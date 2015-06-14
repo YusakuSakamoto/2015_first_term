@@ -1,0 +1,144 @@
+\documentclass[a4j,twoside,openright,11pt]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{listliketab}
+\usepackage{url}
+\usepackage{listings}
+
+\setlength{\textwidth}{15.92cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\footskip}{18mm}
+
+%
+\pagestyle{plain}
+\begin{document}
+
+\begin{screen}
+\huge
+\begin{center}
+{\bf 流体力学　中間テスト対策}\\
+\end{center}
+
+\normalsize
+\begin{flushright}
+九州工業大学　機械知能工学科　機械知能コース  坂本　悠作\\連絡先：n104069y@mail.kyutech.jp
+\end{flushright}
+\end{screen}
+
+\section{連続の式の導出}
+\subsection{変化量の表現１}
+連続の式とは、微小体積に流れ込む流量と、微小体積から流れ出す質量は一定であるという性質を数式化したものである。まず、x方向の流入量$v_x$とすると、流出量を以下のように表す。
+\begin{eqnarray}
+v_x &=& v_x + \frac{\partial v_x}{\partial x}dx\\
+ベクトル表示で、流入量{\bf v}&=&
+\begin{pmatrix}
+v_x\\
+v_y\\
+v_z
+\end{pmatrix}\\
+同様に、流出量{\bf v+\nabla v}&=&
+\begin{pmatrix}
+v_x + \frac{\partial v_x}{\partial x}dx\\
+\\
+v_y + \frac{\partial v_y}{\partial y}dy\\
+\\
+v_z + \frac{\partial v_z}{\partial z}dz
+\end{pmatrix}\\
+\end{eqnarray}
+
+従って、微小体積に流出する質量流量は、
+\begin{eqnarray}
+\rho ({\bf v+\nabla v}) dS = \rho
+\begin{pmatrix}
+(v_x + \frac{\partial v_x}{\partial x}dx)dydz\\
+\\
+(v_y + \frac{\partial v_y}{\partial y}dy)dzdx\\
+\\
+(v_z + \frac{\partial v_z}{\partial z}dz)dxdy
+\end{pmatrix}
+\end{eqnarray}
+
+微小体積に流入する質量流量は、
+\begin{eqnarray}
+\rho ({\bf v}) dS = \rho
+\begin{pmatrix}
+v_x dxdydz\\
+\\
+v_y dxdydz\\
+\\
+v_z dxdydz\\
+\end{pmatrix}
+\end{eqnarray}
+
+以上より、$(流入量-流出量)=\Delta M$とすると、
+\begin{eqnarray}
+\Delta M = - \left\{  \frac{\partial}{\partial x}  (\rho v_x) + \frac{\partial}{\partial y}  (\rho v_y) + \frac{\partial}{\partial z}  (\rho v_z)\right\}dxdydz
+\end{eqnarray}
+\subsection{変化量の表現２}
+密度$\rho$を用いて、以下のように表現する。
+\begin{eqnarray}
+\Delta M = \frac{\partial \rho}{\partial t} dxdydz
+\end{eqnarray}
+
+\subsection{導出}
+先ほどの式を連立させて、連続の式を導出する。
+\begin{eqnarray}
+\frac{\partial \rho}{\partial t} + \left\{  \frac{\partial}{\partial x}  (\rho v_x) + \frac{\partial}{\partial y}  (\rho v_y) + \frac{\partial}{\partial z}  (\rho v_z)\right\} = 0
+\end{eqnarray}
+
+非圧縮性流体の場合は、$\rho = 0$であるので、
+\begin{eqnarray}
+\left(  \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}\right) = 0
+\end{eqnarray}
+
+\section{オイラーの方程式の導出}
+テイラーの１次近似より、速さの変化量を次のように表現する。
+\begin{eqnarray}
+\frac{ du}{ dt} &=& \frac{\partial u}{\partial x}u + \frac{\partial u}{\partial y}v + \frac{\partial u}{\partial z}w\\
+\frac{ dv}{ dt} &=& \frac{\partial v}{\partial x}u + \frac{\partial v}{\partial y}v + \frac{\partial v}{\partial z}w\\
+\frac{ dw}{ dt} &=& \frac{\partial w}{\partial x}u + \frac{\partial w}{\partial y}v + \frac{\partial w}{\partial z}w
+\end{eqnarray}
+
+質量力とは、その体積に対して働く力、つまり重力などを指します。ここで、ベクトル表示すると、
+\begin{eqnarray}
+単位体積あたりに働く力{\bf F} = 
+\begin{pmatrix}
+F_x\\
+F_y\\
+F_z
+\end{pmatrix}\\
+微小体積に働く力{\bf F}\rho dxdydz=
+\begin{pmatrix}
+F_x\rho dxdydz\\
+F_y\rho dxdydz\\
+F_z\rho dxdydz
+\end{pmatrix}\\
+\end{eqnarray}
+
+
+微小流体に働く圧力は、前後の圧力差と考えられるので、以下のように記述できる。
+\begin{eqnarray}
+x軸方向に働く圧力=-\frac{\partial {\bf p}}{\partial x}\\
+y軸方向に働く圧力=-\frac{\partial {\bf p}}{\partial y}\\
+z軸方向に働く圧力=-\frac{\partial {\bf p}}{\partial z}\\
+\nonumber\\
+\nonumber\\
+よって圧力によって加えられる力は、以下のようになる。\\
+x軸方向に働く力=-\frac{\partial {\bf p}}{\partial x}dxdydz\\
+y軸方向に働く力=-\frac{\partial {\bf p}}{\partial y}dxdydz\\
+z軸方向に働く力=-\frac{\partial {\bf p}}{\partial z}dxdydz\\
+\end{eqnarray}
+
+ラプラシアン微分を用いて書き直すと、
+\begin{eqnarray}
+\frac{D {\bf v}}{Dt} = {\bf F} - \frac{1}{\rho} grad p
+\end{eqnarray}
+
+
+\end{document}

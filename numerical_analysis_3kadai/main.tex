@@ -1,0 +1,326 @@
+\documentclass[a4j,twoside,openright,11pt]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{listliketab}
+\usepackage{url}
+\usepackage{listings}
+
+\setlength{\textwidth}{15.92cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\footskip}{18mm}
+
+%
+\pagestyle{plain}
+\begin{document}
+
+\begin{screen}
+\huge
+\begin{center}
+{\bf 数値解析法　第3課題}\\
+\end{center}
+
+\normalsize
+\begin{flushright}
+九州工業大学　機械知能工学科　機械知能コース 3年 坂本　悠作\\学籍番号 13104069 \hspace{0.2in}提出日 2015年4月28日
+\end{flushright}
+\end{screen}
+
+\section*{問題}
+\[
+\bm{A}=
+  \left[
+    \begin{array}{rrr}
+      1 & 1 & 1 \\
+      1 & 1 & 2 \\
+      1 & 2 & 1 \\
+    \end{array}
+  \right]
+\]
+上の行列の固有値、固有ベクトルを求めよ\\
+
+\begin{itemize}
+\item べき乘法
+\item Jacobi法
+\end{itemize}
+
+\section{べき乘法}
+べき乘法により、最大の固有値を求める。
+計算すると、以下のようになる。
+収束条件は以下のように設定した
+\begin{equation}
+\frac{\lambda^{(k-1)}}{\lambda^{(k)}}<\epsilon\;\;\;\;\;\;(\epsilon=0.005)
+\end{equation}
+初期設定として、固有ベクトルを以下のように仮定する
+\begin{equation}
+\bm{x}=
+  \left(
+    \begin{array}{r}
+      1 \\
+      1 \\
+      1 \\
+    \end{array}
+  \right)
+\end{equation}
+\begin{eqnarray}
+\bm{Ax}=
+  \left(
+    \begin{array}{rrr}
+      1 & 1 & 1 \\
+      1 & 1 & 2 \\
+      1 & 2 & 1 \\
+    \end{array}
+  \right)
+  \left(
+    \begin{array}{r}
+      1 \\
+      1 \\
+      1 \\
+    \end{array}
+  \right)&=&
+  \left(
+    \begin{array}{r}
+      3 \\
+      4 \\
+      4 \\
+    \end{array}
+  \right)=4
+  \left(
+    \begin{array}{r}
+      \frac{3}{4} \\
+      1 \\
+      1 \\
+    \end{array}
+  \right)
+\nonumber\\
+  \left(
+    \begin{array}{rrr}
+      1 & 1 & 1 \\
+      1 & 1 & 2 \\
+      1 & 2 & 1 \\
+    \end{array}
+  \right)
+  \left(
+    \begin{array}{r}
+      \frac{3}{4} \\
+      1 \\
+      1 \\
+    \end{array}
+  \right)&=&
+  \left(
+    \begin{array}{r}
+      \frac{11}{4} \\
+      \frac{15}{4} \\
+      \frac{15}{4} \\
+    \end{array}
+  \right)=\frac{15}{4}
+  \left(
+    \begin{array}{r}
+      \frac{11}{15} \\
+      1 \\
+      1 \\
+    \end{array}
+  \right)
+\nonumber
+\\
+  \left(
+    \begin{array}{rrr}
+      1 & 1 & 1 \\
+      1 & 1 & 2 \\
+      1 & 2 & 1 \\
+    \end{array}
+  \right)
+  \left(
+    \begin{array}{r}
+      \frac{11}{15} \\
+      1 \\
+      1 \\
+    \end{array}
+  \right)&=&
+  \left(
+    \begin{array}{r}
+      \frac{41}{15} \\
+      \frac{56}{15} \\
+      \frac{56}{15} \\
+    \end{array}
+  \right)=\frac{56}{15}
+  \left(
+    \begin{array}{r}
+      \frac{41}{56} \\
+      1 \\
+      1 \\
+    \end{array}
+  \right)
+\nonumber
+\\
+\nonumber\\
+\nonumber\\
+\frac{\lambda^{(k-1)}}{\lambda^{(k)}}の値が0.00031となったので、ここで終了とした。\nonumber
+\\
+  \left(
+    \begin{array}{rrr}
+      1 & 1 & 1 \\
+      1 & 1 & 2 \\
+      1 & 2 & 1 \\
+    \end{array}
+  \right)
+  \left(
+    \begin{array}{r}
+      \frac{41}{56} \\
+      1 \\
+      1 \\
+    \end{array}
+  \right)=
+  \left(
+    \begin{array}{r}
+      \frac{153}{56} \\
+      \frac{209}{56} \\
+      \frac{209}{56} \\
+    \end{array}
+  \right)&=&\frac{209}{56}
+  \left(
+    \begin{array}{r}
+      \frac{153}{209} \\
+      1 \\
+      1 \\
+    \end{array}
+  \right) \approx 3.73214
+  \left(
+    \begin{array}{r}
+      0.73205 \\
+      1 \\
+      1 \\
+    \end{array}
+  \right)
+\end{eqnarray}
+\subsubsection*{結果}
+\begin{equation}
+固有値\lambda = \frac{209}{56},\;\;\;固有ベクトルv=\left(0.73205,1,1\right)
+\end{equation}
+\section{Jacobi法}
+行列$\bm{A}$は実対称行列なので、Jacobi法が使える。\\
+\begin{equation}
+\bm{P_1}=
+\left[
+\begin{array}{ccc}
+  1&0&0\\
+  0&\cos \theta_1 &-\sin\theta_1\\
+  0&\sin \theta_1 &\cos\theta_1\\
+\end{array}
+\right]
+\end{equation}
+問題より、$a=1,b=2,d=1$であるので、$a=d$より$\theta=\pi/4$を用いる。
+\begin{eqnarray}
+  \bm{P_1}^{T}\bm{A}\bm{P_1} 
+  &=& 
+  \left[
+  \begin{array}{ccc}
+  1&0&0\\
+  0&\cos \pi/4 &\sin \pi/4\\
+  0&-\sin \pi/4 &\cos \pi/4\\
+  \end{array}
+  \right]
+  \left[
+    \begin{array}{rrr}
+      1 & 1 & 1 \\
+      1 & 1 & 2 \\
+      1 & 2 & 1 \\
+    \end{array}
+  \right]
+  \left[
+  \begin{array}{ccc}
+  1&0&0\\
+  0&\cos \pi/4 &-\sin \pi/4\\
+  0&\sin \pi/4 &\cos \pi/4\\
+  \end{array}
+  \right]
+\nonumber\\
+  &=&
+  \left[
+  \begin{array}{ccc}
+  1&\sqrt{2}&0\\
+  \sqrt{2}&3 &0\\
+  0&0 &-1\\
+  \end{array}
+  \right]
+\nonumber
+\\
+ここで、\theta &=& \frac{2\sqrt{2}}{(1-3)} \div 2 =-0.477658 (radian)であるので、
+\nonumber
+\\
+  \bm{P_2}^{T}\bm{A}\bm{P_2} 
+  &=& 
+  \left[
+  \begin{array}{ccc}
+  \cos -0.477658 &\sin -0.477658  &0\\
+  -\sin -0.477658 &\cos -0.477658 &0\\
+  0&0&1\\
+  \end{array}
+  \right]
+  \left[
+  \begin{array}{ccc}
+  1&\sqrt{2}&0\\
+  \sqrt{2}&3 &0\\
+  0&0 &-1\\
+  \end{array}
+  \right]
+  \left[
+  \begin{array}{ccc}
+  \cos -0.47765 &-\sin -0.47765&0\\
+  \sin -0.47765 &\cos -0.47765&0\\
+  0&0&1\\
+  \end{array}
+  \right]
+\nonumber
+\\
+  &=&
+  \left[
+  \begin{array}{ccc}
+  0.267949 & 1.07062 \times 10^{-6}&0\\
+  1.07062 \times 10^{-6} &3.73205&0\\
+  0&0&-1\\
+  \end{array}
+  \right]
+\end{eqnarray}
+非対角成分が十分に小さい事$(\epsilon=0.005以下)$から、ここで収束したと判定する。\\
+固有値は、$(0.267949,3.73205,-1)$となる\\
+\\
+この結果より、固有ベクトルを求めると、
+\begin{eqnarray}
+  P_1P_2 &=&  \left[
+  \begin{array}{ccc}
+  1&0&0\\
+  0&\cos \pi/4 &-\sin \pi/4\\
+  0&\sin \pi/4 &\cos \pi/4\\
+  \end{array}
+  \right]
+  \left[
+  \begin{array}{ccc}
+  \cos -0.47765 &-\sin -0.47765&0\\
+  \sin -0.47765 &\cos -0.47765&0\\
+  0&0&1\\
+  \end{array}
+  \right]
+\nonumber
+\\
+&=&   \left[
+  \begin{array}{ccc}
+0.88807   & 0.45969 & 0\\
+-0.325052 & 0.62797 & -0.70711\\
+-0.325052 & 0.62797 & 0.70711\\
+  \end{array}
+  \right]
+\end{eqnarray}
+第2、第3行の成分の大きさを1と調整すると、以下のようになる
+\begin{eqnarray}
+v_1&=&(0.73205,1,1)\nonumber\\
+v_2&=&(0,-1,1)\nonumber\\
+v_3&=&(-2.73949,1,1)\nonumber
+\end{eqnarray}
+
+\end{document}

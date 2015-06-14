@@ -1,0 +1,153 @@
+\documentclass[a4j,twoside,openright,11pt]{jreport}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{listliketab}
+\usepackage{url}
+\usepackage{listings}
+
+\setlength{\textwidth}{15.92cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\footskip}{18mm}
+
+%
+\pagestyle{plain}
+\begin{document}
+
+\begin{screen}
+\huge
+\begin{center}
+{\bf 材料強度学　第2回}\\
+\end{center}
+
+\normalsize
+\begin{flushright}
+九州工業大学　機械知能工学科　機械知能コース  坂本　悠作\\連絡先：n104069y@mail.kyutech.jp \hspace{0.2in}提出日 2015年4月14日
+\end{flushright}
+\end{screen}
+
+\section{変形}
+\begin{itemize}
+\item 弾性変形(elastic deformation)\\
+設計においては考慮されている変形。
+\item 塑性変形(Plastic deformation)\\
+設計においては通常考慮しない変形。
+\begin{itemize}
+\item すべり変形(Slip)\\
+通常の塑性変形。
+\item 双晶変形(Twin)\\
+高速or低温での変形。
+\end{itemize}
+\end{itemize}
+
+\subsubsection{すべり}
+最大せん断応力に最も近い特定の結晶面(滑り面)の上下が、特定の方向(すべり方向)へ相互に起こる仕組み。\\
+\begin{itemize}
+\item すべり系(slip system)=すべり面$\times$すべり方向
+\item すべり系の数＝変形のしやすさ
+\end{itemize}
+\begin{table}[htb]
+\begin{center}
+  \caption{すべり面}
+\small
+  \begin{tabular}{|l||c|c|c|} \hline
+結晶構造&すべり面(稠密面)                       &総数   &備考\\
+\hline
+hcp(六方最密充填構造) &(0 0 0 1) $<$1 1 2 0$>$             &3通り  &チタン合金、マグネシウム合金等。\\
+                      &                                 &        &変形しにくい\\
+\hline
+fcc(面心立方格子構造) &$\bigl\{$1 1 1$\bigr\}$  $<$1 1 0$>$                &12通り &加工硬化しやすい。銅やステンレス等\\
+\hline
+bcc(体心立方格子構造) &$\bigl\{$1 1 0$\bigr\}$ $\bigl\{$2 1 1$\bigr\}$ $\bigl\{$3 2 1$\bigr\}$ $<$1 1 1$>$ &48通り &ナトリウム、鉄。\\
+&&&一度に多くのすべり系が動いてしまう\\
+\hline
+  \end{tabular}
+\end{center}
+\end{table}
+\normalsize
+
+理想的降伏強度(理想的限界すべり応力$\tau_{th}$)\\
+xが最小ならば、
+\begin{equation}
+\tau = \tau_{th}(\frac{2 \pi x}{b})
+\end{equation}
+この時は、弾性変形なので
+\begin{equation}
+\tau = G\gamma = G\frac{x}{a}
+\end{equation}
+両式より
+\begin{equation}
+\tau_{th} = G \frac{b}{2 \pi a} \approx \frac{1}{10} G
+\end{equation}
+
+\subsubsection{参考：銅の場合}
+銅の$G:8.1 \times 10^4 GPa$\\
+\begin{eqnarray}
+\tau_{th} &\approx& \frac{1}{10}G \approx 1\times 10^4        [MPa]\\
+         &\approx& 100 \sim 1000                                [MPa]\\
+\frac{\tau_{i}}{\tau_{th}} &=& \frac{1}{10} \sim \frac{1}{1000}
+\end{eqnarray}
+
+\subsection{変形に影響する因子}
+格子欠陥\\
+\begin{itemize}
+\item 点欠陥
+\begin{itemize}
+\item 原子空孔
+\item 格子間原子
+\item 不純物原子
+\end{itemize}
+\item 線欠陥
+\begin{itemize}
+\item 転位
+\end{itemize}
+\item 面欠陥
+\begin{itemize}
+\item 積層欠陥
+\item 双晶欠陥
+\item 結晶粒界
+\end{itemize}
+\end{itemize}
+
+\subsection{原子空孔(Vacancy)}
+格子中のあるべき場所に原子が存在しない。\\
+原子空孔濃度：熱力学的平衡濃度\\
+\begin{equation}
+\frac{x}{N} = \exp(-\frac{E_s}{kt})
+\end{equation}
+ここで、\\
+n:空孔数\\
+N:格子点数\\
+$E_s$:1原子を表面移動させるのに要するエネルギ
+
+\subsection{格子間原子(Internal atom)}
+格子点以外に原子がいる状態。 中性子線によって、原子がはじき出されてできる。\\
+$\Rightarrow$放射線損傷(Radiation damage) , 硬化(靭性の低下) , 延性-脆性遷移温度の上昇\\
+
+\subsection{不純物原子( impurity atom)}
+$\Rightarrow$合金\\
+\begin{itemize}
+\item 置換系固有原子　格子点の原子が置き換わる \\
+Fe $\Leftarrow$ Mo,Ma,Ni,Cr,Co\\
+Pb $\Leftarrow$ Zn\\
+
+\item 侵入型固有原子　格子間に原子が入り込む\\
+Fe $\Leftarrow$ C,N,H\\
+Au $\Leftarrow$ Ag,Cu,Hg\\
+\end{itemize}
+
+\subsection{転位}
+すべり面の上下で、一度に全体がすべらず、1部分ずつ移動した時の境界転位線は閉曲線(表面を含む)
+\begin{itemize}
+\item バーガース・ベクトル
+\item 刃状転位
+\item 螺旋転位
+\end{itemize}
+
+
+\end{document}

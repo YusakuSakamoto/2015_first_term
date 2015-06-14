@@ -1,0 +1,161 @@
+\documentclass[a4j,twoside,openright,11pt]{jarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{listliketab}
+\usepackage{url}
+\usepackage{listings}
+
+\setlength{\textwidth}{15.92cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\footskip}{18mm}
+
+%
+\pagestyle{plain}
+\title{機械工学実験2\\３次元翼空力実験}
+\author{九州工業大学　機械知能工学科　機械知能コース 3年\\学籍番号：13104069 坂本悠作 \\実験日1 2015年6月3日 \\ 実験日2 2015年6月10日}
+
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{目的}
+流体機械の主要素である３次元翼について、低速風洞試験設備を利用した力及び圧力の計測を行い、基本的な圧力特性や性能計算を理解する。
+
+\section{実験装置}
+\subsection{風洞}
+\subsection{天秤}
+\subsection{32チャンネル圧力センサーユニット}
+\subsection{供試体}
+
+\section{実験手順}
+\subsection{力計測の手順}
+\subsection{圧力計速の手順}
+
+\section{データの整理}
+\subsection{力計測から得られたデータの整理}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=9cm,angle=-90]{./CL/CL.eps}
+\end{center}
+\caption{$\alpha - C_L$}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=9cm,angle=-90]{./CD/CD.eps}
+\end{center}
+\caption{$\alpha - C_D$}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm]{./CMC4/CMC4.eps}
+\end{center}
+\caption{$\alpha - C_{M_{C/4}}$}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm]{./N0/N0.eps}
+\end{center}
+\caption{$\alpha - N_0$}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm]{./CLCD/CLCD.eps}
+\end{center}
+\caption{$C_L - C_D$}
+\end{figure}
+
+\subsection{圧力計測から得られた圧力係数と圧力分布の整理}
+得られた風洞制圧(大気圧)との差圧を、電圧からパスカルに変換する。このとき使用した32チャンネル圧力センサーユニットの仕様により、1[V]が750[Pa]であることを利用した。
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm]{./2-CP/-20to-12.eps}
+\end{center}
+\caption{$-20to-12$}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm]{./2-CP/-10to-2.eps}
+\end{center}
+\caption{$-10to-2$}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm]{./2-CP/0to8.eps}
+\end{center}
+\caption{$0to8$}
+\end{figure}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm]{./2-CP/10-20.eps}
+\end{center}
+\caption{$10to20$}
+\end{figure}
+
+今回の実験で使用した翼型NACA0012の理論式を以下に示す。
+\begin{eqnarray}
+\pm y = \frac{0.12}{0.20}\left(0.29690\sqrt{x} -0.12600x -0.35160x^2 +0.28430x^3 -0.10150x^4 \right)
+\end{eqnarray}
+今、翼のy軸に対して翼表面の傾きについて求めたい。これを求めるのに以下の式を用いる。
+\begin{eqnarray}
+\tan \theta_i= \frac{dy}{dx}|_i
+\end{eqnarray}
+よって、$\theta$を算出するにはyの理論式を微分したものに$arctan$によって$\theta$を算出する。計算結果は以下の通りである。
+\begin{eqnarray}
+\frac{dy}{dx} = -0.126+\frac{0.14845}{\sqrt x}-0.7032x+0.8529x^2-0.406x^3
+\end{eqnarray}
+
+また、各面積にかかる力を算出するため、圧力孔付近に局所面積$\Delta s_i$を設ける。その値は求まった角度$\theta$を用いて次の式で算出した。
+
+\begin{eqnarray}
+\Delta s_i = c \times \frac{x_{i+1} - x_{i-1}}{2} \times \arccos \theta
+\end{eqnarray}
+
+\begin{table}[htb]
+\begin{center}
+  \caption{$\theta$の算出}
+  \begin{tabular}{|l||c|c|c|c|} \hline
+i&x&y'&$\theta$[degree]&$\Delta s$\\\hline
+1&0.02&0.909974&42.3&0.001554605\\
+2&0.06&0.440853&23.79&0.0039991647\\
+3&0.12&0.229734&12.94&0.0065806282\\
+4&0.20&0.0961723&5.493&0.0092911009\\
+5&0.30&-0.000129621&-0.007427&0.0109964817\\
+6&0.40&-0.0620799&-3.552&0.0114298114\\
+7&0.50&-0.105185&-6.005&0.0117305733\\
+8&0.60&-0.136924&-7.797&0.014938903\\
+9&0.75&-0.17351&-9.843&0.018306178\\
+10&0.90&-0.207525&-11.72&-0.046019196\\
+11&0.01&1.35155&53.5&-0.0110178779\\
+12&0.04&0.589461&30.52&0.0028253085\\
+13&0.09&0.312158&17.34&0.0057481738\\
+14&0.17&0.137154&7.81&0.0080307384\\
+15&0.25&0.0420625&2.409&0.0096310554\\
+16&0.35&-0.0341207&-1.954&0.0112343467\\
+17&0.45&-0.0854283&-4.883&0.0115928698\\
+18&0.55&-0.122136&-6.963&0.0148104665\\
+19&0.70&-0.162145&-9.21&0.0181885365\\
+20&0.85&-0.195818&-11.08&0.0185367511\\
+\hline
+  \end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+\section{考察}
+
+\end{document}

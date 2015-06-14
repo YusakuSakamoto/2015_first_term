@@ -1,0 +1,159 @@
+\documentclass[a4j,twoside,openright,11pt]{jarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{listliketab}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{color}
+
+\setlength{\textwidth}{15.92cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\footskip}{18mm}
+
+%
+\pagestyle{plain}
+\title{伝熱学\\第6回}
+\author{九州工業大学　機械知能工学科　機械知能コース 3年\\学籍番号：13104069 坂本悠作}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{練習問題}
+\subsection{伝熱の基本三形態を挙げ、その基本法則を示して説明せよ}
+\begin{enumerate}
+\item 熱伝導\\
+フーリエの法則\\
+微小面積$\delta A$に、単位時間に伝わる熱$\dot Q$の移動量を\textcolor{red}{熱流速} といい、$\dot q$で表す。フーリエの法則は、熱流速$\dot q$は温度勾配に比例することを示したものである。ここで$\lambda$は熱伝導率と呼ばれ、熱の伝わりやすさを示す。
+\begin{eqnarray}
+{\bf J}&=& -\lambda \mathrm{grad} T  [W/m^2]\\
+\dot q &=& -\lambda \frac{dT}{dx} [W/m^2]
+\end{eqnarray}
+式1は多次元でのフーリエの式、式2は1次元におけるフーリエの式を示している。
+\item 対流伝熱\\
+ニュートンの冷却の法則\\
+液体や気体等の媒質中に置かれた高温の個体が媒質によって冷却される様子をしめした法則である。この法則は経験によって導かれた法則である。
+\begin{equation}
+-\frac{dQ}{dt}=\alpha S (T-T_m)
+\end{equation}
+ここで、
+\begin{itemize}
+\item $\alpha$...熱伝達率
+\item S...表面積
+\item T...固体の温度
+\item $T_m$...媒質の温度
+\end{itemize}
+\item 放射伝熱\\
+ステファン・ボルツマンの法則\\
+熱放射のエネルギーKと物体の温度Tの間に、次の関係がある
+\begin{equation}
+K=\sigma T^4
+\end{equation}
+ここで、$\sigma$はシュテファン・ボルツマン係数と呼ばれ、$\sigma = 5.74 \times 10^{-8}$で与えられる。
+\end{enumerate}
+
+\subsection{図の積層平板を通過する熱流速と接合面温度を求めよ。ただし、$\delta_1 = 15cm,\delta_2 = 6cm, \delta_3 = 10cm, \lambda_1 = 1.7kw/(mK) \lambda_2 =0.5W/(mK), \lambda_3 = 10W/(mK) ,\lambda_1側の温度=1400K \lambda_3側の温度=250K$とする}
+$\dot q_1 = \dot q_2 = \dot q_3$より、連立方程式を解くことで求めることができるが、今回は次の式を用いて算出する
+\begin{equation}
+\dot q = \frac{T_{low} - T_{high} }{ \frac{\delta_A}{\lambda_A} + \frac{\delta_B}{\lambda_B}}
+\end{equation}
+この問題で$\dot q$を算出し、それを用いて$T_1,T_2$を算出する\\
+$T_1 = 935.040 , T_2 = 302.695$
+
+\subsection{一様に発熱している平面Rの球がある。その発熱量を単位体積、単位時間あたりHとし、以下の手順で定常時の温度分布を求めよ。なお、球の材質は一様であり、熱伝導率を$\lambda$とする}
+\begin{enumerate}
+\item 半径位置rの部分に肉厚drの球殻を与え、半径方向の伝熱量と発熱量との関係から基礎微分方程式を算出せよ。温度は半径のみの関数であり、これをTとする。
+\item 球の外表面温度を$T_0$,球の中心Oでは温度は有限であることから温度分布を半径rの関数として表現せよ
+\item 球の中心部の温度はどうなるか
+\end{enumerate}
+
+\begin{enumerate}
+\item 半径rと発熱量Hの関係を求める。
+\begin{equation}
+\dot Q = \frac{4\pi r^3}{3} \times H
+\end{equation}
+両辺を微分して、
+\begin{equation}
+\frac{d\dot Q}{dr} = 4\pi r^2 \times H
+\end{equation}
+ここで、フーリエの法則の両辺に球の表面積を掛けたものを以下に示す。
+\begin{equation}
+\dot Q =  -\lambda \frac{dT}{dr} \times 4\pi r^2
+\end{equation}
+よって(7)(9)の方程式より、
+\begin{equation}
+-\lambda \frac{d}{dr}(\frac{dT}{dr} r^2) = Hr^2
+\end{equation}
+
+\item (9)を積分し、条件を代入する。
+\begin{equation}
+-\lambda \frac{dT}{dr} r^2= \frac{Hr^3}{3}
+\end{equation}
+\begin{equation}
+\frac{dT}{dr}= -\frac{Hr}{3\lambda}+C_1
+\end{equation}
+\begin{equation}
+T= -\frac{Hr^2}{6\lambda}+C_1r+C_2
+\end{equation}
+ここで、$r=RのときT=T_0,r=0の時T\neq \infty$ の条件より、$C_1=0,C_2=T_0 + \frac{HR^2}{6\lambda}$
+\item r=0を代入する\\
+\begin{equation}
+T=T_0 + \frac{HR^2}{6\lambda}
+\end{equation}
+\end{enumerate}
+
+\subsection{図のように断面積が同じで、長さも等しい7本の棒から構成される物体がある。各棒の端面温度が図に示された値に保たれているとき、接合点AとBの温度を以下の場合について求めよ。ただし、棒表面からの熱伝達は無視できるものとする}
+\begin{enumerate}
+\item 棒の熱伝達が全て同じ場合
+この問題において、熱伝導率と伝わる長さが等しければ、入ってくる熱量が出て行く熱量が等しいという方程式を立てると、以下のようになる
+\begin{equation}
+120+T_B-4T_A=0
+\end{equation}
+\begin{equation}
+90+T_A-4T_B=0
+\end{equation}
+これを計算して、$T_A=38,T_B=32$が導かれる。
+\item 中央の黒い棒の伝達率が、他の1/2の場合
+\begin{equation}
+120+\frac{1}{2}T_B-\frac{7}{2}T_A=0
+\end{equation}
+\begin{equation}
+90+\frac{1}{2}T_A-\frac{7}{2}T_B=0
+\end{equation}
+これを計算して、$T_A=31.25,T_B=38.75$が導かれる。
+
+\end{enumerate}
+
+\subsection{断面積Sの2つの棒が図のように接続されている。Aの熱伝導率は$\lambda_A$,Bは$\lambda_B$である。}
+\begin{description}
+\item[(1)] 表面からの熱損失が無い定常状態に対し、棒の接合面の温度と熱流速を両端温度$T_A$と$T_B$で表わせ\\
+公式より、
+\begin{equation}
+\dot q = \frac{T_A - T_B}{\frac{L}{ \lambda_A} + \frac{2L}{\lambda_B} }
+\end{equation}
+また、$\dot q_1,\dot q_2$を求めると、
+\begin{eqnarray}
+\dot q_1 = -\lambda_A \frac{T_c-T_A}{L}\\
+\dot q_2 = -\lambda_B \frac{T_c-T_B}{2L}
+\end{eqnarray}
+であるので、$T_c=$の形に変換して接合面の温度を得る。
+\begin{equation}
+T_c = \frac{\lambda_BT_B+2\lambda_AT_A}{\lambda_B+2\lambda_A}
+\end{equation}
+
+\item[(2)] 棒Aが単位時間・単位体積あたりにHの発熱をする場合、棒の接合面の温度と棒Bを伝わる熱流速を求めよ\\
+
+\end{description}
+
+
+\section{提出課題}
+
+
+\end{document}

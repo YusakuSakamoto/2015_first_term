@@ -1,0 +1,226 @@
+\documentclass[a4j,twoside,openright,11pt]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{listliketab}
+\usepackage{url}
+\usepackage{listings}
+
+\setlength{\textwidth}{15.92cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\footskip}{18mm}
+
+%
+\pagestyle{plain}
+\begin{document}
+
+\begin{screen}
+\huge
+\begin{center}
+{\bf 数値解析法　第3回}\\
+\end{center}
+
+\normalsize
+\begin{flushright}
+九州工業大学　機械知能工学科　機械知能コース 3年 坂本　悠作\\学籍番号 13104069 \hspace{0.2in}提出日 2015年4月28日
+\end{flushright}
+\end{screen}
+
+
+\setcounter{section}{2}
+\section{固有値問題}
+\subsubsection{正方行列とは}
+正方行列には、次のような性質がある
+\begin{itemize}
+\item 行の数と列の数が等しい行列
+\item 逆行列を定義できる
+\item 行列式(スカラー)を定義できる
+\end{itemize}
+
+$\bm{A}$:n次正方行列
+\begin{equation}
+\bm{A}\bm{x}=\lambda\bm{x}
+\end{equation}
+
+\begin{enumerate}
+\item n個の固有値
+\item $\bm{A}$が実対象行列のとき、次の性質がある
+\begin{itemize}
+\item 固有値は全て実数となる
+\item 異なる固有値に属する固有ベクトルは直交する
+\end{itemize}
+\item $\bm{A}$が対角行列$\rightarrow$対角成分が固有値
+\item $\bm{M}$が正則$\rightarrow \bm{M}^{-1}\bm{A}\bm{M}$は、$\bm{A}$と同じ固有値
+\item $\bm{M}^{-1}\bm{A}\bm{M} \Rightarrow \bm{D}(対角行列) \rightarrow \bm{D}の対角成分が固有値$\\
+$\bm{M}$の各列が固有ベクトル
+\end{enumerate}
+
+\subsection{べき乘法}
+絶対値が最大の固有値・固有ベクトルを求める方法
+\subsubsection{考え方}
+\begin{equation}
+\bm{A}の固有値　\| \lambda_1 \| \geq \|\lambda_2\| \geq \cdots \geq\|\lambda_N\| \nonumber
+\end{equation}
+\begin{equation}
+固有ベクトル　\bm{u}_1,\bm{u}_2,\bm{u}_3,\cdots \nonumber
+\end{equation}
+$\bm{u}$は互いに1次独立なので、初期ベクトル$\bm{x^{(0)}}$はこれらの1次結合により、次のようになる。()内の数字は$\bm{A}$を何度かけたものかを表している。
+\begin{equation}
+任意のベクトル　\bm{x^{(0)}}=c_1\bm{u}_1+c_2\bm{u}_2+c_3\bm{u}_3+\cdots \nonumber
+\end{equation}
+よって、
+\begin{eqnarray}
+\bm{Ax^{(0)}} &=&c_1\bm{Au}_1+c_2\bm{Au}_2 \cdots c_N\bm{Au}_N\nonumber\\
+             &=&c_1\lambda_1\bm{u}_1+c_2\lambda_2\bm{u}_2 \cdots c_N\lambda_N\bm{u}_N\nonumber
+\end{eqnarray}
+この計算の()の値を大きくしていくと、
+\begin{eqnarray}
+  \bm{x^{(k)}}=\bm{A^kx^{(0)}} &=&c_1\bm{A^ku}_1+c_2\bm{A^ku}_2 \cdots c_N\bm{A^ku}_N\nonumber\\
+                               &=&c_1\lambda_1^k\bm{u}_1+c_2\lambda_2^k\bm{u}_2 \cdots c_N\lambda_N^k\bm{u}_N\nonumber\\
+                               &=&c_1\lambda_1^k \left\{ u_1+\frac{c_2}{c_1} \left( \frac{\lambda_2}{\lambda_1} \right)^ku_2 + \cdots + \frac{c_N}{c_1} \left( \frac{\lambda_N}{\lambda_1} \right)^ku_N \right\}
+ \end{eqnarray}
+仮定より、$\lambda_1$が最も大きい値であるので、$\left( \frac{\lambda_N}{\lambda_1} \right)^k$の値は、kが大きいと0に収束する。よって、第一項目以降を0と考えると、$c_1\lambda_1\bm{u_1}$となる。以上の議論により、
+\[
+    \lim_{k \to \infty} \frac{\bm{x^{(k)T}x^{(k)}}}{\bm{x^{(k)T}x^{(k-1)}}} = \lambda_1
+\]
+これにより、$\lambda_1$が求められる。
+\subsubsection{例題}
+\begin{equation}
+\bm{A}=\left(
+\begin{array}{ccc}
+2&2&-1\\
+0&-1&0\\
+0&-5&3
+\end{array}
+\right),x^{(0)}=
+\begin{pmatrix}
+1\\
+1\\
+1
+\end{pmatrix}
+\end{equation}
+このときの固有値・固有ベクトルを求めよ\\
+\subsubsection{解答}
+このときの最大固有値は2.9992である。
+\subsection{Jacobi法}
+\subsubsection{考え方}
+$\bm{A}$:n次正方行列\\
+n個の固有値・固有ベクトルを同時に求める
+\begin{equation}
+\bm{A} = \left[
+\begin{array}{cc}
+a & b\\
+b & d
+\end{array}
+\right]\\
+\end{equation}
+
+\begin{equation}
+\bm{p} = \left[
+\begin{array}{cc}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{array}
+\right]
+\end{equation}
+
+\begin{equation}
+\bm{p^{-1}} = \left[
+\begin{array}{cc}
+\cos \theta & \sin \theta \\
+-\sin \theta & \cos \theta
+\end{array}
+\right]
+\end{equation}
+
+\begin{enumerate}
+\item $\bm{P}$が正則$\rightarrow \bm{P}^{-1}\bm{A}\bm{P}$は、$\bm{A}$と同じ固有値
+\item $\bm{P}^{-1}\bm{A}\bm{P} \rightarrow \bm{D}(対角行列) \rightarrow \bm{D}の対角成分が固有値$\\
+$\bm{P}$の各列が固有ベクトル
+\end{enumerate}
+
+\begin{equation}
+\bm{P}^{-1}\bm{A}\bm{P} = 
+\left[
+\begin{array}{cc}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+a & b \\
+b & d
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+\cos \theta &  \sin \theta \\
+-\sin \theta & \cos \theta
+\end{array}
+\right]=
+\left[
+\begin{array}{cc}
+\lambda_1&0\\
+0&\lambda_2
+\end{array}
+\right]
+\end{equation}
+
+
+\begin{eqnarray}
+a &=&d \Rightarrow \theta =\frac{\pi}{4}\\
+a &\neq& d \Rightarrow \tan 2\theta = \frac{2b}{a-d} 
+\end{eqnarray}
+
+\subsubsection{例題}
+\[
+\bm{A}=
+  \left[
+    \begin{array}{rrr}
+      1  & -2 & -2 \\
+      -2 & 2 & 0 \\
+      -2 & 0 & 0 \\
+    \end{array}
+  \right]
+\]
+対称行列であるので、Jacobi法が使える。非対角成分の絶対値最大のものを正とする。
+\subsubsection{解答}
+\begin{enumerate}
+\item 絶対値最大のものを見つける
+\item その要素が0になるように回転行列P1を転地行列にして左からかける
+\item 右からP1をかける
+\item 計算して出てきたものを$A^{(1)}$とする
+\item 新たに行列P2を作る
+\item 繰り返し
+\end{enumerate}
+非対角行列の値が小さくなれば答えとする。\\
+固有値4,-2,1\\
+固有ベクトル$v_1=(-2,2,1),v_2=(2,1,2),v_3=(-2,-2,2)$
+\section*{問題}
+\[
+\bm{A}=
+  \left[
+    \begin{array}{rrr}
+      1 & 1 & 1 \\
+      1 & 1 & 2 \\
+      1 & 2 & 1 \\
+    \end{array}
+  \right]
+\]
+上の行列の固有値、固有ベクトルを求めよ\\
+
+\begin{itemize}
+\item べき乘法
+\item Jacobi法
+\item 厳密解を求めて評価すると加点
+\end{itemize}
+
+
+
+\end{document}

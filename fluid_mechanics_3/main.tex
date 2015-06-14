@@ -1,0 +1,122 @@
+\documentclass[a4j,twoside,openright,11pt]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{listliketab}
+\usepackage{url}
+\usepackage{listings}
+
+\setlength{\textwidth}{15.92cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\footskip}{18mm}
+
+%
+\pagestyle{plain}
+\begin{document}
+
+\begin{screen}
+\huge
+\begin{center}
+{\bf 流体力学　第3回}\\
+\end{center}
+
+\normalsize
+\begin{flushright}
+九州工業大学　機械知能工学科　機械知能コース  坂本　悠作\\連絡先：n104069y@mail.kyutech.jp \hspace{0.2in}提出日 2015年4月22日
+\end{flushright}
+\end{screen}
+
+\setcounter{section}{2} 
+\setcounter{subsection}{2}
+\subsection{流体の加速度}
+\subsubsection{速度について}
+\begin{itemize}
+\item ラグランジュの方法\\
+質点の速度に着目して、$x(t),y(t),z(t)$を追跡して、流体塊の運動を捉える
+\item オイラーの方法\\
+空間に固定された場所を考え、その場所を次々と占める流体塊の運動を捉える
+\end{itemize}
+今、空間中のある点$P(x,y,z,t)$について考える。
+この点を追跡して、ある点に移動した点の座標は$P'(x+dx,y+dy,z+dz)$と表現できる。
+これらの点の間の速さを、$\bm {V}(u,v,w)$とする。
+このときの$u$について考える。\\
+\begin{eqnarray}
+du &=& u(x+dx,y+dy,z+dz,t+dt) - u(x,y,z,t)\\
+   &=& (u+\frac{\partial u}{\partial x}dx+\frac{\partial u}{\partial y}dy+\frac{\partial u}{\partial z}dz+\frac{\partial u}{\partial t}dt)-u\\
+   &=& \frac{\partial u}{\partial t}dt+\frac{\partial u}{\partial x}dx+\frac{\partial u}{\partial y}dy+\frac{\partial u}{\partial z}dz
+\end{eqnarray}
+方向の加速度は、
+\begin{eqnarray}
+\frac{du}{dt} &=& \frac{\partial u}{\partial t}+\frac{\partial u}{\partial x}\frac{dx}{dt}+\frac{\partial u}{\partial y}\frac{dy}{dt}+\frac{\partial u}{\partial z}\frac{dz}{dt}\\
+              &=& \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}
+\end{eqnarray}
+同様にしてまとめると、
+\begin{eqnarray}
+\frac{du}{dt} &=& \frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}\\
+\frac{dv}{dt} &=& \frac{\partial v}{\partial t}+u\frac{\partial v}{\partial x}+v\frac{\partial v}{\partial y}+w\frac{\partial v}{\partial z}\\
+\frac{dw}{dt} &=& \frac{\partial w}{\partial t}+u\frac{\partial w}{\partial x}+v\frac{\partial w}{\partial y}+w\frac{\partial w}{\partial z}
+\end{eqnarray}
+従って、加速度$\bm{a}$は以下のようになる
+\begin{eqnarray}
+\bm{a}&=&(\frac{du}{dx},\frac{dv}{dy},\frac{dw}{dz})\\
+      &=&(\frac{\partial }{\partial t}+u\frac{\partial }{\partial x}+v\frac{\partial }{\partial y}+w\frac{\partial }{\partial z})\bm{V}\\
+      &=&\frac{D}{Dt}\bm{V}
+\end{eqnarray}
+上の式で、$\frac{D}{Dt}$をラグランジュ微分(実質微分)という。
+\subsection{質量力と表面力}
+
+\subsubsection{質量力(体積力)}
+重力や電磁気のように、質量や電荷を作用する力\\
+$\bm{F}(x,y,z)$とすると、重力であれば$(x,y,z)=(0,0,-g)$
+\subsection{応力テンソル(垂直応力)}
+今、x軸y軸z軸に対して平行な面を持つ直方体を考える。\\
+垂直応力は$\sigma_x,\sigma_y,\sigma_z$の3つ,剪断力は$\tau_{xy},\tau_{yx},\tau_{yz},\tau_{zy},\tau_{zx},\tau_{xz}$の6つ、合計9つの力成分をそれぞれかけることができる。\\
+ここでは、特別に次のような関係式が成り立っているとすると、この行列式は対称行列になる。
+\begin{eqnarray}
+\tau_{xy}&=&\tau_{yx}\nonumber\\
+\tau_{yz}&=&\tau_{zy}\nonumber\\
+\tau_{zx}&=&\tau_{xz}\nonumber
+\end{eqnarray}
+
+\begin{equation}
+\bm{T}=
+\begin{pmatrix}
+\sigma_x & \tau_{yx}   & \tau_{zx}\\
+\tau_{xy} & \sigma_{y} &\tau_{zy}\\
+\tau_{xz}& \tau_{yz}&\sigma_{z}
+\end{pmatrix}
+\end{equation}
+
+
+\subsection*{レポート1(連続の式)}
+直交座標に置いて、連続の式は以下のように示される。
+\begin{equation}
+\frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} = 0
+\end{equation}
+この連続の式を、$(x,y) \Rightarrow (r,\theta)$の変換を用いて、円柱座標$(r,\theta)$の形で連続の式を求めよ。\\
+\\
+------------------------------------------------------------\\
+提出は5月13日(水)：授業前に提出\\
+手書きのみ評価\\
+------------------------------------------------------------\\
+ヒント
+\begin{itemize}
+\item $v_\theta=r\dot \theta$である
+\item 授業では$(u,v)$と表記していたものは、$(v_r,v_\theta)$を用いて表現できる
+\begin{eqnarray}
+u=v_r\cos\theta - v_\theta\sin\theta\\
+v=v_r\sin\theta + v_\theta\cos\theta
+\end{eqnarray}
+\item ここで用いるであろう演算子を以下に示す。
+\begin{eqnarray}
+\frac{\partial }{\partial x}=\frac{\partial }{\partial r}\frac{\partial r}{\partial x}+\frac{\partial }{\partial \theta}\frac{\partial \theta}{\partial x}\\
+\frac{\partial }{\partial y}=\frac{\partial }{\partial r}\frac{\partial r}{\partial y}+\frac{\partial }{\partial \theta}\frac{\partial \theta}{\partial y}
+\end{eqnarray}
+\end{itemize}
+
+\end{document}

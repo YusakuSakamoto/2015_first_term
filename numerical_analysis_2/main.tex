@@ -1,0 +1,140 @@
+\documentclass[a4j,twoside,openright,11pt]{jreport}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{listliketab}
+\usepackage{url}
+\usepackage{listings}
+
+\setlength{\textwidth}{15.92cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\footskip}{18mm}
+
+%
+\pagestyle{plain}
+\begin{document}
+
+\begin{screen}
+\huge
+\begin{center}
+{\bf 数値解析法　第2回課題}\\
+\end{center}
+
+\normalsize
+\begin{flushright}
+九州工業大学　機械知能工学科　機械知能コース 3年 坂本　悠作\\学籍番号 13104069 \hspace{0.2in}提出日 2015年4月21日
+\end{flushright}
+\end{screen}
+
+\section{問題}
+\[
+  \left[
+    \begin{array}{rrrr}
+      2 & -3 & -1 &0\\
+      7 & 1 & 4 & 9\\
+      2 & -5 & -1 & 0\\
+      2 & 1 & 2 & -3\\
+    \end{array}
+  \right]
+\left(
+    \begin{array}{r}
+      x_1 \\
+      x_2 \\
+      x_3 \\
+      x_4 \\
+    \end{array}
+  \right)
+  =
+\left(
+    \begin{array}{r}
+      5 \\
+      8 \\
+      9 \\
+      9 \\
+    \end{array}
+  \right)
+\]
+上の行列式において、$x_{i} (i:1,2,3,4)$の値を計算せよ
+
+\section{直接解法}
+逆行列を計算する。
+\[
+  \left[
+    \begin{array}{rrrr|rrrr}
+      2 & -3 & -1 &0  &1&0&0&0\\
+      7 & 1 & 4 & 9   &0&1&0&0\\
+      2 & -5 & -1 & 0 &0&0&1&0\\
+      2 & 1 & 2 & -3  &0&0&0&1\\
+    \end{array}
+  \right]
+\]
+\\
+逆行列は以下のように算出できた\\
+\[
+\frac{1}{66}
+  \left[
+    \begin{array}{rrrr}
+      46  & 2& -26&  6\\
+      33  & 0& -33&  0\\
+      -73 & 4&  47& 12\\
+      -7  & 4&   3&-10
+    \end{array}
+  \right]
+\]
+これを左から$\left( 5,8,9,9  \right)$と内積計算すると、解$\left( x_1,x_2,x_3,x_4 \right)$=$\left(1,-2,3,-1\right)$が得られる。
+\section{反復解法}
+反復解法で解を求めるにあたり、対角優位になるように作り変える。\\
+次の行列の1行目は、問題の行列の1行目と4行目を足したもので、他の行は順番を入れ替えて作ったものである。
+
+\[
+  \left[
+    \begin{array}{rrrr}
+      4 & -2 & 1 & -3\\
+      2 & -5 & -1 & 0\\
+      2 & 1 & 2 & -3\\
+      7 & 1 & 4 & 9\\
+    \end{array}
+  \right]
+\left(
+    \begin{array}{r}
+      x_1 \\
+      x_2 \\
+      x_3 \\
+      x_4 \\
+    \end{array}
+  \right)
+  =
+\left(
+    \begin{array}{r}
+      14 \\
+      8 \\
+      9 \\
+      9 \\
+    \end{array}
+  \right)
+\]
+行列の形から方程式の形に置き換えると、以下のようになる。
+\begin{eqnarray}
+4x_1-2x_2+x_3-3x_4&=&14\\
+2x_1-5x_2-x_3&=&9\\
+2x_1+x_2+2x_3-3x_4&=&9\\
+7x_1+x_2+4x_3+9x_4&=&8
+\end{eqnarray}
+$x_1,x_2,x_3,x_4$を求めるために、それぞれ上の式から変形させる
+\begin{eqnarray}
+x_1 &=& \left( 14+2x_2-x_3+3x_4 \right) /4  \\
+x_2 &=& \left( 9 -2x_1+x_3      \right) /-5 \\ 
+x_3 &=& \left( 9 -2x_1-x_2+3x_4 \right) /2  \\ 
+x_4 &=& \left( 8 +7x_1-x_2+4x_3 \right) /9
+\end{eqnarray}
+
+今回はgauss seidel法を用いて計算する。\\
+初期値は0,1,3,0とし、計算には表計算ソフトを利用した。\\
+この計算により、解は$\left( x_1,x_2,x_3,x_4 \right)$=$\left(1,-2,3,-1\right)$
+
+\end{document}

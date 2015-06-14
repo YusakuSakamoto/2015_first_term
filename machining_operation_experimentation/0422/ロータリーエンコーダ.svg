@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="ロータリーエンコーダ.svg"
+   inkscape:export-filename="encoder.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="382.2547"
+     inkscape:cy="721.56527"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1321"
+     inkscape:window-height="744"
+     inkscape:window-x="45"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="レイヤー 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3264">
+      <g
+         transform="matrix(0.70988679,0,0,0.60159883,160.24958,30.978094)"
+         id="g3032">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.53021324px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 162.89348,91.840178 42.4264,-10e-7 1.01016,106.066023 c -0.89122,0.71587 23.11053,0.51848 40.64069,0.35714 l -0.18502,-106.615445 0,0"
+           id="path2985"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.53021324px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 246.88995,92.384427 42.4264,0 1.01016,106.066023 c -0.89122,0.71587 23.11053,0.51848 40.64069,0.35714 l -0.18502,-106.615443 0,0"
+           id="path2985-6"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.53021324px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 331.17566,92.02728 42.4264,0 1.01016,106.06602 c -0.89122,0.71587 23.11053,0.51848 40.64069,0.35714 L 415.06789,91.835 l 0,0"
+           id="path2985-0"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.53021324px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 415,91.647896 457.85714,90.93361"
+           id="path3030"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         transform="scale(0.9722401,1.0285525)"
+         sodipodi:linespacing="125%"
+         id="text3038"
+         y="118.27607"
+         x="26.478643"
+         style="font-size:15.45449924px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           id="tspan3042"
+           y="118.27607"
+           x="26.478643"
+           sodipodi:role="line">ロータリーエンコーダで</tspan><tspan
+           id="tspan3046"
+           y="137.59419"
+           x="26.478643"
+           sodipodi:role="line">計測されるパルス</tspan></text>
+      <text
+         transform="scale(0.99548904,1.0045314)"
+         sodipodi:linespacing="125%"
+         id="text3048"
+         y="94.415932"
+         x="198.95346"
+         style="font-size:18.16952133px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="94.415932"
+           x="198.95346"
+           id="tspan3050"
+           sodipodi:role="line">HIGH</tspan></text>
+      <text
+         transform="scale(0.98993955,1.0101627)"
+         sodipodi:linespacing="125%"
+         id="text3052"
+         y="153.88899"
+         x="202.12897"
+         style="font-size:18.06823158px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="153.88899"
+           x="202.12897"
+           id="tspan3054"
+           sodipodi:role="line">LOW</tspan></text>
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path3056"
+         d="m 729.62834,254.33019 -32.07433,0 0,-57.81975 -167.64621,0.30016 0.66133,58.23049 -33.72764,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         transform="scale(0.97644385,1.0241244)"
+         sodipodi:linespacing="125%"
+         id="text3058"
+         y="234.60555"
+         x="21.932858"
+         style="font-size:20.51760101px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="234.60555"
+           x="21.932858"
+           id="tspan3060"
+           sodipodi:role="line">ゲートパルス</tspan></text>
+      <text
+         transform="scale(0.99548904,1.0045314)"
+         sodipodi:linespacing="125%"
+         id="text3048-1"
+         y="202.8401"
+         x="196.4904"
+         style="font-size:18.16952133px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="202.8401"
+           x="196.4904"
+           id="tspan3050-7"
+           sodipodi:role="line">HIGH</tspan></text>
+      <text
+         transform="scale(0.98993955,1.0101627)"
+         sodipodi:linespacing="125%"
+         id="text3052-6"
+         y="256.39865"
+         x="199.44633"
+         style="font-size:18.06823158px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           y="256.39865"
+           x="199.44633"
+           id="tspan3054-8"
+           sodipodi:role="line">LOW</tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path3104"
+         d="m 275.77165,340.20464 27.27412,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3106"
+         d="m 338.40111,341.21478 31.31473,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3108"
+         d="m 401.02383,340.72335 31.32818,-0.0273"
+         style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccc"
+         inkscape:connector-curvature="0"
+         id="path3056-8"
+         d="m 467.92651,253.60168 -32.07433,0 0,-57.81975 -167.64621,0.30016 0.66133,58.23049 -33.72764,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <g
+         transform="matrix(0.94143455,0,0,1,0.12557577,-4.0406101)"
+         id="g3183">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.03063512px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 520.10934,152.86161 c -0.63267,0.43066 16.40586,0.31191 28.85029,0.21485 l -0.13134,-64.139726 0,0"
+           id="path2985-4"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.03063512px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 548.90228,89.379831 30.11794,0 0.7171,63.809199 c -0.63266,0.43066 16.40586,0.31191 28.85029,0.21485 l -0.13134,-64.139724 0,0"
+           id="path2985-6-0"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.03063512px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 608.7356,89.164972 30.11794,0 0.7171,63.809198 c -0.63267,0.43066 16.40586,0.31191 28.85029,0.21485 l -0.13135,-64.139723 0,0"
+           id="path2985-0-1"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.03063512px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 668.24139,88.936735 30.42372,-0.429714"
+           id="path3030-8"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.03063512px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 698.21429,88.790753 0.35714,63.928567 27.14286,0 0.35714,-63.571425"
+           id="path3181"
+           inkscape:connector-curvature="0" />
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path3190"
+         d="m 685.64104,85.519926 30.43085,-0.126269"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3108-5"
+         d="m 563.15332,342.23859 31.32818,-0.0273"
+         style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3108-5-1"
+         d="m 623.76247,342.2386 31.32818,-0.0273"
+         style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3108-5-1-2"
+         d="m 677.30055,343.24874 12.13528,-0.0273"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3108-5-1-2-5"
+         d="m 532.34367,343.24874 12.13528,-0.0273"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:31.38718033px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="295.75482"
+       y="385.73398"
+       id="text3300"
+       sodipodi:linespacing="125%"
+       transform="scale(1.002042,0.99796219)"><tspan
+         sodipodi:role="line"
+         id="tspan3302"
+         x="295.75482"
+         y="385.73398">3カウント</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:31.38718033px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="558.21844"
+       y="387.03122"
+       id="text3300-4"
+       sodipodi:linespacing="125%"
+       transform="scale(1.002042,0.99796217)"><tspan
+         sodipodi:role="line"
+         id="tspan3302-5"
+         x="558.21844"
+         y="387.03122">4カウント</tspan></text>
+  </g>
+</svg>
