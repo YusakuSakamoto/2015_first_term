@@ -119,13 +119,48 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 \item 操作盤の周波数ダイアルを徐々に回して通風し、目標レイノルズ数となる送風機回転を調べる
 \item 天秤に供試体を取り付け、風洞に設置する。
 \item 水準器を用いて仰角$\alpha = 0$に設置する
+\item 温度計を取り付ける
+\item $\alpha = -20$[degree]に設定する
+\item 無風時の天秤出力を得る
+\item 仰角を変更し(1[degree]ずつ)、各仰角の無風時のデータを得る。
+\item 再び$\alpha = -20$[degree]に設定する
+\item 通風する
+\item 通風時の天秤出力を得る
+\item 仰角を変更し($\alpha = -20$[degree] $\sim +20$[degree],1[degree]ずつ)、各仰角の通風時のデータを得る。
 \end{enumerate}
 
+\subsubsection{圧力計測の手順}
 
-\subsubsection{圧力計速の手順}
+\begin{enumerate}
+\item 圧力センサの電源を入れて出力を安定させる
+\item ピトー管を設定する
+\item 操作盤の周波数ダイアルを徐々に回して通風し、目標レイノルズ数(動圧)となる送風機回転数を調べる
+\item ダミー天秤に供試体を取り付け、風洞に設置する
+\item 水準器を用いて仰角$\alpha = 0$[degree]に設定する
+\item 温度計を設定する
+\item $\alpha = -20$[degree]に設定する
+\item 通風する
+\item 圧力のデータを得る
+\item 仰角を変更し($\alpha = -20$[degree] $\sim +20$[degree],2[degree]ずつ)、各仰角の圧力のデータを得る
+\end{enumerate}
 
 \section{実験結果}
 \subsection{力計測から得られたデータの整理}
+\begin{table}[htb]
+\begin{center}
+  \caption{実験環境の整理}
+  \begin{tabular}{lll} \hline
+温度        &$T_a$  &25.5℃\\
+静圧        &$P_a$  &1003.80[hPa]\\
+レイノルズ数&$Re$   &170000\\
+空気密度    &$\rho$ &1.1710[kg/$m^3$]\\
+粘性係数    &$\mu$  &1.846$\times 10^{-5}$[Pa$\cdot$s]\\
+風速        &$V$    &38.28[m/s]\\
+\hline
+  \end{tabular}
+\end{center}
+\end{table}
+
 \newpage
 \begin{figure}[htbp]
 \begin{center}
@@ -162,6 +197,8 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 \caption{$C_L - C_D$}
 \end{figure}
 
+
+\newpage
 \subsection{圧力計測から得られた圧力係数と圧力分布の整理}
 得られた風洞制圧(大気圧)との差圧を、電圧からパスカルに変換する。このとき使用した32チャンネル圧力センサーユニットの仕様により、1[V]が750[Pa]であることを利用した。
 \begin{figure}[htbp]
@@ -255,11 +292,29 @@ i&x&y'&θ[radian]&$\Delta s$\\\hline
 \caption{$\alpha-C_D$}
 \end{figure}
 
+
+\newpage
+\subsection{力測定から得られる数}
+\begin{table}[htb]
+\begin{center}
+  \caption{$\theta$の算出}
+  \begin{tabular}{ll} \hline
+最大揚力係数 &0.756\\
+失速迎角     &13°\\
+最大揚抗比   &19.8\\
+\hline
+  \end{tabular}
+\end{center}
+\end{table}
+
 \newpage
 \section{考察}
+力計測と圧力計測から得られた揚力特性と抗力特性について比較し、考察する
+
 \section{まとめ}
 \section{参考文献}
 機械工学実験2実験書
 \section{風洞実験に対する感想・要望}
 物体が受ける風の影響は、飛行機に限らず車やバイクなどの高速で移動する物質を制作する上で無視できないものであるので、機械実験で簡単に体験できたのは良い経験となりました。
+
 \end{document}
