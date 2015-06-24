@@ -205,21 +205,21 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 \begin{center}
 \includegraphics[width=12cm]{./2-CP/-20to-12.eps}
 \end{center}
-\caption{$-20to-12$}
+\caption{$degree = -20,-18,-16,-14,-12$}
 \end{figure}
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=12cm]{./2-CP/-10to-2.eps}
 \end{center}
-\caption{$-10to-2$}
+\caption{$degree = -10,-8,-6,-4,-2$}
 \end{figure}
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=12cm]{./2-CP/0to8.eps}
 \end{center}
-\caption{$0to8$}
+\caption{$degree = 0,2,4,6,8$}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -239,7 +239,7 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 \end{eqnarray}
 よって、$\theta$を算出するにはyの理論式を微分したものに$arctan$によって$\theta$を算出する。計算結果は以下の通りである。
 \begin{eqnarray}
-\frac{dy}{dx} = -0.126+\frac{0.14845}{\sqrt x}-0.7032x+0.8529x^2-0.406x^3
+\frac{dy}{dx} = \frac{0.12}{0.20}(-0.126+\frac{0.14845}{\sqrt x}-0.7032x+0.8529x^2-0.406x^3)
 \end{eqnarray}
 
 また、各面積にかかる力を算出するため、圧力孔付近に局所面積$\Delta s_i$を設ける。その値は求まった角度$\theta$を用いて次の式で算出した。
@@ -295,13 +295,15 @@ i&x&y'&θ[radian]&$\Delta s$\\\hline
 
 \newpage
 \subsection{力測定から得られる数}
+\subsubsection{最大揚力係数}
+
 \begin{table}[htb]
 \begin{center}
   \caption{$\theta$の算出}
   \begin{tabular}{ll} \hline
 最大揚力係数 &0.756\\
-失速迎角     &13°\\
-最大揚抗比   &19.8\\
+失速迎角     &12°\\
+最大揚抗比   &11.316\\
 \hline
   \end{tabular}
 \end{center}

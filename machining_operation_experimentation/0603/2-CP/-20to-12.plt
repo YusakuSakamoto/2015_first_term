@@ -31,7 +31,7 @@ set timefmt x2 "%d/%m/%y,%H:%M"
 set x2data 
 set boxwidth
 set style fill  empty border
-set style rectangle back fc lt -3 fillstyle   solid 1.00 border lt -1
+set style rectangle back fc  lt -3 fillstyle   solid 1.00 border lt -1
 set style circle radius graph 0.02, first 0, 0 
 set style ellipse size graph 0.05, 0.03, first 0 angle 0 units xy
 set dummy x,y
@@ -114,17 +114,17 @@ set rrange [ * : * ] noreverse nowriteback
 set trange [ * : * ] noreverse nowriteback
 set urange [ * : * ] noreverse nowriteback
 set vrange [ * : * ] noreverse nowriteback
-set xlabel "" 
+set xlabel "x/c" 
 set xlabel  offset character 0, 0, 0 font "" textcolor lt -1 norotate
 set x2label "" 
 set x2label  offset character 0, 0, 0 font "" textcolor lt -1 norotate
 set xrange [ * : * ] noreverse nowriteback
 set x2range [ * : * ] noreverse nowriteback
-set ylabel "" 
+set ylabel "C_p" 
 set ylabel  offset character 0, 0, 0 font "" textcolor lt -1 rotate by -270
 set y2label "" 
 set y2label  offset character 0, 0, 0 font "" textcolor lt -1 rotate by -270
-set yrange [ -1.00000 : 1.00000 ] noreverse nowriteback
+set yrange [ -4.00000 : 1.00000 ] noreverse nowriteback
 set y2range [ * : * ] noreverse nowriteback
 set zlabel "" 
 set zlabel  offset character 0, 0, 0 font "" textcolor lt -1 norotate
@@ -151,5 +151,5 @@ set fontpath
 set psdir
 set fit noerrorvariables
 GNUTERM = "wxt"
-plot "2-CP-20.dat" using 1:2 with lines ti "-20[degree]", "2-CP-20.dat" using 1:3 with lines ti "-18[degree]", "2-CP-20.dat" using 1:4 with lines ti "-16[degree]", "2-CP-20.dat" using 1:5 with lines ti "-14[degree]", "2-CP-20.dat" using 1:6 with lines ti "-12[degree]"
+plot "2-CP-20.dat" using 1:2 ti "-20[degree]" with linespoints, "2-CP-20.dat" using 1:3 ti "-18[degree]" with linespoints, "2-CP-20.dat" using 1:4 ti "-16[degree]" with linespoints, "2-CP-20.dat" using 1:5 ti "-14[degree]" with linespoints, "2-CP-20.dat" using 1:6 ti "-12[degree]" with linespoints
 #    EOF
