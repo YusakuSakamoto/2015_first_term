@@ -17,13 +17,7 @@
 
 %
 \pagestyle{plain}
-\title{機械工学実験2\\３次元翼空力実験}
-\author{九州工業大学　機械知能工学科　機械知能コース 3年\\学籍番号：13104069 坂本悠作 \\実験日1 2015年6月3日 \\ 実験日2 2015年6月10日}
-
-
 \begin{document}
-\maketitle
-\newpage
 
 \section{目的}
 流体機械の主要素である３次元翼について、低速風洞試験設備を利用した力及び圧力の計測を行い、基本的な圧力特性や性能計算を理解する。
@@ -148,14 +142,14 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 \subsection{力計測から得られたデータの整理}
 \begin{table}[htb]
 \begin{center}
-  \caption{実験環境の整理}
+  \caption{実験環境の整理(力測定)}
   \begin{tabular}{lll} \hline
-温度        &$T_a$  &25.5℃\\
-静圧        &$P_a$  &1003.80[hPa]\\
-レイノルズ数&$Re$   &170000\\
-空気密度    &$\rho$ &1.1710[kg/$m^3$]\\
-粘性係数    &$\mu$  &1.846$\times 10^{-5}$[Pa$\cdot$s]\\
-風速        &$V$    &38.28[m/s]\\
+温度        &$T_a$  &34.495℃\\
+静圧        &$P_a$  &1003.60[hPa]\\
+レイノルズ数&$Re$   &163659.5066\\
+空気密度    &$\rho$ &1.1370[kg/$m^3$]\\
+粘性係数    &$\mu$  &1.888$\times 10^{-5}$[Pa$\cdot$s]\\
+風速        &$V$    &38.857[m/s]\\
 \hline
   \end{tabular}
 \end{center}
@@ -192,7 +186,7 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=12cm]{./CLCD/CLCD.eps}
+\includegraphics[width=12cm]{./CLCD/CLCD2.eps}
 \end{center}
 \caption{$C_L - C_D$}
 \end{figure}
@@ -200,6 +194,20 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 
 \newpage
 \subsection{圧力計測から得られた圧力係数と圧力分布の整理}
+\begin{table}[htb]
+\begin{center}
+  \caption{実験環境の整理(圧力測定)}
+  \begin{tabular}{lll} \hline
+温度        &$T_a$  &31.886℃\\
+静圧        &$P_a$  &1008.001[hPa]\\
+レイノルズ数&$Re$   &165810\\
+空気密度    &$\rho$ &1.15129[kg/$m^3$]\\
+粘性係数    &$\mu$  &1.876$\times 10^{-5}$[Pa$\cdot$s]\\
+風速        &$V$    &38.61[m/s]\\
+\hline
+  \end{tabular}
+\end{center}
+\end{table}
 得られた風洞制圧(大気圧)との差圧を、電圧からパスカルに変換する。このとき使用した32チャンネル圧力センサーユニットの仕様により、1[V]が750[Pa]であることを利用した。
 \begin{figure}[htbp]
 \begin{center}
@@ -285,7 +293,7 @@ i&x&y'&θ[radian]&$\Delta s$\\\hline
 \caption{$\alpha-C_L$}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[htb]
 \begin{center}
 \includegraphics[width=12cm]{./2-CL-CD/CD.eps}
 \end{center}
@@ -296,6 +304,12 @@ i&x&y'&θ[radian]&$\Delta s$\\\hline
 \newpage
 \subsection{力測定から得られる数}
 \subsubsection{最大揚力係数}
+仰角を大きくすると揚力係数が大きくなるが、大きくし過ぎると気流に渦が発生してしまい、逆に揚力係数が減少してしまう。このような境界層剥離が発生する現象を失速といい、失速する直前の揚力係数を最大揚力係数という。今回の実験で算出した揚力係数のグラフの最大値を読むことで、この値を読み取ることができる。
+
+\subsubsection{失速仰角}
+失速仰角は、失速が発生したときの仰角(翼の傾き)のことである。
+\subsubsection{最大揚抗比}
+揚抗比とは、揚力と抗力の比であり、この揚抗比が高いほど翼の性能が良いことを示している。今回の実験で得られた$C_L-C_D(図5)$によって、揚抗比の最大値を求めた。求め方は、原点(0,0)からポーラ曲線に接線を引き、その値を読み取る方法を採用した。
 
 \begin{table}[htb]
 \begin{center}
@@ -309,13 +323,37 @@ i&x&y'&θ[radian]&$\Delta s$\\\hline
 \end{center}
 \end{table}
 
-\newpage
 \section{考察}
-力計測と圧力計測から得られた揚力特性と抗力特性について比較し、考察する
+\subsection{$C_L \sim \alpha$の比較}
+力測定で得られた揚力特性と圧力測定で得られた揚力特性を以下に示す。
+\begin{figure}
+\begin{center}
+\includegraphics[width=12cm]{./2-CL-CD/CL-CD2.eps}
+\end{center}
+\caption{$\alpha-C_L$}
+\end{figure}
+力測定と圧力測定を比較すると、圧力測定の揚力係数の値の方が大きくなっていることがわかる。力測定は天秤を用いて計測しているので、圧力測定で測定できていない要素が存在していると考えられる。この要素として、主に揚力係数は主に流れる気流によって翼が受ける摩擦力が関係していると考えられる。圧力測定では、翼面に対して垂直方向の力しか計測できないことから推測される理由である。それ以外の要素としては、センサの計測誤差、翼の寸法誤差等が考えられるが、摩擦による揚力低下に比べて非常に小さい影響しか無いと考えられる。
+
+\subsection{$C_D \sim \alpha$の比較}
+力測定で得られた揚力特性と圧力測定で得られた抗力特性を以下に示す。
+\begin{figure}[]
+\begin{center}
+\includegraphics[width=12cm]{./2-CL-CD/CD2.eps}
+\end{center}
+\caption{$\alpha-C_D$}
+\end{figure}
+図13を見ると、力測定に比べて中心付近では圧力測定の方が小さく、中心でないところでは圧力測定の方が大きくなっている。これも面に対して平行に働く摩擦力を考慮していないことが挙げられる。仰角が小さい場合は、風流に対して直角平面に翼を投影した面積が小さく、かつ風流による力と翼面の直角方向に働く力と摩擦力がほぼ釣り合っているため力測定では0付近となり、仰角が大きい場合は風流に対して直角平面に翼を投影した面積が大きいので、その分風流による力が大きくなり、翌面の直角方向に働く力の抗力成分が大きくなったため、図13のような差が見られていると考えられる。
+
 
 \section{まとめ}
+仰角を変えていく毎に取得した翼が得る揚力と抗力のデータを分析し、仰角との関係性について考察した。
+
 \section{参考文献}
-機械工学実験2実験書
+\begin{enumerate}
+\item 機械工学実験2実験書
+\item \url{http://www.jal.com/ja/jiten/dict/p051.html}
+\end{enumerate}
+
 \section{風洞実験に対する感想・要望}
 物体が受ける風の影響は、飛行機に限らず車やバイクなどの高速で移動する物質を制作する上で無視できないものであるので、機械実験で簡単に体験できたのは良い経験となりました。
 

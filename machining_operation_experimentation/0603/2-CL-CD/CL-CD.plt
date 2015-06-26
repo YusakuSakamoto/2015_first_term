@@ -11,13 +11,8 @@
 #    	gnuplot home:     http://www.gnuplot.info
 #    	faq, bugs, etc:   type "help FAQ"
 #    	immediate help:   type "help"  (plot window: hit 'h')
-# set terminal postscript eps enhanced defaultplex \
-   leveldefault monochrome colortext \
-   dashed dashlength 1.0 linewidth 1.0 butt noclip \
-   nobackground \
-   palfuncparam 2000,0.003 \
-   "Helvetica" 14  fontscale 1.0 
-# set output 'CL-CD.eps'
+# set terminal wxt 0
+# set output
 unset clip points
 set clip one
 unset clip two
@@ -36,7 +31,7 @@ set timefmt x2 "%d/%m/%y,%H:%M"
 set x2data 
 set boxwidth
 set style fill  empty border
-set style rectangle back fc lt -3 fillstyle   solid 1.00 border lt -1
+set style rectangle back fc  lt -3 fillstyle   solid 1.00 border lt -1
 set style circle radius graph 0.02, first 0, 0 
 set style ellipse size graph 0.05, 0.03, first 0 angle 0 units xy
 set dummy x,y
@@ -156,5 +151,5 @@ set fontpath
 set psdir
 set fit noerrorvariables
 GNUTERM = "wxt"
-plot "CL-CD.dat" using 1:2 ti "C_L"
+plot "CL-CD.dat" using 1:2 with linespoints ti "pressure", "../CL/CL.dat" with linespoints ti "power"
 #    EOF
