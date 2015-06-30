@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  29 JUN 2015 23:49
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  30 JUN 2015 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -257,14 +257,15 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2] [3] (./main.aux) ) 
+) [2] [3] [4]
+(./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3032 strings out of 495129
- 38902 string characters out of 6182594
- 98181 words of memory out of 5000000
- 6350 multiletter control sequences out of 15000+600000
- 19773 words of font info for 77 fonts, out of 8000000 for 9000
+ 3035 strings out of 495129
+ 38932 string characters out of 6182594
+ 102181 words of memory out of 5000000
+ 6352 multiletter control sequences out of 15000+600000
+ 19941 words of font info for 78 fonts, out of 8000000 for 9000
  80 hyphenation exceptions out of 8191
- 27i,4n,32p,291b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,9n,32p,661b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (3 pages, 4436 bytes).
+Output written on main.dvi (4 pages, 12860 bytes).
