@@ -11,8 +11,13 @@
 #    	gnuplot home:     http://www.gnuplot.info
 #    	faq, bugs, etc:   type "help FAQ"
 #    	immediate help:   type "help"  (plot window: hit 'h')
-# set terminal wxt 0
-# set output
+# set terminal postscript eps enhanced defaultplex \
+   leveldefault monochrome colortext \
+   dashed dashlength 1.0 linewidth 1.0 butt noclip \
+   nobackground \
+   palfuncparam 2000,0.003 \
+   "Helvetica" 14  fontscale 1.0 
+# set output 'CD2.eps'
 unset clip points
 set clip one
 unset clip two
@@ -43,10 +48,7 @@ set format z "% g"
 set format cb "% g"
 set format r "% g"
 set angles radians
-set grid nopolar
-set grid xtics nomxtics ytics nomytics noztics nomztics \
- nox2tics nomx2tics noy2tics nomy2tics nocbtics nomcbtics
-set grid layerdefault   linetype 0 linewidth 1.000,  linetype 0 linewidth 1.000
+unset grid
 set raxis
 set key title ""
 set key inside right top vertical Right noreverse enhanced autotitles nobox
@@ -117,17 +119,17 @@ set rrange [ * : * ] noreverse nowriteback
 set trange [ * : * ] noreverse nowriteback
 set urange [ * : * ] noreverse nowriteback
 set vrange [ * : * ] noreverse nowriteback
-set xlabel "" 
+set xlabel "Angle of Attack:a[degree]" 
 set xlabel  offset character 0, 0, 0 font "" textcolor lt -1 norotate
 set x2label "" 
 set x2label  offset character 0, 0, 0 font "" textcolor lt -1 norotate
 set xrange [ * : * ] noreverse nowriteback
 set x2range [ * : * ] noreverse nowriteback
-set ylabel "" 
+set ylabel "Drag Coefficient:C_D" 
 set ylabel  offset character 0, 0, 0 font "" textcolor lt -1 rotate by -270
 set y2label "" 
 set y2label  offset character 0, 0, 0 font "" textcolor lt -1 rotate by -270
-set yrange [ -2.00000 : 1.00000 ] noreverse nowriteback
+set yrange [ * : * ] noreverse nowriteback
 set y2range [ * : * ] noreverse nowriteback
 set zlabel "" 
 set zlabel  offset character 0, 0, 0 font "" textcolor lt -1 norotate
@@ -154,5 +156,5 @@ set fontpath
 set psdir
 set fit noerrorvariables
 GNUTERM = "wxt"
-plot "2-CP-20.dat" using 1:12 with linespoints ti "0[degree]", "2-CP-20.dat" using 1:13 with linespoints ti "2[degree]", "2-CP-20.dat" using 1:14 with linespoints ti "4[degree]", "2-CP-20.dat" using 1:15 with linespoints ti "6[degree]", "2-CP-20.dat" using 1:16 with linespoints ti "8[degree]"
+plot "../CD/D.dat" using 1:2 with linespoints ti "power", "CL-CD.dat" using 1:3 with linespoints ti "pressure"
 #    EOF

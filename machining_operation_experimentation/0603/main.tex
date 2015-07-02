@@ -158,14 +158,14 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 \newpage
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=9cm,angle=-90]{./CL/CL.eps}
+\includegraphics[width=12cm]{./CL/CL.eps}
 \end{center}
 \caption{$\alpha - C_L$}
 \end{figure}
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=9cm,angle=-90]{./CD/CD.eps}
+\includegraphics[width=12cm]{./CD/CD.eps}
 \end{center}
 \caption{$\alpha - C_D$}
 \end{figure}
@@ -186,7 +186,7 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=12cm]{./CLCD/CLCD2.eps}
+\includegraphics[width=12cm]{./CLCD/CLCD.eps}
 \end{center}
 \caption{$C_L - C_D$}
 \end{figure}
@@ -234,7 +234,7 @@ OFFSET範囲              &$\pm 4mV/℃  atF.S. $\\
 \begin{center}
 \includegraphics[width=12cm]{./2-CP/10-20.eps}
 \end{center}
-\caption{$10to20$}
+\caption{$degree = 10,12,14,16,18,20$}
 \end{figure}
 
 今回の実験で使用した翼型NACA0012の理論式を以下に示す。
@@ -295,7 +295,7 @@ i&x&y'&θ[radian]&$\Delta s$\\\hline
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=12cm]{./2-CL-CD/CD.eps}
+\includegraphics[width=12cm]{./2-CL-CD/CD2.eps}
 \end{center}
 \caption{$\alpha-C_D$}
 \end{figure}
@@ -325,24 +325,12 @@ i&x&y'&θ[radian]&$\Delta s$\\\hline
 
 \section{考察}
 \subsection{$C_L \sim \alpha$の比較}
-力測定で得られた揚力特性と圧力測定で得られた揚力特性を以下に示す。
-\begin{figure}
-\begin{center}
-\includegraphics[width=12cm]{./2-CL-CD/CL-CD2.eps}
-\end{center}
-\caption{$\alpha-C_L$}
-\end{figure}
+力測定で得られた揚力特性と圧力測定で得られた揚力特性を図10に示す。
 力測定と圧力測定を比較すると、圧力測定の揚力係数の値の方が大きくなっていることがわかる。力測定は天秤を用いて計測しているので、圧力測定で測定できていない要素が存在していると考えられる。この要素として、主に揚力係数は主に流れる気流によって翼が受ける摩擦力が関係していると考えられる。圧力測定では、翼面に対して垂直方向の力しか計測できないことから推測される理由である。それ以外の要素としては、センサの計測誤差、翼の寸法誤差等が考えられるが、摩擦による揚力低下に比べて非常に小さい影響しか無いと考えられる。
 
 \subsection{$C_D \sim \alpha$の比較}
-力測定で得られた揚力特性と圧力測定で得られた抗力特性を以下に示す。
-\begin{figure}[]
-\begin{center}
-\includegraphics[width=12cm]{./2-CL-CD/CD2.eps}
-\end{center}
-\caption{$\alpha-C_D$}
-\end{figure}
-図13を見ると、力測定に比べて中心付近では圧力測定の方が小さく、中心でないところでは圧力測定の方が大きくなっている。これも面に対して平行に働く摩擦力を考慮していないことが挙げられる。仰角が小さい場合は、風流に対して直角平面に翼を投影した面積が小さく、かつ風流による力と翼面の直角方向に働く力と摩擦力がほぼ釣り合っているため力測定では0付近となり、仰角が大きい場合は風流に対して直角平面に翼を投影した面積が大きいので、その分風流による力が大きくなり、翌面の直角方向に働く力の抗力成分が大きくなったため、図13のような差が見られていると考えられる。
+力測定で得られた揚力特性と圧力測定で得られた抗力特性を図11に示す。
+図11を見ると、力測定に比べて中心付近では圧力測定の方が小さく、中心でないところでは圧力測定の方が大きくなっている。これも面に対して平行に働く摩擦力を考慮していないことが挙げられる。仰角が小さい場合は、風流に対して直角平面に翼を投影した面積が小さく、かつ風流による力と翼面の直角方向に働く力と摩擦力がほぼ釣り合っているため力測定では0付近となり、仰角が大きい場合は風流に対して直角平面に翼を投影した面積が大きいので、その分風流による力が大きくなり、翌面の直角方向に働く力の抗力成分が大きくなったため、図13のような差が見られていると考えられる。
 
 \subsection{誘導抗力}
 

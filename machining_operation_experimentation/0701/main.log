@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  2 JUL 2015 17:26
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  1 JUL 2015 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -218,85 +218,38 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 \c@lstlisting=\count115
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 22.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 22.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 26.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 26.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 27.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 27.
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+ [1
 
 ]
-Overfull \hbox (8.68474pt too wide) in paragraph at lines 100--101
-[]\JY1/mc/m/n/10.95 圧力孔の位置は 、 上面の \OT1/cmr/m/n/10.95 2,6,12,20,30,40
-,50,60,75,90[%\JY1/mc/m/n/10.95 翼弦長\OT1/cmr/m/n/10.95 ], \JY1/mc/m/n/10.95 
-下面の \OT1/cmr/m/n/10.95 1,4,9,17,25,35,45,55,70,85[%
- []
-
-[2] [3]
-File: ./CL/CL.eps Graphic file (type eps)
- <./CL/CL.eps>
-File: ./CD/CD.eps Graphic file (type eps)
- <./CD/CD.eps>
-File: ./CMC4/CMC4.eps Graphic file (type eps)
- <./CMC4/CMC4.eps>
-File: ./N0/N0.eps Graphic file (type eps)
- <./N0/N0.eps>
-File: ./CLCD/CLCD.eps Graphic file (type eps)
-
-<./CLCD/CLCD.eps> [4] [5] [6]
-File: ./2-CP/-20to-12.eps Graphic file (type eps)
- <./2-CP/-20to-12.eps>
-File: ./2-CP/-10to-2.eps Graphic file (type eps)
- <./2-CP/-10to-2.eps>
-File: ./2-CP/0to8.eps Graphic file (type eps)
-
-<./2-CP/0to8.eps>
-File: ./2-CP/10-20.eps Graphic file (type eps)
- <./2-CP/10-20.eps> [7] [8]
-File: ./2-CL-CD/CL-CD.eps Graphic file (type eps)
- <./2-CL-CD/CL-CD.eps>
-File: ./2-CL-CD/CD2.eps Graphic file (type eps)
-
-<./2-CL-CD/CD2.eps> [9] [10] [11] [12] (./main.aux) ) 
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 48.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 48.
+ [2] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3069 strings out of 495129
- 39320 string characters out of 6182594
- 105095 words of memory out of 5000000
- 6369 multiletter control sequences out of 15000+600000
- 21227 words of font info for 83 fonts, out of 8000000 for 9000
+ 2953 strings out of 495129
+ 37885 string characters out of 6182594
+ 96215 words of memory out of 5000000
+ 6305 multiletter control sequences out of 15000+600000
+ 10210 words of font info for 42 fonts, out of 8000000 for 9000
  80 hyphenation exceptions out of 8191
- 27i,9n,32p,550b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,4n,32p,215b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (12 pages, 21336 bytes).
+Output written on main.dvi (2 pages, 1048 bytes).

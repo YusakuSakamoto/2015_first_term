@@ -43,7 +43,10 @@ set format z "% g"
 set format cb "% g"
 set format r "% g"
 set angles radians
-unset grid
+set grid nopolar
+set grid xtics nomxtics ytics nomytics noztics nomztics \
+ nox2tics nomx2tics noy2tics nomy2tics nocbtics nomcbtics
+set grid layerdefault   linetype 0 linewidth 1.000,  linetype 0 linewidth 1.000
 set raxis
 set key title ""
 set key inside right top vertical Right noreverse enhanced autotitles nobox
@@ -124,7 +127,7 @@ set ylabel ""
 set ylabel  offset character 0, 0, 0 font "" textcolor lt -1 rotate by -270
 set y2label "" 
 set y2label  offset character 0, 0, 0 font "" textcolor lt -1 rotate by -270
-set yrange [ -1.00000 : 1.00000 ] noreverse nowriteback
+set yrange [ -4.00000 : 1.00000 ] noreverse nowriteback
 set y2range [ * : * ] noreverse nowriteback
 set zlabel "" 
 set zlabel  offset character 0, 0, 0 font "" textcolor lt -1 norotate
@@ -151,5 +154,5 @@ set fontpath
 set psdir
 set fit noerrorvariables
 GNUTERM = "wxt"
-plot "2-CP-20.dat" using 1:17 with lines ti "10[degree]", "2-CP-20.dat" using 1:18 with lines ti "12[degree]", "2-CP-20.dat" using 1:19 with lines ti "14[degree]", "2-CP-20.dat" using 1:20 with lines ti "16[degree]", "2-CP-20.dat" using 1:21 with lines ti "18[degree]", "2-CP-20.dat" using 1:22 with lines ti "20[degree]"
+plot "2-CP-20.dat" using 1:17 with linespoints ti "10[degree]", "2-CP-20.dat" using 1:18 with linespoints ti "12[degree]", "2-CP-20.dat" using 1:19 with linespoints ti "14[degree]", "2-CP-20.dat" using 1:20 with linespoints ti "16[degree]", "2-CP-20.dat" using 1:21 with linespoints ti "18[degree]", "2-CP-20.dat" using 1:22 with linespoints ti "20[degree]"
 #    EOF

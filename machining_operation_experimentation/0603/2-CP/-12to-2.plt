@@ -117,17 +117,17 @@ set rrange [ * : * ] noreverse nowriteback
 set trange [ * : * ] noreverse nowriteback
 set urange [ * : * ] noreverse nowriteback
 set vrange [ * : * ] noreverse nowriteback
-set xlabel "" 
+set xlabel "x/c" 
 set xlabel  offset character 0, 0, 0 font "" textcolor lt -1 norotate
 set x2label "" 
 set x2label  offset character 0, 0, 0 font "" textcolor lt -1 norotate
 set xrange [ * : * ] noreverse nowriteback
 set x2range [ * : * ] noreverse nowriteback
-set ylabel "" 
+set ylabel "C_p" 
 set ylabel  offset character 0, 0, 0 font "" textcolor lt -1 rotate by -270
 set y2label "" 
 set y2label  offset character 0, 0, 0 font "" textcolor lt -1 rotate by -270
-set yrange [ -2.00000 : 1.00000 ] noreverse nowriteback
+set yrange [ -4.00000 : 1.00000 ] reverse nowriteback
 set y2range [ * : * ] noreverse nowriteback
 set zlabel "" 
 set zlabel  offset character 0, 0, 0 font "" textcolor lt -1 norotate
@@ -154,5 +154,5 @@ set fontpath
 set psdir
 set fit noerrorvariables
 GNUTERM = "wxt"
-plot "2-CP-20.dat" using 1:12 with linespoints ti "0[degree]", "2-CP-20.dat" using 1:13 with linespoints ti "2[degree]", "2-CP-20.dat" using 1:14 with linespoints ti "4[degree]", "2-CP-20.dat" using 1:15 with linespoints ti "6[degree]", "2-CP-20.dat" using 1:16 with linespoints ti "8[degree]"
+plot "2-CP-20.dat" using 1:7 with linespoints ti "-10[degree]", "2-CP-20.dat" using 1:8 with linespoints ti "-8[degree]", "2-CP-20.dat" using 1:9 with linespoints ti "-6[degree]", "2-CP-20.dat" using 1:10 with linespoints ti "-4[degree]", "2-CP-20.dat" using 1:11 with linespoints ti "-2[degree]"
 #    EOF
