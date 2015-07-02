@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  2 JUL 2015 18:06
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  2 JUL 2015 18:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -289,14 +289,16 @@ File: ./2-CL-CD/CL-CD.eps Graphic file (type eps)
  <./2-CL-CD/CL-CD.eps>
 File: ./2-CL-CD/CD2.eps Graphic file (type eps)
 
-<./2-CL-CD/CD2.eps> [9] [10] [11] [12] [13] (./main.aux) ) 
+<./2-CL-CD/CD2.eps> [9] [10] [11]
+File: yuudoukouryoku.eps Graphic file (type eps)
+ <yuudoukouryoku.eps> [12] [13] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3069 strings out of 495129
- 39320 string characters out of 6182594
+ 3071 strings out of 495129
+ 39356 string characters out of 6182594
  105095 words of memory out of 5000000
- 6369 multiletter control sequences out of 15000+600000
+ 6370 multiletter control sequences out of 15000+600000
  21227 words of font info for 83 fonts, out of 8000000 for 9000
  80 hyphenation exceptions out of 8191
  27i,9n,32p,550b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (13 pages, 22448 bytes).
+Output written on main.dvi (13 pages, 22596 bytes).
