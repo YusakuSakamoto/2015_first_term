@@ -39,7 +39,21 @@
 \author{九州工業大学 機械知能工学科　機械コース\\3年 学籍番号:13104069 坂本 悠作}
 \date{
 実験日2:平成27年7月\,\,\,\,8日\\
-提出日 :平成27年7月15日
+提出日 :平成27年7月15日\\
+共同実験者\\
+川内　諒\\
+川上　晃弘\\
+金城　悟\\
+草場　悠真\\
+石井　敦\\
+一ノ宮　浩祐\\
+砂野　仁輝\\
+高野　真里\\
+是永　遼介\\
+酒井　淳\\
+里中　花実\\
+白石　大輔\\
+高木　怜\\
 }
 \begin{document}
 \maketitle
@@ -48,5 +62,132 @@
 \section{目的}
 並流型及び交流型熱交換器について、対数平均温度差、熱通過率、及び温度効率を実験により求め、熱伝達理論と実験の比較、実験結果の整理方法を学ぶ.
 \section{熱交換器の基礎}
+用語の整理
+\begin{enumerate}
+\item ヌセルト数\\
+対流熱伝導の際に、壁面での温度勾配を基準温度勾配で除したもの。このあたいが大きければ壁面でより急峻な変化をしており、逆に小さければ壁面での変化は緩やかになる。
+\begin{eqnarray}
+Nu = \frac{hd}{\lambda}
+\end{eqnarray}
+\item レイノルズ数\\
+流れの特性を表す無次元数で、層流か乱流かを判断する量。分子は慣性力、分母は粘性を示す量で、乱流が発生しにくい環境(慣性力が小さく、粘性が大きい)ではレイノルズ数は小さくなる。
+\begin{eqnarray}
+Re = \frac{\rho u l}{\mu}
+\end{eqnarray}
+\item プラントル数\\
+流れと熱移動の相関を表す無次元数。温度境界層と速度境界層の関係を注目した場合、速度境界層に対して温度境界層の方が大きければ、Pr$<$1となり、速度境界層に温度境界層が一致していればPr=1,温度境界層の方が小さければPr$>$1となる。
+\begin{eqnarray}
+Pr = \frac{\nu}{\alpha} =\frac{c_p\mu}{\lambda}
+\end{eqnarray}
+\end{enumerate}
+
+Colburnの実験式($L/D>60$の範囲で適用できる理論式)
+\begin{eqnarray}
+Nu = \frac{hd}{\lambda} =0.023Re^{0.8}Pr^{\frac{1}{3}}
+\end{eqnarray}
+
+\section{バッキンガムの$\pi$定理}
+バッキンガムの$\pi$定理は、n個の物理量とm個の基本物理量が存在するとき、(n-m)個の無次元量で表現できるという定理。熱伝導実験で関係がある物理量を表1に示す。
+\begin{table}[htb]
+\begin{center}
+  \caption{物理量}
+  \begin{tabular}{lcc} \hline
+物理量&記号&MLST次元式\\\hline
+熱伝達率&h&$M/(S^3T)$\\
+流体の密度&$\rho$&$M/L^3$\\
+定圧比熱&$C_p$&$L^2/(S^2)$\\
+代表寸法&l&L\\
+流体の熱伝導率&$\lambda$&$ML/(S^3T)$\\
+流速&w&L/S\\
+流体の粘性係数&$\mu$&$M/(LS)$\\
+\hline
+  \end{tabular}
+\end{center}
+\end{table}
+\begin{eqnarray}
+Nu = \frac{hd}{\lambda} =0.023Re^{0.8}Pr^{\frac{1}{3}}
+\end{eqnarray}
+
+これら7つの物理量に対して、次の式が成立する
+\begin{eqnarray}
+f(h,\rho,C_p,l,\lambda,w,\mu) = 0
+\end{eqnarray}
+よって、(物理量-基本物理量)=(7-4)=3となるので、3つの無次元数を用いて
+\begin{eqnarray}
+f(\pi_1,\pi_2,\pi_3) = 0
+\end{eqnarray}
+\subsection{ヌセルト数の導出}
+ヌセルト数は、熱伝達率hに関する無次元量であるので、$l,\lambda,w,\mu$を用いて無次元化していく。無次元量$\pi_1$とhの間には、次の関係があるとする。
+\begin{eqnarray}
+\pi_1 = \frac{h}{l^a \lambda^b w^c \mu^d}
+\end{eqnarray}
+MLST次元量で書き直すと、
+\begin{eqnarray}
+\pi_1[\cdot] = \frac{M^1S^{-3}T^{-1}}{M^{b+d} L^{a+b+c-d} S^{-3b-c-d} T^{-b}}
+\end{eqnarray}
+よって、連立方程式が成り立つ。
+\begin{eqnarray}
+b+d = 1\nonumber\\
+a+b+c-d = 0\nonumber\\
+-3b-c-d = -3\nonumber\\
+-b = -1\nonumber
+\end{eqnarray}
+これを解いて、a=-1,b=1,c=0,d=0となる。よって、
+\begin{eqnarray}
+\pi_1 = \frac{hl}{\lambda}= Nu
+\end{eqnarray}
+同様に、
+\begin{eqnarray}
+\pi_2 = \frac{wl\rho}{\mu}= Re\\
+\pi_3 = \frac{C_p\mu}{\lambda}= Pr
+\end{eqnarray}
+
+以上より、
+\begin{eqnarray}
+\pi_1 &=& f(\pi_2,\pi_3)\nonumber\\
+Nu    &=& f(Re,Pr)\nonumber\\
+      &=& CRe^mPr^n (C,m,nは定数)
+\end{eqnarray}
+\section{最小自乗法}
+理論式より、
+\begin{eqnarray}
+Nu/Pr^{1/3}=CRe^m (C,mは定数)\nonumber
+\end{eqnarray}
+であるので、誤差の自乗が最小となるようなC,mを求める。$y=\log (Nu/Pr^{1/3}),x=Re,\alpha = m,\beta = \log(C)$とすれば、伝熱実験で使用したプログラムを用いて求めることができる。
+\begin{eqnarray}
+  Nu/Pr^{1/3}=10^{-1.77002}Re^{0.810572}
+\end{eqnarray}
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=14cm]{./Colburn/data.eps}
+\end{center}
+\caption{レポート課題3}
+\end{figure}
+\begin{table}[htb]
+\begin{center}
+  \caption{比較表}
+  \begin{tabular}{|l|c|c|} \hline
+$Nu/Pr^{1/3}$実験式&$Nu/Pr^{1/3}$Colburnの式&誤差(Colburn基準[\%])\\
+\hline
+123.0&143.942&85.45\\
+96.01&118.675&80.90\\
+66.6 & 86.221&77.24\\
+57.73& 65.528&88.10\\
+36.56& 45.557&80.25\\\hline
+  \end{tabular}
+\end{center}
+\end{table}
+全体的に理論式よりも小さい値となった。誤差の大きいもので最大23\%、小さいもので12\%という結果になった。これの理由として、水の流れによって発生する管内摩擦で摩擦熱が発生し、温度勾配を表すヌセルト数の値が小さくなってしまったためであると考えられる。
+
+\section{並流型と向流型}
+熱交換器には並流型と向流型があるが、向流型のほうが性能が良い。特に管の長さが短い方がその差が顕著に表れる。並流型の方は流れるにつれて温度差が小さくなっていくが、交流型の方は温度差は小さくならない。これによって、熱交換の性能が向上する。
+
+\section{参考文献}
+\begin{enumerate}
+\item \url{http://www.sit.ac.jp/user/konishi/JPN/L_Support/SupportPDF/Non-dimension.pdf}
+\item \url{http://envuniv.net/bakkingam.php}
+\item \url{http://web2.clarkson.edu/projects/subramanian/ch330/notes/Heat%20Transfer%20in%20Flow%20Through%20Conduits.pdf}
+\end{enumerate}
 
 \end{document}

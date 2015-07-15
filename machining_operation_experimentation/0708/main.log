@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  7 JUL 2015 17:14
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  15 JUL 2015 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -218,38 +218,66 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 \c@lstlisting=\count115
  [1
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 48.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 62.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 48.
- [2] (./main.aux) ) 
-Here is how much of TeX's memory you used:
- 2953 strings out of 495129
- 37885 string characters out of 6182594
- 96203 words of memory out of 5000000
- 6305 multiletter control sequences out of 15000+600000
- 10210 words of font info for 42 fonts, out of 8000000 for 9000
- 80 hyphenation exceptions out of 8191
- 27i,4n,32p,215b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 62.
+LaTeX Font Info:    Try loading font information for U+msa on input line 69.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 69.
 
-Output written on main.dvi (2 pages, 1324 bytes).
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 119.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 119.
+ [2] [3]
+File: ./Colburn/data.eps Graphic file (type eps)
+
+<./Colburn/data.eps> [4]
+Overfull \hbox (11.80751pt too wide) in paragraph at lines 188--189
+[]$\OT1/cmtt/m/n/10.95 http : / / www . sit . ac . jp / user / konishi / JPN / 
+L _ Support / SupportPDF / Non-[]dimension . pdf$ 
+ []
+
+
+Overfull \hbox (28.55357pt too wide) in paragraph at lines 190--191
+[]$\OT1/cmtt/m/n/10.95 http : / / web2 . clarkson . edu / projects / subramania
+n / ch330 / notes / Heat % 20Transfer % 20in %
+ []
+
+[5] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 3054 strings out of 495129
+ 39181 string characters out of 6182594
+ 102299 words of memory out of 5000000
+ 6367 multiletter control sequences out of 15000+600000
+ 23933 words of font info for 93 fonts, out of 8000000 for 9000
+ 80 hyphenation exceptions out of 8191
+ 27i,9n,32p,255b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on main.dvi (5 pages, 10396 bytes).
