@@ -1537,10 +1537,39 @@ f_s = \frac{C_{0r}}{P_0} = \frac{24000}{4479.24} \geq 1
 第2段&:&C=2.5v+10[mm] =2.5 \times 2.2113 + 10 = 15.528[mm] \approx 16[mm]
 \end{eqnarray}
 \section{歯車箱の放熱面積の決定}
-\subsection{BS規格}
-\subsection{AGMA規格}
+\subsection{参考}
+\begin{enumerate}
+\item 馬力[HP],1[HP]=735.5[W]
+\item 1[kcal/h]=1.163[W]
+\item 1[inch]= 0.0254[m]
+\item 1[mm]=0.03937[inch]
+\end{enumerate}
+\subsection{BS(British Standards)規格}
+\begin{enumerate}
+\item $\Delta t$ :許容温度と周囲温度の温度差
+\begin{eqnarray}
+\Delta t &=&  許容温度 - 周囲温度\\
+         &=&  82℃ - 周囲温度
+\end{eqnarray}
+\item Q:歯車箱内での発熱量[kcal/h]
+\begin{eqnarray}
+Q=632(1-\eta)N
+\end{eqnarray}
+\item $\eta$:歯車装置の効率
+\item N:歯車装置に与えられる馬力[HP]
+\item A:歯車箱の放熱面積(底面を除く)[$m^2$]
+\item K:熱通過係数($kcal/(m^2hK)$)
+\end{enumerate}
+BS規格では、放熱面積と歯車箱に加えられる馬力の間に次の関係がある。また、ここでは$\eta=0.98,\Delta t_{max} = 28,N=17000/735.5$とすると、次のようになる。
+\begin{eqnarray}
+A&=&\frac{Q}{K\Delta t_{max}}\\
+ &=&\frac{632(1-\eta)N}{K\Delta t_{max}}\\
+ &=&\frac{632\times(1-0.98) \times 17000/735.5}{10 \times 28}\\
+ &=&1.0434[m^2]
+\end{eqnarray}
+\subsection{AGMA(American Gear Manufacturers Association)規格}
 \begin{figure}[htbp]
-\begin{center}
+  \begin{center}
 \includegraphics[width=9cm]{20127161210319005.eps}
 \end{center}
 \caption{AGMA}
@@ -1556,8 +1585,19 @@ A=43.2 \times (259.753 \times 0.03937)^{1.7} &=& 2249.147 [inch^2]\\
 \end{eqnarray}
 
 \section{油面の高さの決定}
+はねかけ式潤滑法では、油面の高さは中間軸の大歯車の最下位の歯丈の$2\sim3$倍程度にする.また、油面計をつける必要がある。
 \section{重量計算}
+
 \section{歯車箱への装着物}
+\begin{enumerate}
+\item 点検窓
+\item 注油窓
+\item 空気抜け(内圧上昇の防止,防塵防水に対する配慮)
+\item 油面計
+\item 排油口
+\item 吊り金具
+\item ノックピン(組み立て用)
+\end{enumerate}
 \section{仕上げ記号、はめあい記号の決定}
 
 \section{参考文献}
