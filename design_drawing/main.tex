@@ -1115,6 +1115,10 @@ d=82,b=22,h=14,l=70と仮定すると、
 \end{center}
 \end{table}
 
+
+
+
+
 \section{軸受け計算}
 \newpage
 \subsection{軸受け1の選定}
@@ -1165,7 +1169,8 @@ C &=& \frac{f_h}{f_n} \times P = 11280.1546[N]
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
            &=& 500 \times \frac{100}{3 \times 1300} \times (12500/972.6)^3\\
-           &=& 27126.523 \geq 20000
+           &=& 27126.523 \geq 20000\\
+寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{27126.523}{500} \right)^{1/3} = 3.786
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
@@ -1174,6 +1179,13 @@ C &=& \frac{f_h}{f_n} \times P = 11280.1546[N]
 よって、静等価荷重P_0 = F_r=972.6\\
 f_s = \frac{C_{0r}}{P_0} = \frac{7400}{972.6}\geq 1
 \end{eqnarray}
+
+
+
+
+
+
+
 
 \newpage
 \subsection{軸受け2の選定}
@@ -1196,14 +1208,14 @@ f_s = \frac{C_{0r}}{P_0} = \frac{7400}{972.6}\geq 1
 
 \begin{table}[htb]
 \begin{center}
-  \caption{NSK6011}
+  \caption{NSK6311}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
 内径& d &55 [mm]\\
-外径& D &90 [mm]\\
-基本動定格荷重&$C_{r}$&28300\\
-基本静定格荷重&$C_{0r}$&21200\\
-軸受各部の形状および適用する&$f_0$&15.3\\
+外径& D &120 [mm]\\
+基本動定格荷重&$C_{r}$&71500\\
+基本静定格荷重&$C_{0r}$&44500\\
+軸受各部の形状および適用する&$f_0$&13.1\\
 応力水準によって定まる係数&&\\
 \hline
   \end{tabular}
@@ -1224,8 +1236,16 @@ C &=& \frac{f_h}{f_n} \times P = 11.59794 \times 1972.0276 = 22941.045[N]
 \subsubsection{軸受け2再検討}
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 1300} \times (28300/1972.0276)^3\\
-           &=& 37890.099 \geq 20000
+           &=& 500 \times \frac{100}{3 \times 1300} \times (71500/1972.0276)^3\\
+           &=& 611960.99 \geq 20000
+\end{eqnarray}
+X=0.56,Y=2.30とする。
+\begin{eqnarray}
+P &=& XF_r+YF_a = 0.56 \times 1784.21 + 2.30 \times 972.87 = 3236.76\\
+寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
+           &=& 500 \times \frac{100}{3 \times 1300} \times (71500/3236.76)^3\\
+           &=& 138194.90 \geq 20000\\
+寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{138194.90}{500} \right)^{1/3} = 6.514
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
@@ -1233,7 +1253,7 @@ C &=& \frac{f_h}{f_n} \times P = 11.59794 \times 1972.0276 = 22941.045[N]
 P_0&=&0.6F_r+0.5F_a\\
 &=&0.6 \times 1784.21 + 0.5 \times 972.87 = 1556.961 \leq F_r\\
 よって、静等価荷重P_0 &=& F_r =1784.21\\
-f_s &=& \frac{C_{0r}}{P_0} = \frac{21200}{1784.21}\geq 1
+f_s &=& \frac{C_{0r}}{P_0} = \frac{44500}{1784.21}\geq 1
 \end{eqnarray}
 
 
@@ -1295,7 +1315,8 @@ C &=& \frac{f_h}{f_n} \times P = 51115.654[N]
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
            &=& 500 \times \frac{100}{3 \times 328.5714} \times (53000/6970.86)^3\\
-           &=& 22293.975 \geq 20000
+           &=& 22293.975 \geq 20000\\
+寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{22293.975}{500} \right)^{1/3} = 3.546
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
@@ -1304,6 +1325,12 @@ C &=& \frac{f_h}{f_n} \times P = 51115.654[N]
 よって、静等価荷重P_0 = F_r = 6970.86\\
 f_s = \frac{C_{0r}}{P_0} = \frac{32000}{6970.86} \geq 1
 \end{eqnarray}
+
+
+
+
+
+
 
 \newpage
 \subsection{軸受け4の選定}
@@ -1326,14 +1353,14 @@ f_s = \frac{C_{0r}}{P_0} = \frac{32000}{6970.86} \geq 1
 
 \begin{table}[htb]
 \begin{center}
-  \caption{NSK6308}
+  \caption{NSK6309}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-内径& d &40 [mm]\\
-外径& D &90 [mm]\\
-基本動定格荷重&$C_{r}$&40500\\
-基本静定格荷重&$C_{0r}$&24000\\
-軸受各部の形状および適用する&$f_0$&13.2\\
+内径& d &45 [mm]\\
+外径& D &100 [mm]\\
+基本動定格荷重&$C_{r}$&53000\\
+基本静定格荷重&$C_{0r}$&32000\\
+軸受各部の形状および適用する&$f_0$&13.1\\
 応力水準によって定まる係数&&\\
 \hline
   \end{tabular}
@@ -1353,8 +1380,17 @@ C &=& \frac{f_h}{f_n} \times P = 7.33276 \times 4485.25 = 32889.26[N]
 \subsubsection{軸受け4再検討}
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 328.5714} \times (40500/4485.25)^3\\
-           &=& 37344.2805 \geq 20000
+           &=& 500 \times \frac{100}{3 \times 328.5714} \times (53000/4485.25)^3\\
+           &=& 83692.52 \geq 20000
+\end{eqnarray}
+
+X=0.56,Y=1.71とする。
+\begin{eqnarray}
+P &=& XF_r+YF_a = 0.56 \times 4477 + 1.71 \times 1978.13 = 5889.72\\
+寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
+           &=& 500 \times \frac{100}{3 \times 328.5714} \times (40500/5889.27)^3\\
+           &=& 36971.09 \geq 20000\\
+寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{36971.09}{500} \right)^{1/3} = 4.197
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
@@ -1362,7 +1398,7 @@ C &=& \frac{f_h}{f_n} \times P = 7.33276 \times 4485.25 = 32889.26[N]
 P_0&=&0.6F_r+0.5F_a\\
 &=&0.6 \times 4477 + 0.5 \times 1978.13 = 3675.265 \leq F_r\\
 よって、静等価荷重P_0 &=& F_r = 4477\\
-f_s &=& \frac{C_{0r}}{P_0} = \frac{24000}{4477}\geq 1
+f_s &=& \frac{C_{0r}}{P_0} = \frac{32000}{4477}\geq 1
 \end{eqnarray}
 
 
@@ -1387,14 +1423,14 @@ f_s &=& \frac{C_{0r}}{P_0} = \frac{24000}{4477}\geq 1
 
 \begin{table}[htb]
 \begin{center}
-  \caption{NSK6918}
+  \caption{NSK6018}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
 内径& d & 90 [mm]\\
-外径& D & 125 [mm]\\
-基本動定格荷重&$C_{r}$&3300\\
-基本静定格荷重&$C_{0r}$&31500\\
-軸受各部の形状および適用する&$f_0$&136.5\\
+外径& D & 140 [mm]\\
+基本動定格荷重&$C_{r}$&58000\\
+基本静定格荷重&$C_{0r}$&50000\\
+軸受各部の形状および適用する&$f_0$&15.6\\
 応力水準によって定まる係数&&\\
 \hline
   \end{tabular}
@@ -1414,16 +1450,23 @@ C &=& \frac{f_h}{f_n} \times P = 5.0610 \times 5894.2816 = 29830.959[N]
 \subsubsection{軸受け5再検討}
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 108.0235} \times (33000/5894.2816)^3\\
-           &=& 27575.70 \geq 20000
+           &=& 500 \times \frac{100}{3 \times 108.0235} \times (147022. 60/5894.2816)^3\\
+           &=& 147022.60 \geq 20000
 \end{eqnarray}
-
+X=0.56,Y=1.45とする。
+\begin{eqnarray}
+P &=& XF_r+YF_a = 0.56 \times 5255.86 + 1.71 \times 2951 =7989.49\\
+寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
+           &=& 500 \times \frac{100}{3 \times 108.0235} \times (58000/7989.49)^3\\
+           &=& 59027.90 \geq 20000\\
+寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{59027.90}{500} \right)^{1/3} = 4.9056
+\end{eqnarray}
 \subsubsection{静荷重の確認}
 \begin{eqnarray}
 P_0&=&0.6F_r+0.5F_a\\
 &=&0.6 \times 5255.86 + 0.5 \times 2951 = 4629.016 \leq F_r\\
 よって、静等価荷重P_0 &=& F_r = 5255.86\\
-f_s &=& \frac{C_{0r}}{P_0} = \frac{31500}{5255.86}\geq 1
+f_s &=& \frac{C_{0r}}{P_0} = \frac{50000}{5255.86}\geq 1
 \end{eqnarray}
 
 
@@ -1477,14 +1520,15 @@ C &=& \frac{f_h}{f_n} \times P = 22669.62752[N]
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
            &=& 500 \times \frac{100}{3 \times 108.0235} \times (62000/4479.24)^3\\
-           &=& 30257.740 \geq 20000
+           &=& 30257.740 \geq 20000\\
+寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{30257.74}{500} \right)^{1/3} = 3.926
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
 \begin{eqnarray}
 0.6F_r+0.5F_a=0.6 \times 4479.24 + 0.5 \times 0 = 2687.544 \leq F_r\\
 よって、静等価荷重P_0 = F_r = 4479.24\\
-f_s = \frac{C_{0r}}{P_0} = \frac{24000}{4479.24} \geq 1
+f_s = \frac{C_{0r}}{P_0} = \frac{38500}{4479.24} \geq 1
 \end{eqnarray}
 
 \section{オイルシールの選定}

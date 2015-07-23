@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  21 JUL 2015 09:22
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  21 JUL 2015 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -324,11 +324,11 @@ File: jiku332.eps Graphic file (type eps)
 第 3 章
 [39
 
-] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52
+] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52]
+第 4 章
+[53
 
 ]
-第 4 章
-[53]
 File: 20127161210319005.eps Graphic file (type eps)
  <20127161210319005.eps> [54] [55] (./main.aux) ) 
 Here is how much of TeX's memory you used:
@@ -340,4 +340,4 @@ Here is how much of TeX's memory you used:
  80 hyphenation exceptions out of 8191
  27i,13n,32p,620b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (55 pages, 121300 bytes).
+Output written on main.dvi (55 pages, 124852 bytes).
