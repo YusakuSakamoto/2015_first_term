@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  5 AUG 2015 14:20
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013/Debian) (format=platex 2014.11.14)  29 JUL 2015 08:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,29 +6,30 @@ entering extended mode
 (./main.tex
 pLaTeX2e <2006/11/10> (based on LaTeX2e <2011/06/27> patch level 0)
 Babel <3.9h> and hyphenation patterns for 11 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/platex/base/jarticle.cls
-Document Class: jarticle 2006/06/27 v1.6 Standard pLaTeX class
+(/usr/share/texlive/texmf-dist/tex/platex/base/jreport.cls
+Document Class: jreport 2006/06/27 v1.6 Standard pLaTeX class
 \c@@paper=\count81
 (/usr/share/texlive/texmf-dist/tex/platex/base/jsize11.clo
 File: jsize11.clo 2006/06/27 v1.6 Standard pLaTeX file (size option)
 )
 \c@part=\count82
-\c@section=\count83
-\c@subsection=\count84
-\c@subsubsection=\count85
-\c@paragraph=\count86
-\c@subparagraph=\count87
-\c@figure=\count88
-\c@table=\count89
+\c@chapter=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \symmincho=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
-(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 601.
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 677.
 \toclineskip=\dimen118
 \@lnumwidth=\dimen119
 \bibindent=\dimen120
-\heisei=\count90
+\heisei=\count91
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
@@ -50,13 +51,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count91
+\inf@bad=\count92
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count92
-\leftroot@=\count93
+\uproot@=\count93
+\leftroot@=\count94
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count94
-\DOTSCASE@=\count95
+\classnum@=\count95
+\DOTSCASE@=\count96
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -65,15 +66,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen123
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count96
-\c@MaxMatrixCols=\count97
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
 \dotsspace@=\muskip10
-\c@parentequation=\count98
-\dspbrk@lvl=\count99
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
 \tag@help=\toks16
-\row@=\count100
-\column@=\count101
-\maxfields@=\count102
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
 \andhelp@=\toks17
 \eqnshift@=\dimen124
 \alignsep@=\dimen125
@@ -146,7 +147,7 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 \@iboxstr=\box47
 \@bwsp=\box48
 \@@bwsp=\box49
-\@bcal=\count103
+\@bcal=\count104
 \shaderule=\dimen137
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/listliketab/listliketab.sty
@@ -154,15 +155,15 @@ Package: listliketab 2005/01/09 v1.0a Create list-like tabulars
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count104
-\calc@Bcount=\count105
+\calc@Acount=\count105
+\calc@Bcount=\count106
 \calc@Adimen=\dimen138
 \calc@Bdimen=\dimen139
 \calc@Askip=\skip46
 \calc@Bskip=\skip47
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count106
+\calc@Ccount=\count107
 \calc@Cskip=\skip48
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
@@ -187,23 +188,23 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count107
+\lst@mode=\count108
 \lst@gtempboxa=\box51
 \lst@token=\toks23
-\lst@length=\count108
+\lst@length=\count109
 \lst@currlwidth=\dimen142
-\lst@column=\count109
-\lst@pos=\count110
+\lst@column=\count110
+\lst@pos=\count111
 \lst@lostspace=\dimen143
 \lst@width=\dimen144
-\lst@newlines=\count111
-\lst@lineno=\count112
+\lst@newlines=\count112
+\lst@lineno=\count113
 \lst@maxwidth=\dimen145
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-\c@lstnumber=\count113
-\lst@skipnumbers=\count114
+\c@lstnumber=\count114
+\lst@skipnumbers=\count115
 \lst@framebox=\box52
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -211,89 +212,85 @@ File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-LaTeX Warning: Unused global option(s):
-    [openright].
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
 
-(./main.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-\c@lstlisting=\count115
- [1
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+\c@lstlisting=\count116
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
-]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 62.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 62.
-LaTeX Font Info:    Try loading font information for U+msa on input line 65.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 65.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
+
+] [2
+
+]
+第 1 章
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 29.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 30.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 84.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 40.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 84.
- [2]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 88.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 88.
-File: ./fulie/data.eps Graphic file (type eps)
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 40.
 
-<./fulie/data.eps> [3]
-File: ./fulie/data2.eps Graphic file (type eps)
- <./fulie/data2.eps> [4]
-File: ./q-dtdx/data.eps Graphic file (type eps)
- <./q-dtdx/data.eps> [5] [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 215.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 215.
-
-Overfull \hbox (28.52042pt too wide) in paragraph at lines 231--290
- [] 
+Overfull \hbox (0.89714pt too wide) in paragraph at lines 57--57
+\OML/cmm/m/it/14.4 K\OT1/cmr/m/n/14.4 )$\JY1/gt/m/n/14.4 、 ガスの定圧比熱は $\
+OT1/cmr/m/n/14.4 1\OML/cmm/m/it/14.4 :\OT1/cmr/m/n/14.4 0\OML/cmm/m/it/14.4 kJ=
+\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 kg \OMS/cmsy/m/n/14.4 ^^A \OML/cmm/m/it/1
+4.4 K\OT1/cmr/m/n/14.4 )$\JY1/gt/m/n/14.4 、 ガス側の熱伝達率は $\OT1/cmr/m/n/1
+4.4 40\OML/cmm/m/it/14.4 W=\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 m[] \OMS/cmsy/
+m/n/14.4 ^^A
  []
 
+[3] [4]
+第 2 章
+[5
 
-Overfull \hbox (57.37526pt too wide) in paragraph at lines 305--319
- [] 
- []
-
-File: ./netudentui/data.eps Graphic file (type eps)
-<./netudentui/data.eps> [7] [8] [9] [10] [11] (./main.aux) ) 
+] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3084 strings out of 495129
- 39617 string characters out of 6182594
- 104299 words of memory out of 5000000
- 6387 multiletter control sequences out of 15000+600000
- 23991 words of font info for 94 fonts, out of 8000000 for 9000
+ 3267 strings out of 495129
+ 42622 string characters out of 6182594
+ 102512 words of memory out of 5000000
+ 6576 multiletter control sequences out of 15000+600000
+ 27922 words of font info for 108 fonts, out of 8000000 for 9000
  80 hyphenation exceptions out of 8191
- 27i,9n,32p,442b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,7n,32p,516b,229s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (11 pages, 25520 bytes).
+Output written on main.dvi (5 pages, 8788 bytes).

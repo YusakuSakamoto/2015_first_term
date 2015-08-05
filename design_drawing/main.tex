@@ -972,32 +972,33 @@ r&=&\sqrt{\frac{I}{A}}\\
 \begin{eqnarray}
 P_k &=& C\frac{\pi^2}{l^2}EI\\
 I&=&\frac{\pi d^4}{64}\\
-d&=&\sqrt[4]{P_k\frac{64l[mm^2]}{\pi^3CE[N/mm^2]}}
+d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}
 \end{eqnarray}
 \subsubsection{第2軸受け側の軸}
 \begin{eqnarray}
-d&=&\sqrt[4]{P_k\frac{64l[mm^2]}{\pi^3CE[N/mm^2]}}\\
- &=&\sqrt[4]{972.87 \times \frac{64\times 66.5^2}{\pi^3 \times 206000[N/mm^2]}}\\
- &=&2.56[mm]
+d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}\\
+ &=&\sqrt[4]{972.87 \times \frac{64\times 66.5^2}{\pi^3 \times 206[N/mm^2]}}\\
+ &=&14.41[mm]
 \end{eqnarray}
 \subsubsection{第3軸受けと第4軸受けの間の軸}
 \begin{eqnarray}
-d&=&\sqrt[4]{P_k\frac{64l[mm^2]}{\pi^3CE[N/mm^2]}}\\
- &=&\sqrt[4]{2951 \times \frac{64\times 75^2}{\pi^3 \times 206000[N/mm^2]}}\\
- &=&3.59[mm]
+d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}\\
+ &=&\sqrt[4]{2951 \times \frac{64\times 75^2}{\pi^3 \times 206[N/mm^2]}}\\
+ &=&20.19[mm]
 \end{eqnarray}
 \subsubsection{第4軸受け側の軸}
 \begin{eqnarray}
-d&=&\sqrt[4]{P_k\frac{64l[mm^2]}{\pi^3CE[N/mm^2]}}\\
- &=&\sqrt[4]{1978.13 \times \frac{64\times 66.5^2}{\pi^3 \times 206000[N/mm^2]}}\\
- &=&3.06[mm]
+d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}\\
+ &=&\sqrt[4]{1978.13 \times \frac{64\times 66.5^2}{\pi^3 \times 206[N/mm^2]}}\\
+ &=&17.21[mm]
 \end{eqnarray}
 \subsubsection{第5軸受け側の軸}
 \begin{eqnarray}
-d&=&\sqrt[4]{P_k\frac{64l[mm^2]}{\pi^3CE[N/mm^2]}}\\
- &=&\sqrt[4]{2951 \times \frac{64\times 67.5^2}{\pi^3 \times 206000[N/mm^2]}}\\
- &=&3.41[mm]
+d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}\\
+ &=&\sqrt[4]{2951 \times \frac{64\times 67.5^2}{\pi^3 \times 206[N/mm^2]}}\\
+ &=&19.16[mm]
 \end{eqnarray}
+
 \subsection{ねじり剛性に基づく軸径}
 \subsubsection{計算原理}
 上で述べたとおり,一般的な比ねじれ角の目安である$\bar{\theta} = 0.25\pi /180 [radian/m]$を採用して,次の計算をする.
@@ -1208,14 +1209,14 @@ f_s = \frac{C_{0r}}{P_0} = \frac{7400}{972.6}\geq 1
 
 \begin{table}[htb]
 \begin{center}
-  \caption{NSK6311}
+  \caption{NSK6013}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-内径& d &55 [mm]\\
-外径& D &120 [mm]\\
-基本動定格荷重&$C_{r}$&71500\\
-基本静定格荷重&$C_{0r}$&44500\\
-軸受各部の形状および適用する&$f_0$&13.1\\
+内径& d &65 [mm]\\
+外径& D &100 [mm]\\
+基本動定格荷重&$C_{r}$&30500\\
+基本静定格荷重&$C_{0r}$&25200\\
+軸受各部の形状および適用する&$f_0$&15.8\\
 応力水準によって定まる係数&&\\
 \hline
   \end{tabular}
@@ -1236,14 +1237,14 @@ C &=& \frac{f_h}{f_n} \times P = 11.59794 \times 1972.0276 = 22941.045[N]
 \subsubsection{軸受け2再検討}
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 1300} \times (71500/1972.0276)^3\\
-           &=& 611960.99 \geq 20000
+           &=& 500 \times \frac{100}{3 \times 1300} \times (30500/1972.0276)^3\\
+           &=& 47431.4 \geq 20000
 \end{eqnarray}
-X=0.56,Y=2.30とする。
+X=0.56,Y=1.77とする。
 \begin{eqnarray}
-P &=& XF_r+YF_a = 0.56 \times 1784.21 + 2.30 \times 972.87 = 3236.76\\
+P &=& XF_r+YF_a = 0.56 \times 1784.21 + 1.77 \times 972.87 = 2721.14\\
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 1300} \times (71500/3236.76)^3\\
+           &=& 500 \times \frac{100}{3 \times 1300} \times (30500/2721.14)^3\\
            &=& 138194.90 \geq 20000\\
 寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{138194.90}{500} \right)^{1/3} = 6.514
 \end{eqnarray}
@@ -1532,7 +1533,7 @@ f_s = \frac{C_{0r}}{P_0} = \frac{38500}{4479.24} \geq 1
 \end{eqnarray}
 
 \section{オイルシールの選定}
-\subsection{軸受け1側オイルシール}
+\subsection{軸受け2側オイルシール}
 \begin{table}[htb]
 \begin{center}
   \caption{商品コード:AA213600}
@@ -1548,7 +1549,7 @@ f_s = \frac{C_{0r}}{P_0} = \frac{38500}{4479.24} \geq 1
   \end{tabular}
 \end{center}
 \end{table}
-\subsection{軸受け6側オイルシール}
+\subsection{軸受け5側オイルシール}
 \begin{table}[htb]
 \begin{center}
   \caption{商品コード：AA213607}
@@ -1649,5 +1650,6 @@ A=43.2 \times (259.753 \times 0.03937)^{1.7} &=& 2249.147 [inch^2]\\
 \item \url{http://www.juntsu.co.jp/qa/qa2119.html}
 \item \url{http://www.superior-inc.com/有限会社スピリアの構造変更情報館へようこそ！/構造変更一般/基本事項/強度検討書等を作成するための考察/圧縮（座屈）に付いて/}
 \item \url{http://www.toishi.info/metal/hard_metal.html}
+\item \url{http://kikakurui.com/b0/B0903-2001-01.html}
 \end{enumerate}
 \end{document}

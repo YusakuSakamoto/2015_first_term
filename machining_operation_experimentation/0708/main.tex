@@ -61,32 +61,9 @@
 
 \section{目的}
 並流型及び交流型熱交換器について、対数平均温度差、熱通過率、及び温度効率を実験により求め、熱伝達理論と実験の比較、実験結果の整理方法を学ぶ.
-\section{熱交換器の基礎}
-用語の整理
-\begin{enumerate}
-\item ヌセルト数\\
-対流熱伝導の際に、壁面での温度勾配を基準温度勾配で除したもの。このあたいが大きければ壁面でより急峻な変化をしており、逆に小さければ壁面での変化は緩やかになる。
-\begin{eqnarray}
-Nu = \frac{hd}{\lambda}
-\end{eqnarray}
-\item レイノルズ数\\
-流れの特性を表す無次元数で、層流か乱流かを判断する量。分子は慣性力、分母は粘性を示す量で、乱流が発生しにくい環境(慣性力が小さく、粘性が大きい)ではレイノルズ数は小さくなる。
-\begin{eqnarray}
-Re = \frac{\rho u l}{\mu}
-\end{eqnarray}
-\item プラントル数\\
-流れと熱移動の相関を表す無次元数。温度境界層と速度境界層の関係を注目した場合、速度境界層に対して温度境界層の方が大きければ、Pr$<$1となり、速度境界層に温度境界層が一致していればPr=1,温度境界層の方が小さければPr$>$1となる。
-\begin{eqnarray}
-Pr = \frac{\nu}{\alpha} =\frac{c_p\mu}{\lambda}
-\end{eqnarray}
-\end{enumerate}
-
-Colburnの実験式($L/D>60$の範囲で適用できる理論式)
-\begin{eqnarray}
-Nu = \frac{hd}{\lambda} =0.023Re^{0.8}Pr^{\frac{1}{3}}
-\end{eqnarray}
-
-\section{バッキンガムの$\pi$定理}
+\section{レポート課題}
+\subsection{次元解析から$Nu=CRe^mPr^n$を導く(バッキンガムの$\pi$定理を利用)。また、ヌセルト数、レイノルズ数、プラントル数の物理的意味を調べる。}
+\subsubsection{バッキンガムの$\pi$定理}
 バッキンガムの$\pi$定理は、n個の物理量とm個の基本物理量が存在するとき、(n-m)個の無次元量で表現できるという定理。熱伝導実験で関係がある物理量を表1に示す。
 \begin{table}[htb]
 \begin{center}
@@ -116,7 +93,7 @@ f(h,\rho,C_p,l,\lambda,w,\mu) = 0
 \begin{eqnarray}
 f(\pi_1,\pi_2,\pi_3) = 0
 \end{eqnarray}
-\subsection{ヌセルト数の導出}
+\subsubsection{ヌセルト数の導出}
 ヌセルト数は、熱伝達率hに関する無次元量であるので、$l,\lambda,w,\mu$を用いて無次元化していく。無次元量$\pi_1$とhの間には、次の関係があるとする。
 \begin{eqnarray}
 \pi_1 = \frac{h}{l^a \lambda^b w^c \mu^d}
@@ -148,7 +125,32 @@ a+b+c-d = 0\nonumber\\
 Nu    &=& f(Re,Pr)\nonumber\\
       &=& CRe^mPr^n (C,m,nは定数)
 \end{eqnarray}
-\section{最小自乗法}
+
+\subsubsection{物理的意味}
+\begin{enumerate}
+\item ヌセルト数\\
+対流熱伝導の際に、壁面での温度勾配を基準温度勾配で除したもの。このあたいが大きければ壁面でより急峻な変化をしており、逆に小さければ壁面での変化は緩やかになる。
+\begin{eqnarray}
+Nu = \frac{hd}{\lambda}
+\end{eqnarray}
+\item レイノルズ数\\
+流れの特性を表す無次元数で、層流か乱流かを判断する量。分子は慣性力、分母は粘性を示す量で、乱流が発生しにくい環境(慣性力が小さく、粘性が大きい)ではレイノルズ数は小さくなる。
+\begin{eqnarray}
+Re = \frac{\rho u l}{\mu}
+\end{eqnarray}
+\item プラントル数\\
+流れと熱移動の相関を表す無次元数。温度境界層と速度境界層の関係を注目した場合、速度境界層に対して温度境界層の方が大きければ、Pr$<$1となり、速度境界層に温度境界層が一致していればPr=1,温度境界層の方が小さければPr$>$1となる。
+\begin{eqnarray}
+Pr = \frac{\nu}{\alpha} =\frac{c_p\mu}{\lambda}
+\end{eqnarray}
+\end{enumerate}
+
+\subsection{両対数グラフの縦軸に$Nu/Pr^n$,横軸にReを取り、実験データをプロットし、最小二乗法から係数決定をし、実験式を求める。}
+Colburnの実験式($L/D>60$の範囲で適用できる理論式)
+\begin{eqnarray}
+Nu = \frac{hd}{\lambda} =0.023Re^{0.8}Pr^{\frac{1}{3}}
+\end{eqnarray}
+
 理論式より、
 \begin{eqnarray}
 Nu/Pr^{1/3}=CRe^m (C,mは定数)\nonumber
@@ -162,8 +164,10 @@ Nu/Pr^{1/3}=CRe^m (C,mは定数)\nonumber
 \begin{center}
 \includegraphics[width=14cm]{./Colburn/data.eps}
 \end{center}
-\caption{レポート課題3}
+\caption{レポート課題2}
 \end{figure}
+
+\subsection{課題2で求めた実験データとコルバーンの式を比較し考察する。}
 \begin{table}[htb]
 \begin{center}
   \caption{比較表}
@@ -178,16 +182,41 @@ $Nu/Pr^{1/3}$実験式&$Nu/Pr^{1/3}$Colburnの式&誤差(Colburn基準[\%])\\
   \end{tabular}
 \end{center}
 \end{table}
-全体的に理論式よりも小さい値となった。誤差の大きいもので最大23\%、小さいもので12\%という結果になった。これの理由として、水の流れによって発生する管内摩擦で摩擦熱が発生し、温度勾配を表すヌセルト数の値が小さくなってしまったためであると考えられる。
+全体的にコルバーンの式よりも小さい値となった。誤差の大きいもので最大23\%、小さいもので12\%という結果になった。
 
-\section{並流型と向流型}
-熱交換器には並流型と向流型があるが、向流型のほうが性能が良い。特に管の長さが短い方がその差が顕著に表れる。並流型の方は流れるにつれて温度差が小さくなっていくが、交流型の方は温度差は小さくならない。これによって、熱交換の性能が向上する。
+コルバーンの式は、乱流で壁温が一定、プラントル数が一定、円管流れの条件での関係を表している関係式である。この実験式とコルバーンの式はよく似たものであるので、実際の関係式をよく表現できている式であると考えられる。
+
+\subsection{並流型、向流型熱交換器の性能について調べ、まとめる}
+\subsubsection{並流型熱交換器}
+高温流体と低温流体が同じ方向に流動する熱交換器である。両流体入り口近傍で大きな温度差が生じるので、素早い熱交換が行えるが、低温流体の出口温度が高温流体の出口温度を超えることはない。
+
+\subsubsection{向流型熱交換器}
+高温流体と低温流体が互いに反対方向に流動する熱交換器であり、両流体間の温度差が小さくなるため、大量の熱交換をさせるためには大きな熱通過面積が必要になるが、低温流体を高温流体の出口以上に加熱することが可能である。\\
+\par
+
+\subsubsection{冷却水4大障害}
+冷却水では腐食によるチューブの損傷、熱交換率の低下などを引き起こす問題が生じるため、冷却水の適切な水質管理が重要になる。
+\begin{enumerate}
+\item 腐食障害\\
+腐食と水質には密接な関係があり、腐食が進むと穴あき等がおこる。
+\item スライム障害\\
+微生物が繁殖し、その微生物が分泌する粘性有機物がスライムの原因である。
+\item スケール障害\\
+不溶解成分で、局部腐食を引き起こすほか、熱交換率を低下させる。
+\item レジオネラ障害\\
+レジオネラ菌を空気中に放出するため、感染症に注意する必要がある。
+\end{enumerate}
+
+\section{まとめ}
+この実験では、熱交換器の挙動についてデータを取り、Colburnの式と比較した。ヌセルト数、レイノルズ数、プラントル数の定義と物理的意味について学んだ。
 
 \section{参考文献}
 \begin{enumerate}
 \item \url{http://www.sit.ac.jp/user/konishi/JPN/L_Support/SupportPDF/Non-dimension.pdf}
 \item \url{http://envuniv.net/bakkingam.php}
 \item \url{http://web2.clarkson.edu/projects/subramanian/ch330/notes/Heat%20Transfer%20in%20Flow%20Through%20Conduits.pdf}
+\item \url{https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&ved=0CDQQFjAEahUKEwiSipT43Y7HAhUJkpQKHdSYBqo&url=http%3A%2F%2Fwww.ocw.titech.ac.jp%2Findex.php%3Fmodule%3DGeneral%26action%3DDownLoad%26file%3D2004-6550-20041116-3-8.pdf%26type%3Dcal%26JWC%3D200826550&ei=xVLAVdKTOomk0gTUsZrQCg&usg=AFQjCNGkS0r48c3y1oFkcE_SDKf8G-jp_g}
+\item \url{http://www.mizu-shori.com/solution/}
 \end{enumerate}
 
 \end{document}

@@ -1,4 +1,3 @@
-
 \documentclass[a4j,twoside,openright,11pt]{jarticle}
 %
 \usepackage{amsmath,amssymb}
@@ -81,8 +80,12 @@ q = -\lambda \frac{dT}{dx}
 \item 熱伝達について調べ、まとめる。
 \end{enumerate}
 
-\section{結果の整理}
-\subsection{最小二乗法の計算}
+\section{結果の整理(レポート課題)}
+\subsection{試験ブロックを加熱し、中心5点および冷却水の温度を測定する。}
+測定した結果を表1-3に示す。
+\newpage
+\subsection{軸方向の温度分布をグラフに描き、ヒーター加熱量Qに対する勾配を最小二乗法により求める。}
+\subsubsection{最小二乗法の計算}
 最小二乗法は、誤差の自乗が最小になるように係数a,bを設定したものである。今回の実験では取得した値が5点であったので、5点の場合の計算方法を以下に示す。求めたい曲線をy=ax+bと仮定する今、データ点が$(x_1,y_1),(x_2,y_2),(x_3,y_3),(x_4,y_4),(x_5,y_5)$とすると、最小二乗法の考え方より、評価式Sが以下のようになる
 \begin{eqnarray}
 S &=& d_1^2 + d_2^2 + d_3^2 + d_4^2 + d_5^2 \nonumber\\
@@ -114,7 +117,6 @@ S&=&A+a^2B+5b^2-2bC-2aD+2abE
 a=\frac{5D-CE}{5B-E^2}\nonumber\\
 b=\frac{BC-DE}{5B-E^2}
 \end{eqnarray}
-
 最小二乗法の計算によって、以下の式が求められた。
 \begin{eqnarray}
 y&=&-0.092x+302.45\\
@@ -123,36 +125,44 @@ y&=&-0.202x+311.63\\
 y&=&-0.253x+316.395
 \end{eqnarray}
 
+\subsubsection{計算結果}
 \begin{figure}[htbp]
 \begin{center}
-  \includegraphics[width=12cm]{./fulie/data.eps}
+  \includegraphics[width=10cm]{./fulie/data.eps}
 \end{center}
 \caption{軸方向温度分布}
 \end{figure}
 
 \begin{figure}[htbp]
 \begin{center}
-  \includegraphics[width=12cm]{./fulie/data2.eps}
+  \includegraphics[width=10cm]{./fulie/data2.eps}
 \end{center}
 \caption{軸方向温度分布(最小二乗法)}
 \end{figure}
-
-\section{実験結果1−3のまとめ}
-実験結果より得られたデータから、熱伝導率を導出する。前節の最小二乗法から、近似直線の傾きがわかるので、これを温度勾配[K/m]とした。
+\newpage
+\subsection{ヒーター加熱量から求まる熱流速(Q/A)と温度勾配との関係をグラフに表し、式(1)の関係について考察する。また、材料の熱伝導率を求め、表1-1の値と比較し、試験ブロックの材質を特定する。}
+実験結果より得られたデータから、熱伝導率を導出する。
 \begin{eqnarray}
 熱流速[W/m^2] &=& ヒーター加熱量[W] /　断面積[m^2]\nonumber\\
               &=& 18.0/(0.025^2\pi)\nonumber\\
               &=& 9167.3[W/m^2]
 \end{eqnarray}
-熱伝導率は、次のように求めた。
+
+\subsubsection{$Q-\frac{dT}{dx}$のグラフ}
+\begin{figure}[htbp]
+\begin{center}
+  \includegraphics[width=10cm]{./q-dtdx/data.eps}
+\end{center}
+\caption{加熱量に対する勾配}
+\end{figure}
+熱伝導率は、図1から最小自乗法により求めた。
 \begin{eqnarray}
-熱伝達率[W/(m\cdot K)] &=& 熱流速[W/m^2] / 温度勾配[K/m]\nonumber\\
-                       &=& 9167.3/92\nonumber\\
-                       &=& 99.64[W/(m\cdot K)]
+Q=104.494\frac{dT}{dx}
 \end{eqnarray}
 
-この熱伝達率の平均を求めると、$102.84[W/(m\cdot K)]$を得た。よって、銅・アルミニウム・黄銅のいずれかだとすれば、この試験片は黄銅であることがわかる。
+実験では、同じ実験装置を用いて実験をしたので、伝熱面積Aは一定の値を取る。よって、熱流速と温度勾配のグラフは図3のグラフの縦軸をAで割ったものである。このことから、熱流速と温度勾配には比例関係が成り立つものと考えられる。この関係は式(1)のフーリエの関係式と等しい。
 
+計算によって得られた熱伝達率は104.494であるので、銅・アルミニウム・黄銅のいずれかだとすれば、この試験片は黄銅であることがわかる。
 \begin{table}[htb]
 \begin{center}
   \caption{熱伝達率の物質値概要}
@@ -167,8 +177,7 @@ y&=&-0.253x+316.395
 \end{center}
 \end{table}
 
-\section{冷却水温との差}
-
+\subsection{上面の表面温度を外挿により求め、冷却水温との差について考察する。}
 試験ブロックの最上端の温度を求めるために、最小自乗法によって求めた式にx=60を代入する。
 \begin{eqnarray}
 y&=&-0.092x+302.45 = 296.93\\
@@ -181,8 +190,9 @@ y&=&-0.253x+316.395 = 301.22
   \dot{q} =\alpha (T-T_m)
 \end{eqnarray}
 
-\section{熱電対}
-\subsection{補償導線の必要性}
+\subsection{熱電対についてまとめ、考察する。}
+
+\subsubsection{補償導線の必要性}
 コンピュータで情報を収集するために、熱電対とコンピュータが数百メートル離れてしまうということがある。このような場合、全ての導線が熱電対と同じ導線だと理想的ではあるがコストがかかってしまうため、補償導線という導線に繋ぎ直して長距離を補完する。この補償導線は接続状況によって熱電対の精度を大きく下げてしまうおそれがあるので、以下の点に注意する必要が有る。
 \begin{enumerate}
 \item 熱電対とほぼ同等の熱起電力を持つ導線を補償導線として選定する\\
@@ -191,13 +201,12 @@ y&=&-0.253x+316.395 = 301.22
 熱電対部分の長さを極端に短くしてしまうと、熱電対と補償導線の接合点である補償接点と基準温度接点との間に温度勾配が生じてしまうため、熱電対の性能よりも補償導線の性能が誤差に大きく影響してしまう。
 \end{enumerate}
 
-\subsection{熱電対の校正方法}
 \subsubsection{定点法}
 物質の融点や沸点では温度が一定になる現象を利用したもので、$\pm$0.001℃の精度で校正が可能である。
 \subsubsection{比較法}
 標準熱電対と比較して校正する方法で、定点法に比べると精度は落ちるが、任意の温度で校正ができる。
 
-\subsection{保護管と被覆}
+\subsubsection{保護管と被覆}
 保護管もしくは被覆をした製品がある。これらは外部の環境から熱電対の素線を守るために施す処理で、保護管は金属や非金属で素線を保護し耐熱性の向上や防滴効果、耐振動性、耐圧性など、様々な環境に対して熱電対が使えるようになる。それに対して被覆熱電対は柔軟性があり、自由な使い方ができ経済的であるが被覆を施しているだけなので脆い。
 
 \subsubsection{金属保護管の種類}
@@ -309,7 +318,7 @@ JIS2種アルミナ&1,400&1,500&PT-2&熱ショック抵抗が良好。\\
 \normalsize
 \end{center}
 \end{table}
-\section{自作熱電対の挙動}
+\subsection{自作熱電対の挙動}
 実験で熱電対を作成し、温度と熱電対が生み出す起電力を測定した。
 \begin{figure}[htbp]
 \begin{center}
@@ -317,6 +326,10 @@ JIS2種アルミナ&1,400&1,500&PT-2&熱ショック抵抗が良好。\\
 \end{center}
 \caption{熱電対の挙動}
 \end{figure}
+
+\section{まとめ}
+この実験では、フーリエの法則が成り立つことを実験により求め、熱電対について調べ学習を行った。
+
 
 \section{参考文献}
 \begin{enumerate}

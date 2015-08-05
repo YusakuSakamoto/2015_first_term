@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg4303"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="新規ドキュメント 7">
+  <defs
+     id="defs4305">
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3773"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="375"
+     inkscape:cy="540"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1321"
+     inkscape:window-height="744"
+     inkscape:window-x="45"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4308">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="レイヤー 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-8"
+       width="167.68532"
+       height="64.649765"
+       x="416.52881"
+       y="389.78827" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2987-2"
+       width="59.598999"
+       height="13.131983"
+       x="356.92984"
+       y="417.06238" />
+    <text
+       xml:space="preserve"
+       style="font-size:25.82601547px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="462.33633"
+       y="393.22562"
+       id="text2989-7"
+       sodipodi:linespacing="125%"
+       transform="scale(0.90434933,1.1057674)"><tspan
+         sodipodi:role="line"
+         id="tspan2991-4"
+         x="462.33633"
+         y="393.22562">DCサーボモータ</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2993-8"
+       width="114.14724"
+       height="138.3909"
+       x="307.43237"
+       y="121.08768" />
+    <text
+       xml:space="preserve"
+       style="font-size:29.34951401px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="329.07111"
+       y="260.1871"
+       id="text2995-6"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0230804,0.97744028)"><tspan
+         sodipodi:role="line"
+         id="tspan2997-2"
+         x="329.07111"
+         y="260.1871">LRF</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart)"
+       id="path2999-2"
+       sodipodi:cx="291.42902"
+       sodipodi:cy="319.49652"
+       sodipodi:rx="35.860416"
+       sodipodi:ry="20.708128"
+       d="m 308.85582,301.39803 a 35.860416,20.708128 0 1 1 -50.70474,10.38229"
+       sodipodi:start="5.2198526"
+       sodipodi:end="9.8066053"
+       sodipodi:open="true"
+       transform="matrix(0.21782363,-0.97598815,0.97598815,0.21782363,10.149508,637.46803)" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4277"
+       width="24.243662"
+       height="148.49243"
+       x="278.64301"
+       y="189.27298" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4277-1"
+       width="24.243662"
+       height="148.49243"
+       x="427.13547"
+       y="189.77808" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4297"
+       width="44.446712"
+       height="27.274118"
+       x="342.28262"
+       y="259.98367" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4299"
+       width="16.162441"
+       height="122.22845"
+       x="356.42477"
+       y="271.09534" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4301"
+       width="17.172594"
+       height="60.609154"
+       x="355.41461"
+       y="375.14105" />
+  </g>
+</svg>

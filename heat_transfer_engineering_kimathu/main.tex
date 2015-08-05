@@ -1,0 +1,90 @@
+\documentclass[a4j,twoside,openright,11pt]{jreport}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{listliketab}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{color}
+
+\setlength{\textwidth}{15.92cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{23.5cm}
+\setlength{\footskip}{18mm}
+
+%
+\pagestyle{plain}
+\title{伝熱学\\第6回}
+\author{九州工業大学　機械知能工学科　機械知能コース 3年\\学籍番号：13104069 坂本悠作}
+\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+
+\chapter{平成25年期末試験}
+\section{Describe the three fundamental modes of heat transfer and those basic laws in detail.}
+\begin{enumerate}
+\item 熱伝導-フーリエの法則
+\item 対流伝熱-ニュートンの冷却則
+\item 輻射伝熱-シュテファン・ボルツマン
+\end{enumerate}
+
+\section{}
+
+\section{図に示す軸方向(奥行き)に長さ1mの同軸2重円筒が定常状態にある。内側にある半径$r_1$=1cmの円筒の外表面温度$T_1$=20℃,放射率$\epsilon$=0.5である。外側にある半径$r_2$=2cmの円筒の内表面温度$T_2$=200℃,放射率$\epsilon$=0.1とした場合、次のことを求めよ}
+\subsection{形態係数$F_{11}$と$F_{22}$}
+形態係数とは、添字1から出た電磁波が添字2にどれだけ伝達するのかを示す係数。
+\begin{eqnarray}
+F_{11} =0,F_{12} =1,F_{21} =\frac{A_1}{A_2},F_{22} =1-\frac{A_1}{A_2}\\
+この問題において、F_{21} =\frac{1}{2}=0.5,F_{22} =0.5で正解
+\end{eqnarray}
+
+\subsection{この2重円筒間の輻射伝熱量}
+無限級数の授業で、以下のことを学んだ。同心円筒の場合
+\begin{eqnarray}
+\dot Q_{12} =\frac{\sigma(T_1^4-T_2^4)}{\frac{1}{\epsilon_1}+\frac{1-\epsilon_2}{\epsilon_2}(\frac{A_1}{A_2})}A_1
+\end{eqnarray}
+よって、
+\begin{eqnarray}
+\dot Q_{12} =\frac{5.67 \times 10^{-8}((200+273.15)^4-(20+273.15)^4)}{\frac{1}{0.5}+\frac{1-0.1}{0.1}(\frac{0.01}{0.02})}\pi\times0.02=23.42[W]
+\end{eqnarray}
+
+\section{ガスタービンの換気ガスの熱を回収するため、隔板式向流熱交換器を用いることにする。温度160度、流量$600kg/hr$の排気ガスで流量$300kg/hr$の水を20℃から80℃まで加熱する設計要求に対して、必要な隔板の伝熱面積を求めよ。ただし、水の定圧比熱は$4.2kJ/(kg \cdot K)$、ガスの定圧比熱は$1.0kJ/(kg \cdot K)$、ガス側の熱伝達率は$40W/(m^2 \cdot K)$,水側の熱伝達率は$160W/(m^2 \cdot K)$,隔板の熱伝導率は$150W/(m \cdot K)$,厚みは$1mm$とする。}
+
+水に与えられる熱量を求める
+\begin{eqnarray}
+Q_{water} &=& \dot m C_P \Delta T\\
+  &=& 300 \times \frac{1}{3600} \times 4200 \times (80-20)\\
+  &=& 21000[W]
+\end{eqnarray}
+ガスの出口温度を求める
+\begin{eqnarray}
+Q_{gass}   &=& \dot m C_P \Delta T = Q_{water}\\
+21000     &=& 600 \times \frac{1}{3600} \times 1000 \times (160-T_{gass(out)})\\
+ T_{gass(out)}        &=& 34[℃]
+\end{eqnarray}
+熱通過率を計算する.
+\begin{eqnarray}
+熱通過率 &=& \frac{1}{40} + \frac{1}{160} + \frac{0.001}{150}\\
+&=&0.03126
+\end{eqnarray}
+対数温度平均は、以下のように算出できる
+\begin{eqnarray}
+\Delta T_m = \frac{80-14}{\ln \frac{80}{14}} = 37.87
+\end{eqnarray}
+フーリエの法則より
+\begin{eqnarray}
+Q &=& \frac{\Delta T_m}{k}A\\
+A &=& 21000 \times 0.03126 / 37.87\\
+&=& 17.33[m^2]
+\end{eqnarray}
+
+\chapter{平成23年度}
+\section{図に示す2次元物体について、定常状態における内部$(1\sim 6の格子点)$の温度を数値的に求めよ。ただし、格子間隔は$\Delta x = \Delta y =1cm$で、左の面は断熱されており、右面と下面は100度に保たれている。上面では熱伝達率は$25W/(m^2K)$で、温度5度の周囲流体と熱伝達を行っているものとする。この物体の熱伝導率は、$2.5W/(mK)$である。}
+
+\end{document}
