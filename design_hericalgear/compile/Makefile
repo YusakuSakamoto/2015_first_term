@@ -2,7 +2,7 @@ MAIN	=main
 INCLUDE	=-I../tex/
 
 .PHONY:clean
-all:../$(MAIN).pdf
+all:clean ../$(MAIN).pdf
 
 $(MAIN).dvi:../tex/$(MAIN).tex
 	platex -o $< $@
