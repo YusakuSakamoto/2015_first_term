@@ -22,8 +22,8 @@ F_{34}&=& \frac{60P}{\pi d[m] n[rpm] } = \frac{60 \times 17000}{\pi \times 0.128
 
 \section{スラスト荷重とラジアル荷重の算出}
 軸に加えられる力を,軸に対して直角に作用するラジアル荷重と,軸方向に作用するスラスト荷重に分類分けをする.こうすることでかかる力とモーメントの関係をそれぞれ算出し,後で合成することで計算ができる.\\
-歯車の形状から,ラジアル荷重$P_r$とスラスト荷重$P_t$は以下のように計算される.ここに,正面圧力角(歯車を正面から見た時のピッチ円周上の歯の角度)$\alpha_t=21.2991[degree]$,ピッチ円筒ねじれ角$
-\beta =21[degree]$とする\\
+歯車の形状から,ラジアル荷重$P_r$とスラスト荷重$P_t$は以下のように計算される.ここに,正面圧力角(歯車を正面から見た時のピッチ円周上の歯の角度)$\alpha_t=21.2991[degree]$,ピッチ円筒ねじれ角$\beta =21[degree]$とする\\
+
 \begin{eqnarray}
 P_r = F\tan(\alpha)\\
 P_t = F\tan(\beta)
@@ -198,14 +198,14 @@ R_2 &=& \sqrt {R_{2x}^2+R_{2y}^2}=1702.25\\
 \end{figure}
 \begin{eqnarray}
 M_{1x} &=& R_{1x} \times (a_1+a_2)=88318\\
-M_{2x} &=& R_{2x} \times a_3=401381\\
+M_{2x} &=& R_{2x} \times a_3=40381\\
 M_{1y} &=& R_{1y} \times (a_1+a_2)= 146903\\
 M_{2y} &=& R_{2y} \times a_3= 146903 
 \end{eqnarray}
 最大曲げモーメントを算出する.
 \begin{eqnarray}
 M_{1max} &=& \sqrt {M_{1x}^2+M_{1y}^2}=171407\\
-M_{2max} &=& \sqrt {M_{2x}^2+M_{2y}^2}=427419
+M_{2max} &=& \sqrt {M_{2x}^2+M_{2y}^2}=152351
 \end{eqnarray}
 軸に作用するねじりモーメントを求める
 \begin{eqnarray}
@@ -241,18 +241,16 @@ x軸,R_3回りのモーメント&:&-a_1Fw_{34}-(a_1+a_2)Fw_{12}+(a_1+a_2+a_3)F_{
 \end{eqnarray}
 この方程式を解くことで,次の結果を得る.
 \begin{itemize}
-\item $R_{3x} = 100.142$
-\item $R_{3y} = 6011.182$
-\item $R_{4x} = 2109.198$
-\item $R_{4y} = 4210.847$
-\item $R_{4z} = 1978.130$
+\item $R_{3x} = -111.33$
+\item $R_{3y} = 5902.09$
+\item $R_{4x} = -1897.73$
+\item $R_{4y} = 4319.9392$
+\item $R_{4z} = -1978.13$
 \end{itemize}
 上の結果から,軸受けにかかるラジアル荷重の大きさが以下のように算出できる.
 \begin{eqnarray}
-R_3 &=& \sqrt {R_{3x}^2+R_{3y}^2}\\
-    &=& \sqrt {100.142^2+6011.182^2}=6012.016\\
-R_4 &=& \sqrt {R_{4x}^2+R_{4y}^2}\\
-    &=& \sqrt {2109.198^2+4210.847^2}=4709.559
+R_3 &=& \sqrt {R_{3x}^2+R_{3y}^2} = 5903\\
+R_4 &=& \sqrt {R_{4x}^2+R_{4y}^2} = 4718.4\\
 \end{eqnarray}
 次に,この軸にかかるモーメントを求め,BMDに示す.
 歯車が有る点を中心に考えると,軸受けのラジアル力によって軸にかかるモーメントは次のように求めることができる.
@@ -269,16 +267,17 @@ R_4 &=& \sqrt {R_{4x}^2+R_{4y}^2}\\
 \caption{中間軸x軸基準}
 \end{figure}
 \begin{eqnarray}
-M_{3x} &=& R_{3y} \times a_1=-405754.796\\
-M_{4x} &=& R_{4y} \times (a_2+a_3)=-280021.328\\
-M_{31y} &=& R_{3x} \times a_1=6759.573\\
-M_{32y} &=& M_{31y} + P_t \frac{d_3}{2}=-182897.361\\
-M_{21y} &=& M_{22y} + P_t \frac{d_2}{2}=49397.762\\
-M_{22y} &=& R_{4x} \times a_3=-140261.688
+M_{3y}  &=& R_{3y} \times a_1          =522334\\
+M_{4y}  &=& R_{4y} \times a_3          =386634\\
+M_{31x} &=& R_{3x} \times a_1          =9853\\
+M_{32x} &=& M_{31x} + P_t \frac{d_3}{2} =199510\\
+M_{21x} &=& M_{22x} + P_t \frac{d_2}{2} =19812\\
+M_{22x} &=& R_{4x} \times a_3           =169846\\
 \end{eqnarray}
 以上より,最大モーメントの組み合わせは,
 \begin{eqnarray}
-\sqrt{ M_{x3}^2 + M_{32y}^2 } = 445071.229
+  \sqrt{ M_{3y}^2 + M_{32x}^2 } = 559139\\
+  \sqrt{ M_{3y}^2 + M_{21x}^2 } = 422296
 \end{eqnarray}
 軸に作用するねじりモーメントを求める
 \begin{eqnarray}
@@ -291,6 +290,19 @@ T_{4} &=& \frac{d_3}{2} \times Fw_{34}\\
 T_{z3} &=& -1978.130\\
 T_{z4} &=& R_{4z} = 1978.130
 \end{eqnarray}
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsubsection{逆回転の場合}
 \begin{figure}[htbp]
 \begin{center}
@@ -309,18 +321,16 @@ x軸,R_3回りのモーメント&:&a_1Fw_{34}+(a_1+a_2)Fw_{12}-(a_1+a_2+a_3)F_{4
 \end{eqnarray}
 この方程式を解くことで,次の結果を得る.
 \begin{itemize}
-\item $R_{3x} = 3529.680$
-\item $R_{3y} = 6011.182$
-\item $R_{4x} = 1520.624$
-\item $R_{4y} = 4210.847$
-\item $R_{4z} = 1978.130$
+\item $R_{3x} = -3098.07$
+\item $R_{3y} = -5902.09$
+\item $R_{4x} = 1089.01$
+\item $R_{4y} = -4319.9392$
+\item $R_{4z} = 1978.13$
 \end{itemize}
 上の結果から,軸受けにかかるラジアル荷重の大きさが以下のように算出できる.
 \begin{eqnarray}
-R_3 &=& \sqrt {R_{3x}^2+R_{3y}^2}\\
-    &=& \sqrt {3529.680^2+6011.182^2}=6970.865\\
-R_4 &=& \sqrt {R_{4x}^2+R_{4y}^2}\\
-    &=& \sqrt {1520.624^2+4210.847^2}=4477.000
+R_3 &=& \sqrt {R_{3x}^2+R_{3y}^2} = 6665.79\\
+R_4 &=& \sqrt {R_{4x}^2+R_{4y}^2} = 4455.10\\
 \end{eqnarray}
 次に,この軸にかかるモーメントを求め,BMDに示す.
 歯車が有る点を中心に考えると,軸受けのラジアル力によって軸にかかるモーメントは次のように求めることができる.
@@ -337,16 +347,17 @@ R_4 &=& \sqrt {R_{4x}^2+R_{4y}^2}\\
 \caption{中間軸x軸基準}
 \end{figure}
 \begin{eqnarray}
-M_{3x} &=& R_{3y} \times a_1=405754.796\\
-M_{4x} &=& R_{4y} \times (a_2+a_3)=280021.328\\
-M_{31y} &=& R_{3x} \times a_1=-238253.403\\
-M_{32y} &=& M_{31y} + P_t \frac{d_3}{2}=-48596.496\\
-M_{21y} &=& M_{22y} + P_t \frac{d_2}{2}=88537.984\\
-M_{22y} &=& R_{4x} \times a_3=101121.465
+M_{3y}  &=& R_{3y} \times a_1          =522335\\
+M_{4y}  &=& R_{4y} \times a_3          =386634\\
+M_{31x} &=& R_{3x} \times a_1          =-274179\\
+M_{32x} &=& M_{31x} + P_t \frac{d_3}{2} =-84522\\
+M_{21x} &=& M_{22x} + P_t \frac{d_2}{2} =-92193.173\\
+M_{22x} &=& R_{4x} \times a_3          =97466.276\\
 \end{eqnarray}
 以上より,最大モーメントの組み合わせは,
 \begin{eqnarray}
-\sqrt{ M_{x3}^2 + M_{31y}^2 } = 470533.355
+  \sqrt{ M_{3y}^2 + M_{31x}^2 } = 589921\\
+  \sqrt{ M_{3y}^2 + M_{21x}^2 } = 398730
 \end{eqnarray}
 軸に作用するねじりモーメントを求める
 \begin{eqnarray}
@@ -384,18 +395,16 @@ x軸,R_5回りのモーメント&:&a_1Fw_{34}-(a_1+a_2+a_3)R_{6y}
 \end{eqnarray}
 この方程式を解くことで,次の結果を得る.
 \begin{itemize}
-\item $R_{5x}=4789.314$
-\item $R_{5y}=5204.782$
-\item $R_{5z}=2951.000$
-\item $R_{6x}=1792.187$
-\item $R_{6y}=2482.846$
+\item $R_{5x} = 4224.02$
+\item $R_{5y} = -5009.06$
+\item $R_{5z} = 2951$
+\item $R_{6x} = 1226.88$
+\item $R_{6y} = -2678.5684$
 \end{itemize}
 上の結果から,軸受けにかかるラジアル荷重の大きさが以下のように算出できる.
 \begin{eqnarray}
-R_5 &=& \sqrt {R_{5x}^2+R_{5y}^2}\\
-    &=& \sqrt {4789.314^2+5204.782^2}=7072.996\\
-R_6 &=& \sqrt {R_{6x}^2+R_{6y}^2}\\
-    &=& \sqrt {-1792.187^2+2482.846^2}=3062.101
+R_5 &=& \sqrt {R_{5x}^2+R_{5y}^2} = 6552.32\\
+R_6 &=& \sqrt {R_{6x}^2+R_{6y}^2} = 3195.88\\
 \end{eqnarray}
 次に,この軸にかかるモーメントを求め,BMDに示す.
 歯車が有る点を中心に考えると,軸受けのラジアル力によって軸にかかるモーメントは次のように求めることができる.
@@ -412,17 +421,15 @@ R_6 &=& \sqrt {R_{6x}^2+R_{6y}^2}\\
 \caption{入力軸モデル(y成分BMD)}
 \end{figure}
 \begin{eqnarray}
-M_{5x} &=& R_{5y} \times a_1=351322.779\\
-M_{6x} &=& R_{6y} \times (a_2+a_3)=351322.779\\
-M_{5y} &=& R_{5x} \times a_1=323278.666\\
-M_{6y} &=& R_{6x} \times (a_2+a_3)=-253594.471
+M_{5x} &=& R_{5x} \times a_1       =-373824.548\\
+M_{6x} &=& R_{6x} \times a_3       =203048.589\\
+M_{5y} &=& R_{5y} \times a_1       =443302.249 \\
+M_{6y} &=& R_{6y} \times a_3       =443302.249 \\
 \end{eqnarray}
 最大曲げモーメントを算出する.
 \begin{eqnarray}
-M_{1max} &=& \sqrt {M_{5x}^2+M_{5y}^2}\\
-         &=& \sqrt {351322.779^2+(323278.666)^2}=477427.262\\
-M_{2max} &=& \sqrt {M_{6x}^2+M_{6y}^2}\\
-         &=& \sqrt {351322.779^2+(-253594.471)^2}=433287.261
+M_{1max} &=& \sqrt {M_{5x}^2+M_{5y}^2} = 579881\\
+M_{2max} &=& \sqrt {M_{6x}^2+M_{6y}^2} = 487592\\
 \end{eqnarray}
 軸に作用するねじりモーメントを求める
 \begin{eqnarray}
@@ -435,6 +442,12 @@ T_{2} &=& \frac{d_4}{2} \times Fw_{34}\\
 T_{z1} &=& 0\\
 T_{z2} &=& R_{6z} = P_{t3} = 2951.000
 \end{eqnarray}
+
+
+
+
+
+
 \subsubsection{逆回転の場合}
 釣り合いの式を以下に示す.
 \begin{eqnarray}
@@ -446,18 +459,16 @@ x軸,R_5回りのモーメント&:&a_1Fw_{34}-(a_1+a_2+a_3)R_{6y}
 \end{eqnarray}
 この方程式を解くことで,次の結果を得る.
 \begin{itemize}
-\item $R_{5x}=731.004$
-\item $R_{5y}=-5204.782$
+\item $R_{5x}=-318.29$
+\item $R_{5y}=5009.06$
 \item $R_{5z}=-2951.000$
-\item $R_{6x}=-3728.130$
-\item $R_{6y}=-2482.846$
+\item $R_{6x}=3315.43$
+\item $R_{6y}=2678.5684$
 \end{itemize}
 上の結果から,軸受けにかかるラジアル荷重の大きさが以下のように算出できる.
 \begin{eqnarray}
-R_5 &=& \sqrt {R_{5x}^2+R_{5y}^2}\\
-    &=& \sqrt {731.004^2+(-5204.782)^2}=5255.865\\
-R_6 &=& \sqrt {R_{6x}^2+R_{6y}^2}\\
-    &=& \sqrt {(-3728.130)^2+(-2482.846)^2}=4479.228
+R_5 &=& \sqrt {R_{5x}^2+R_{5y}^2} = 3330.67\\
+R_6 &=& \sqrt {R_{6x}^2+R_{6y}^2} = 5680.26\\
 \end{eqnarray}
 次に,この軸にかかるモーメントを求め,BMDに示す.
 歯車が有る点を中心に考えると,軸受けのラジアル力によって軸にかかるモーメントは次のように求めることができる.
@@ -474,17 +485,15 @@ R_6 &=& \sqrt {R_{6x}^2+R_{6y}^2}\\
 \caption{入力軸モデル(y成分BMD)}
 \end{figure}
 \begin{eqnarray}
-M_{5x} &=& R_{5y} \times a_1=351322.779\\
-M_{6x} &=& R_{6y} \times (a_2+a_3)=351322.779\\
-M_{5y} &=& R_{5x} \times a_1=49342.738\\
-M_{6y} &=& R_{6x} \times (a_2+a_3)=-527530.398
+M_{5x} &=& R_{5x} \times a_1       =-281670\\
+M_{6x} &=& R_{6x} \times a_3       =-548703\\
+M_{5y} &=& R_{5y} \times a_1       =-443302\\
+M_{6y} &=& R_{6y} \times a_3       =-443302
 \end{eqnarray}
 最大曲げモーメントを算出する.
 \begin{eqnarray}
-M_{1max} &=& \sqrt {M_{5x}^2+M_{5y}^2}\\
-         &=& \sqrt {351322.779^2+(49342.738)^2}=354770.913\\
-M_{2max} &=& \sqrt {M_{6x}^2+M_{6y}^2}\\
-         &=& \sqrt {351322.779^2+(-527530.398)^2}=633810.710
+M_{1max} &=& \sqrt {M_{5x}^2+M_{5y}^2} = 444196\\
+M_{2max} &=& \sqrt {M_{6x}^2+M_{6y}^2} = 705402\\
 \end{eqnarray}
 軸に作用するねじりモーメントを求める
 \begin{eqnarray}
@@ -498,6 +507,11 @@ T_{z1} &=& 0\\
 T_{z2} &=& R_{6z} = P_{t3} = 2951.000
 \end{eqnarray}
 
+
+
+
+
+\newpage
 \section{軸の最小径の決定}
 \subsection{計算手順}
 まず次の計算を行い,最小軸径をそれぞれ求める.
@@ -527,139 +541,137 @@ d_{min} = \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(M+\frac{d}{8}P)^2+T^2} }\\
 動的効果の係数に直すと,\nonumber\\
 d_{min} = \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(k_bM+\frac{d}{8}P)^2+k_tT^2} }
 \end{eqnarray}
+
+
+
+
+
 \subsubsection{軸受け1側の軸(正回転)}
 軸受け1側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=0,T=0$を代入した.
 \begin{eqnarray}
 d_{11min} &=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{k_bM^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 115549.168^2} }\\
-       &=& 18.66[mm]
+       &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{(1.5 \times 149226)^2} }\\
+       &=& 20.32[mm]
 \end{eqnarray}
 \subsubsection{軸受け1側の軸(逆回転)}
 軸受け1側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=0,T=0$を代入した.
 \begin{eqnarray}
 d_{11min} &=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{k_bM^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 138595.08^2} }\\
-       &=& 19.82[mm]
+       &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{(1.5 \times 171407)^2} }\\
+       &=& 21.28[mm]
 \end{eqnarray}
 \subsubsection{軸受け2側の軸(正回転)}
-軸受け2側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=-972.87,T=124876.26, M=129657.71$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
+軸受け2側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=-972.87,T=124877.53, M=164561.82$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
 \begin{eqnarray}
 d_{12min}&=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(k_bM+\frac{d}{8}P)^2+k_tT^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi 135.92} \sqrt{(1.5 \times 129657.71 +\frac{20}{8}\times -972.87)^2+(1.0 \times 124876.26)^2} }\\
-       &=&20.47\\
-       &=& \sqrt [3]{ \frac{16}{\pi 135.92} \sqrt{(1.5 \times 129657.71 +\frac{20.47}{8}\times -972.87)^2+(1.0 \times 124876.26)^2} }\\
-       &=&20.47[mm](収束確認)
+       &=& \sqrt [3]{ \frac{16}{\pi 135.92} \sqrt{(1.5 \times 164561.82 +\frac{20}{8}\times -972.87)^2+(1.0 \times 164561.82)^2} }\\
+       &=&21.75\\
+       &=& \sqrt [3]{ \frac{16}{\pi 135.92} \sqrt{(1.5 \times 164561.82 +\frac{21.75}{8}\times -972.87)^2+(1.0 \times 164561.82)^2} }\\
+       &=&21.74[mm](収束確認)
 \end{eqnarray}
+
+
 \subsubsection{軸受け2側の軸(逆回転)}
-軸受け2側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=972.87,T=124876.26, M=118650.16$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
+軸受け2側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=972.87,T=124877.53, M=152351$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
 \begin{eqnarray}
 d_{12min}&=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(k_bM+\frac{d}{8}P)^2+k_tT^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi 135.92} \sqrt{(1.5 \times 118650.16 +\frac{20}{8}\times 972.87)^2+(1.0 \times 124876.26)^2} }\\
-       &=&20.18\\
-       &=& \sqrt [3]{ \frac{16}{\pi 135.92} \sqrt{(1.5 \times 118650.16 +\frac{20.18}{8}\times 972.87)^2+(1.0 \times 124876.26)^2} }\nonumber\\
-\\
-       &=&20.18[mm](収束確認)
+       &=& \sqrt [3]{ \frac{16}{\pi 135.92} \sqrt{(1.5 \times 152351  +\frac{20}{8}\times 972.87)^2+(1.0 \times 124877.53)^2} }\\
+&=&21.43\\
+       &=& \sqrt [3]{ \frac{16}{\pi 135.92} \sqrt{(1.5 \times 152351  +\frac{21.43}{8}\times 972.87)^2+(1.0 \times 124877.53)^2} }\\
+       &=&21.43[mm](収束確認)
 \end{eqnarray}
 \subsubsection{軸受け3側の軸(正回転)}
 軸受け33側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=0,T=0$を代入した.
 \begin{eqnarray}
 d_{11min} &=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{k_bM^2} }\\
-         &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 405810.94^2} }\\
-         &=& 28.36[mm]
+         &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 559139^2} }\\
+         &=& 31.56[mm]
 \end{eqnarray}
 \subsubsection{軸受け3側の軸(逆回転)}
 軸受け3側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=0,T=0$を代入した.
 \begin{eqnarray}
 d_{11min} &=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{k_bM^2} }\\
-         &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 470533.23^2} }\\
-         &=& 29.79[mm]
+         &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 589921^2} }\\
+         &=& 32.13[mm]
 \end{eqnarray}
 \subsubsection{第3歯車と第4歯車の間の軸(正回転)}
-軸受け3側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=2951,T=494077.63, M=445071.18$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
+軸受け3側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=2951,T=494074, M=559139$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
 \begin{eqnarray}
 d_{12min}&=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(k_bM+\frac{d}{8}P)^2+k_tT^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 445071.18 +\frac{20}{8}\times -2951)^2+(1.0 \times 494077.63)^2} }\nonumber\\
-\\
-       &=&34.53\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 445071.18 +\frac{34.53}{8}\times -2951)^2+(1.0 \times 494077.63)^2} }\nonumber\\
-\\
-         &=& 34.48[mm]\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 445071.18 +\frac{34.48}{8}\times -2951)^2+(1.0 \times 494077.63)^2} }\nonumber\\
-\\
-         &=& 34.48[mm](収束確認)
+       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 559139 +\frac{20}{8}\times -2951)^2+(1.0 \times 494074)^2} }\nonumber\\
+       &=& 36.42\\
+       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 559139 +\frac{36.42}{8}\times -2951)^2+(1.0 \times 494074)^2} }\nonumber\\
+&=& 36.36[mm]\\
+       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 559139 +\frac{36.36}{8}\times -2951)^2+(1.0 \times 494074)^2} }\nonumber\\
+         &=& 36.36[mm](収束確認)
 \end{eqnarray}
 \subsubsection{第3歯車と第4歯車の間の軸(逆回転)}
-軸受け3側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=2951,T=, M=408654.51$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
+軸受け3側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=2951,T=494074, M=589921$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
 \begin{eqnarray}
 d_{12min}&=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(k_bM+\frac{d}{8}P)^2+k_tT^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 408654.51 +\frac{20}{8}\times 2951)^2+(1.0 \times 494077.63)^2} }\nonumber\\
-\\
-       &=&34.09\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 408654.51 +\frac{34.09}{8}\times 2951)^2+(1.0 \times 494077.63)^2} }\nonumber\\
-\\
-         &=& 34.10[mm](収束確認)
+&=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 530408 +\frac{20}{8}\times 2951)^2+(1.0 \times 494074)^2} }\nonumber\\
+&=& 36.11\\
+&=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 530408 +\frac{36.11}{8}\times 2951)^2+(1.0 \times 494074)^2} }\nonumber\\
+         &=& 36.17[mm](収束確認)
 \end{eqnarray}
 \subsubsection{第4歯車側の軸(正回転)}
-軸受け4側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=-1978.13,M=313185.59$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
+軸受け4側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=-1978.13,M=422296$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
 \begin{eqnarray}
 d_{12min}&=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(k_bM+\frac{d}{8}P)^2+k_tT^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 135.92} \sqrt{(1.5 \times 313185.59 +\frac{20}{8}\times -1978.13)^2}}\nonumber\\
+       &=& \sqrt [3]{ \frac{16}{\pi \times 135.92} \sqrt{(1.5 \times 422296 +\frac{20}{8}\times -1978.13)^2}}\nonumber\\
 \\
-       &=&25.92\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 135.92} \sqrt{(1.5 \times 313185.59 +\frac{25.92}{8}\times -1978.13)^2} }\nonumber\\
+       &=&28.66\\
+&=& \sqrt [3]{ \frac{16}{\pi \times 135.92} \sqrt{(1.5 \times 422296 +\frac{28.66}{8}\times -1978.13)^2}}\nonumber\\
 \\
-         &=& 25.89[mm]\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 135.92} \sqrt{(1.5 \times 313185.59 +\frac{34.48}{8}\times -1978.13)^2} }\nonumber\\
-\\
-         &=& 25.89[mm](収束確認)
+         &=& 28.63[mm](収束確認)
 \end{eqnarray}
 \subsubsection{第4歯車側の軸(逆回転)}
-軸受け4側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=1978.13,M=297720.25$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
+軸受け4側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=1978.13,M=398730$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
 \begin{eqnarray}
 d_{12min}&=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(k_bM+\frac{d}{8}P)^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 135.92} \sqrt{(1.5 \times 297720.25 +\frac{20}{8}\times 1978.13)^2}}\nonumber\\
+       &=& \sqrt [3]{ \frac{16}{\pi \times 135.92} \sqrt{(1.5 \times 398730 +\frac{20}{8}\times 1978.13)^2}}\nonumber\\
 \\
-       &=& 25.67\\
-       &=& \sqrt [3]{ \frac{16}{\pi  \times 135.92} \sqrt{(1.5 \times 297720.25 +\frac{34.09}{8}\times 1978.13)^2}}\nonumber\\
+&=& 28.27\\
+       &=& \sqrt [3]{ \frac{16}{\pi \times 135.92} \sqrt{(1.5 \times 398730 +\frac{28.27}{8}\times 1978.13)^2}}\nonumber\\
 \\
-         &=& 25.67[mm](収束確認)
+         &=& 28.31[mm](収束確認)
 \end{eqnarray}
 \subsubsection{第5歯車側の軸(正回転)}
-軸受け3側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=2951,T=1502808.35, M=477427.46$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
+軸受け3側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=2951,T=1502808, M=579881$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
 \begin{eqnarray}
 d_{12min}&=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(k_bM+\frac{d}{8}P)^2+k_tT^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 477427.46 +\frac{20}{8}\times 2951)^2+(1.0 \times 1502808.35)^2} }\nonumber\\
+       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 579881 +\frac{20}{8}\times 2951)^2+(1.0 \times 1502808)^2} }\nonumber\\
 \\
-       &=&43.71\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 477427.46 +\frac{42.41}{8}\times 2951)^2+(1.0 \times 1502808.35)^2} }\nonumber\\
+&=&44.30\\
+       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 579881 +\frac{44.30}{8}\times 2951)^2+(1.0 \times 1502808)^2} }\nonumber\\
 \\
-       &=& 43.71[mm](収束確認)\\
+       &=& 44.34[mm](収束確認)\\
 \end{eqnarray}
-\subsubsection{第5歯車側の軸(正回転)}
-軸受け3側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=-2951,T=1502808.35,M=354770.75$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
+\subsubsection{第5歯車側の軸(逆回転)}
+軸受け3側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.また,キー溝があるので,$\tau_{al}$の値を0.75倍にした.ここで$P=-2951,T=1502808,M=444196$を代入した.この計算ではd(直径)の値がわかっていないので,繰り返し計算で算出する.初期値20[mm]とする.
 \begin{eqnarray}
 d_{12min}&=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{(k_bM+\frac{d}{8}P)^2+k_tT^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 354770.75 +\frac{20}{8}\times -2951)^2+(1.0 \times 1502808.35)^2} }\nonumber\\
+       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 444196 +\frac{20}{8}\times -2951)^2+(1.0 \times 1502808)^2} }\nonumber\\
 \\
-       &=& 43.01\\
-       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 354770.75 +\frac{34.09}{8}\times -2951)^2+(1.0 \times 1502808.35)^2} }\nonumber\\
+&=& 43.41\\
+       &=& \sqrt [3]{ \frac{16}{\pi \times 0.75 \times 135.92} \sqrt{(1.5 \times 444196 +\frac{43.49}{8}\times -2951)^2+(1.0 \times 1502808)^2} }\nonumber\\
 \\
-         &=& 42.98[mm](収束確認)
+         &=& 43.41[mm](収束確認)
 \end{eqnarray}
 
 \subsubsection{軸受け6側の軸(正回転)}
 軸受け6側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=0,T=0$を代入した.
 \begin{eqnarray}
 d_{11min} &=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{k_bM^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 433286.99^2} }\\
-       &=& 28.99[mm]
+       &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 487592^2} }\\
+       &=& 30.15[mm]
 \end{eqnarray}
 \subsubsection{軸受け6側の軸(逆回転)}
 軸受け6側にかかる許容せん断応力$\tau_{al}$は,ねじりと軸力が作用しないので,次の式で算出する.ここで$P=0,T=0$を代入した.
 \begin{eqnarray}
 d_{11min} &=& \sqrt [3]{ \frac{16}{\pi \tau_{al}}\sqrt{k_bM^2} }\\
-       &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 633810.96^2} }\\
-       &=& 32.90[mm]
+       &=& \sqrt [3]{ \frac{16}{\pi 135.92}\sqrt{1.5 \times 705402^2} }\\
+       &=& 34.10[mm]
 \end{eqnarray}
 
 \subsection{座屈条件に基づく軸径}
@@ -683,26 +695,26 @@ d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}
 \subsubsection{第2軸受け側の軸}
 \begin{eqnarray}
 d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}\\
- &=&\sqrt[4]{972.87 \times \frac{64\times 66.5^2}{\pi^3 \times 206[N/mm^2]}}\\
- &=&14.41[mm]
+ &=&\sqrt[4]{972.87 \times \frac{64\times 89.5^2}{\pi^3 \times 206[N/mm^2]}}\\
+ &=&16.72[mm]
 \end{eqnarray}
 \subsubsection{第3軸受けと第4軸受けの間の軸}
 \begin{eqnarray}
 d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}\\
- &=&\sqrt[4]{2951 \times \frac{64\times 75^2}{\pi^3 \times 206[N/mm^2]}}\\
- &=&20.19[mm]
+ &=&\sqrt[4]{2951 \times \frac{64\times 76^2}{\pi^3 \times 206[N/mm^2]}}\\
+ &=&20.33[mm]
 \end{eqnarray}
 \subsubsection{第4軸受け側の軸}
 \begin{eqnarray}
 d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}\\
- &=&\sqrt[4]{1978.13 \times \frac{64\times 66.5^2}{\pi^3 \times 206[N/mm^2]}}\\
- &=&17.21[mm]
+ &=&\sqrt[4]{1978.13 \times \frac{64\times 89.5^2}{\pi^3 \times 206[N/mm^2]}}\\
+ &=&19.96[mm]
 \end{eqnarray}
 \subsubsection{第5軸受け側の軸}
 \begin{eqnarray}
 d&=&\sqrt[4]{P_k\frac{64l^2[mm^2]}{\pi^3CE[N/mm^2]}}\\
- &=&\sqrt[4]{2951 \times \frac{64\times 67.5^2}{\pi^3 \times 206[N/mm^2]}}\\
- &=&19.16[mm]
+ &=&\sqrt[4]{2951 \times \frac{64\times 88.5^2}{\pi^3 \times 206[N/mm^2]}}\\
+ &=&21.94[mm]
 \end{eqnarray}
 
 \subsection{ねじり剛性に基づく軸径}
@@ -717,21 +729,25 @@ d[mm]&=&\sqrt[4]{\frac{32T[N \cdot mm]}{\pi \bar{\theta}/1000[radian/mm] G[N/mm^
 以下の計算では,$G=79500[N/mm^2]$を用いて計算をする.
 \subsubsection{軸受け２側の軸}
 \begin{eqnarray}
-d[mm]&=&\sqrt[4]{\frac{32T[N \cdot mm]}{\pi \bar{\theta}/1000[radian/mm] G[N/mm^2]}}\\
-     &=&\sqrt[4]{\frac{32\times 124876.26 }{\pi \times 0.25/1000 \times 79500}}\\
-     &=&43.76[mm]
+d[mm]&=& \sqrt[4]{\frac{32T[N \cdot mm]}{\pi^2/180 \bar{\theta}/1000[radian/mm] G[N/mm^2]}}\\
+     &=& \sqrt[4]{\frac{32\times 124877 }{\pi^2/180 \times 0.25/1000 \times 79500}}\\
+     &=& 43.76[mm]
 \end{eqnarray}
+
+
 \subsubsection{第2歯車と第3歯車の間の軸}
 \begin{eqnarray}
-d[mm]&=&\sqrt[4]{\frac{32T[N \cdot mm]}{\pi \bar{\theta}/1000[radian/mm] G[N/mm^2]}}\\
-     &=&\sqrt[4]{\frac{32\times 494077.63 }{\pi \times 0.25/1000 \times 79500}}\\
-     &=&61.72[mm]
+d[mm]&=&\sqrt[4]{\frac{32T[N \cdot mm]}{\pi^2/180 \bar{\theta}/1000[radian/mm] G[N/mm^2]}}\\
+     &=&\sqrt[4]{\frac{32\times 494073.883 }{\pi^2/180 \times 0.25/1000 \times 79500}}\\
+     &=& 61.72[mm]
 \end{eqnarray}
+
+
 \subsubsection{軸受け5側の軸}
 \begin{eqnarray}
-d[mm]&=&\sqrt[4]{\frac{32T[N \cdot mm]}{\pi \bar{\theta}/1000[radian/mm] G[N/mm^2]}}\\
-     &=&\sqrt[4]{\frac{32\times 1502808.35 }{\pi \times 0.25/1000 \times 79500}}\\
-     &=&81.5[mm]
+d[mm]&=& \sqrt[4]{\frac{32T[N \cdot mm]}{\pi^2/180 \bar{\theta}/1000[radian/mm] G[N/mm^2]}}\\
+     &=& \sqrt[4]{\frac{32\times 1502807.966 }{\pi^2/180 \times 0.25/1000 \times 79500}}\\
+     &=& 81.5[mm]
 \end{eqnarray}
 \section{最小軸径のまとめ}
 \begin{table}[htb]
@@ -739,20 +755,25 @@ d[mm]&=&\sqrt[4]{\frac{32T[N \cdot mm]}{\pi \bar{\theta}/1000[radian/mm] G[N/mm^
   \caption{最小軸径のまとめ}
   \begin{tabular}{|l||c|c|} \hline
 軸の名称&軸の最小径[mm]&軸の径[mm]\\\hline\hline
-d11&19.82&20\\
+d11&21.28&22\\
 d12&43.76&44\\
-d21&29.79&30\\
+d21&32.13&33\\
 d22&61.72&62\\
-d23&25.89&26\\
+d23&28.63&29\\
 d31&81.5&82\\
-d32&32.9&33\\
+d32&34.1&35\\
 \hline
   \end{tabular}
 \end{center}
 \end{table}
+
+
+
+
+
 \section{キーの設計}
 \subsection{キーの許容圧縮応力と許容せん断応力}
-キーに使う材料は,s45c(機械構造用炭素鋼鋼材)とし,端部は角型とする.安産率は4とする.キーの許容圧縮応力と許容せん断応力の計算を以下に示す.
+キーに使う材料は,s45c(機械構造用炭素鋼鋼材)とし,端部は角型とする.安全率は4とする.キーの許容圧縮応力と許容せん断応力の計算を以下に示す.
 \begin{eqnarray}
 (s45cの引っ張り強さ)&=&690[N/mm^2]\\
 キーの許容圧縮応力:\sigma_{al} = \frac{690}{4} &=& 172.5[N/mm^2]\\
@@ -768,7 +789,7 @@ d32&32.9&33\\
 d=62,b=18,h=11,l=50と仮定すると、
 \begin{eqnarray}
 \sigma_{al} &\geq& \frac{2T}{dlt_1}\\
-(右辺) &=& \frac{2 \times 494077.63[N \cdot mm]}{62[mm] \times 50[mm] \times 11/2[mm]}\\
+(右辺) &=& \frac{2 \times 494074[N \cdot mm]}{62[mm] \times 50[mm] \times 11/2[mm]}\\
        &\approx&57.956[N \cdot m]\\
        &\leq& 172.5\\
 \tau_{al} &\geq& \frac{2T}{dlb}\\
@@ -794,11 +815,11 @@ d=62,b=18,h=11,l=50と仮定すると、
 d=82,b=22,h=14,l=70と仮定すると、
 \begin{eqnarray}
 \sigma_{al} &\geq& \frac{2T}{dlt_1}\\
-(右辺) &=& \frac{2 \times 1502808.35015[N \cdot mm]}{82[mm] \times 70[mm] \times 14/2[mm]}\\
+(右辺) &=& \frac{2 \times 1502808.35  [N \cdot mm]}{82[mm] \times 70[mm] \times 14/2[mm]}\\
        &\approx&74.804[N \cdot m]\\
        &\leq& 172.5\\
 \tau_{al} &\geq& \frac{2T}{dlb}\\
-(右辺) &=& \frac{2 \times 1502808.35015[N \cdot mm]}{82[mm] \times 70[mm] \times 22[mm]}\\
+(右辺) &=& \frac{2 \times 1502808.35  [N \cdot mm]}{82[mm] \times 70[mm] \times 22[mm]}\\
        &=& 23.801\\
        &\leq&86.25[N \cdot m]
 \end{eqnarray}

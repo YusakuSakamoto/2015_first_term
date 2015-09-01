@@ -1,16 +1,16 @@
-\chapter{軸受け}
+v\chapter{軸受け}
 \section{軸受けにかかる力のまとめ}
 \begin{table}[htb]
 \begin{center}
   \caption{表題}
   \begin{tabular}{|l||c|c|c|c|} \hline
 軸受け番号& 最小軸径[mm] &ラジアル荷重Fr[N] &スラスト荷重Fa[N]&回転数[rpm]\\\hline
-1&20&972.6&0&1300\\
-2&44&1784.21&972.87&1300\\
-3&30&6970.86&0&328.5714\\
-4&26&4477&1978.13&328.5714\\
-5&82&5255.86&2951&108.0235\\
-6&33&4479.24&0&108.0235\\
+1 &22 &1042    &0       &1300\\
+2 &44 &1838.68 &972.87  &1300\\
+3 &33 &6665.79 &0       &328.5714\\
+4 &29 &4718.4  &1978.13 &328.5714\\
+5 &82 &6552.33 &2951    &108.0235\\
+6 &35 &4262.25 &0       &108.0235\\
 \hline
   \end{tabular}
 \end{center}
@@ -29,11 +29,11 @@
   \caption{軸受け1データ}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-ラジアル荷重&$F_r$&972.6[N]\\
+ラジアル荷重&$F_r$&1042[N]\\
 スラスト荷重&$F_a$&0\\
 回転数&n&1300[rpm]\\
 定格寿命&$L_h$&20000以上 [hour]\\
-最小軸径&$\alpha$&20 [mm]\\
+最小軸径&$\alpha$&22 [mm]\\
 軸受け種類&p(玉軸受け)&3[$\cdot$]\\
 \hline
   \end{tabular}
@@ -61,24 +61,27 @@
 \begin{eqnarray}
 寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{20000}{500} \right)^{1/3} = 3.420\\
 速度係数f_n &=& \left( \frac{100}{3n} \right)^{1/p} = \left( \frac{100}{3 \times 1300} \right)^{1/3} = 0.29488\\
-P &=& XF_r+YF_a = 972.6\\
-C &=& \frac{f_h}{f_n} \times P = 11280.1546[N]
+\frac{F_a}{F_r} &=& \frac{0}{1042}=0\\
+f_0\frac{F_a}{C_{0r}}&=& 14.5 \times \frac{0}{7400} = 0
+\end{eqnarray}
+アキシアル荷重が働いていないので、自動的にX=1,Y=0とする。\\
+\begin{eqnarray}
+P &=& XF_r+YF_a = 1042\\
+C &=& \frac{f_h}{f_n} \times P = 12085[N]
 \end{eqnarray}
 
 \subsubsection{軸受け1再検討}
-アキシアル荷重が働いていないので、自動的にX=1,Y=0とする。
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 1300} \times (12500/972.6)^3\\
-           &=& 27126.523 \geq 20000\\
-寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{27126.523}{500} \right)^{1/3} = 3.786
+           &=& 500 \times \frac{100}{3 \times 1300} \times (12500/1042)^3\\
+           &=& 22133 \geq 20000\\
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
 \begin{eqnarray}
-0.6F_r+0.5F_a=0.6 \times 972.6 + 0.5 \times 0 = 486.3 \leq F_r\\
-よって、静等価荷重P_0 = F_r=972.6\\
-f_s = \frac{C_{0r}}{P_0} = \frac{7400}{972.6}\geq 1
+0.6F_r+0.5F_a=0.6 \times 1042 + 0.5 \times 0 = 625.2 \leq F_r\\
+よって、静等価荷重P_0 = F_r=1042\\
+f_s = \frac{C_{0r}}{P_0} = \frac{7400}{1042} = 7.102\geq 1
 \end{eqnarray}
 
 \newpage
@@ -89,7 +92,7 @@ f_s = \frac{C_{0r}}{P_0} = \frac{7400}{972.6}\geq 1
   \caption{軸受け2データ}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-ラジアル荷重&$F_r$&1784.21[N]\\
+ラジアル荷重&$F_r$&1838.68[N]\\
 スラスト荷重&$F_a$&972.87[N]\\
 回転数&n&328.5714[rpm]\\
 定格寿命&$L_h$&20000以上 [hour]\\
@@ -102,60 +105,47 @@ f_s = \frac{C_{0r}}{P_0} = \frac{7400}{972.6}\geq 1
 
 \begin{table}[htb]
 \begin{center}
-  \caption{NSK6013}
+  \caption{NSK6012}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-内径& d &65 [mm]\\
-外径& D &100 [mm]\\
-基本動定格荷重&$C_{r}$&30500\\
-基本静定格荷重&$C_{0r}$&25200\\
-軸受各部の形状および適用する&$f_0$&15.8\\
+内径& d &60 [mm]\\
+外径& D &95 [mm]\\
+基本動定格荷重&$C_{r}$&29500\\
+基本静定格荷重&$C_{0r}$&23200\\
+軸受各部の形状および適用する&$f_0$&15.6\\
 応力水準によって定まる係数&&\\
 \hline
   \end{tabular}
 \end{center}
 \end{table}
 
-
 \subsubsection{軸受け2検討}
-X=0.56,Y=1.00とする。
 \begin{eqnarray}
 寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{20000}{500} \right)^{1/3} = 3.420\\
 速度係数f_n &=& \left( \frac{100}{3n} \right)^{1/p} = \left( \frac{100}{3 \times 1300} \right)^{1/3} = 0.29488\\
-\frac{F_a}{F_r} &=& \frac{972.87}{1784.21} = 0.5453(\geq 0.44)\\
-P &=& XF_r+YF_a = 0.56 \times 1784.21 + 1.00 \times 972.87 = 1972.0276\\
-C &=& \frac{f_h}{f_n} \times P = 11.59794 \times 1972.0276 = 22941.045[N]
+\frac{F_a}{F_r} &=& \frac{972.87}{1838.68} = 0.529 (\geq 0.44)\\
+f_0\frac{F_a}{C_{0r}}&=& 15.6 \times \frac{972.87}{23200} = 0.654
+\end{eqnarray}
+X=0.56,Y=1.00とする.
+\begin{eqnarray}
+P &=& XF_r+YF_a = 0.56 \times 1838.68 + 1.00 \times 972.87 = 2002.53\\
+C &=& \frac{f_h}{f_n} \times P = 11.60 \times 2002.53 = 23225.22[N]
 \end{eqnarray}
 
 \subsubsection{軸受け2再検討}
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 1300} \times (30500/1972.0276)^3\\
-           &=& 47431.4 \geq 20000
-\end{eqnarray}
-X=0.56,Y=1.77とする。
-\begin{eqnarray}
-P &=& XF_r+YF_a = 0.56 \times 1784.21 + 1.77 \times 972.87 = 2721.14\\
-寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 1300} \times (30500/2721.14)^3\\
-           &=& 138194.90 \geq 20000\\
-寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{138194.90}{500} \right)^{1/3} = 6.514
+           &=& 500 \times \frac{100}{3 \times 1300} \times (29500/2002.53)^3\\
+           &=& 40986 \geq 20000
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
 \begin{eqnarray}
-P_0&=&0.6F_r+0.5F_a\\
-&=&0.6 \times 1784.21 + 0.5 \times 972.87 = 1556.961 \leq F_r\\
-よって、静等価荷重P_0 &=& F_r =1784.21\\
-f_s &=& \frac{C_{0r}}{P_0} = \frac{44500}{1784.21}\geq 1
+P_0 &=& 0.6F_r+0.5F_a\\
+    &=& 0.6 \times 1838.68 + 0.5 \times 972.87 = 1589.64 \leq F_r\\
+よって、静等価荷重P_0 &=& F_r = 1838.68\\
+f_s &=& \frac{C_{0r}}{P_0} = \frac{29500}{1838.68} = \geq 1
 \end{eqnarray}
-
-
-
-
-
-
-
 
 
 
@@ -169,11 +159,11 @@ f_s &=& \frac{C_{0r}}{P_0} = \frac{44500}{1784.21}\geq 1
   \caption{軸受け3データ}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-ラジアル荷重&$F_r$&6970.86[N]\\
+ラジアル荷重&$F_r$&6665.79[N]\\
 スラスト荷重&$F_a$&0\\
 回転数&n&328.5714[rpm]\\
 定格寿命&$L_h$&20000以上 [hour]\\
-最小軸径&$\alpha$&30 [mm]\\
+最小軸径&$\alpha$&33 [mm]\\
 軸受け種類&p(玉軸受け)&3[$\cdot$]\\
 \hline
   \end{tabular}
@@ -200,7 +190,12 @@ f_s &=& \frac{C_{0r}}{P_0} = \frac{44500}{1784.21}\geq 1
 \begin{eqnarray}
 寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{20000}{500} \right)^{1/3} = 3.420\\
 速度係数f_n &=& \left( \frac{100}{3n} \right)^{1/p} = \left( \frac{100}{3 \times 328.5714} \right)^{1/3} = 0.4664\\
-P &=& XF_r+YF_a = 6970.86\\
+\frac{F_a}{F_r} &=& \frac{0}{6665.79} = 0 (\leq e)\\
+f_0\frac{F_a}{C_{0r}}&=& 13.1 \times \frac{0}{32000} = 0
+\end{eqnarray}
+X=1.00,Y=0とする.
+\begin{eqnarray}
+P &=& XF_r+YF_a = 6665.79\\
 C &=& \frac{f_h}{f_n} \times P = 51115.654[N]
 \end{eqnarray}
 
@@ -208,19 +203,16 @@ C &=& \frac{f_h}{f_n} \times P = 51115.654[N]
 アキシアル荷重が働いていないので、自動的にX=1,Y=0とする。
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 328.5714} \times (53000/6970.86)^3\\
-           &=& 22293.975 \geq 20000\\
-寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{22293.975}{500} \right)^{1/3} = 3.546
+           &=& 500 \times \frac{100}{3 \times 328.5714} \times (53000/6665.79)^3\\
+           &=& 25497 \geq 20000\\
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
 \begin{eqnarray}
-0.6F_r+0.5F_a=0.6 \times 6970.86 + 0.5 \times 0 = 4182.516 \leq F_r\\
-よって、静等価荷重P_0 = F_r = 6970.86\\
-f_s = \frac{C_{0r}}{P_0} = \frac{32000}{6970.86} \geq 1
+0.6F_r+0.5F_a=0.6 \times 6665.79 + 0.5 \times 0 = 3999.474 \leq F_r\\
+よって、静等価荷重P_0 = F_r = 6665.79\\
+f_s = \frac{C_{0r}}{P_0} = \frac{53000}{6665.79} \geq 1
 \end{eqnarray}
-
-
 
 
 
@@ -234,11 +226,11 @@ f_s = \frac{C_{0r}}{P_0} = \frac{32000}{6970.86} \geq 1
   \caption{軸受け4データ}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-ラジアル荷重&$F_r$&4477[N]\\
+ラジアル荷重&$F_r$&4718.4[N]\\
 スラスト荷重&$F_a$&1978.13[N]\\
 回転数&n&328.5714[rpm]\\
 定格寿命&$L_h$&20000以上 [hour]\\
-最小軸径&$\alpha$&26 [mm]\\
+最小軸径&$\alpha$&29 [mm]\\
 軸受け種類&p(玉軸受け)&3[$\cdot$]\\
 \hline
   \end{tabular}
@@ -262,37 +254,32 @@ f_s = \frac{C_{0r}}{P_0} = \frac{32000}{6970.86} \geq 1
 \end{table}
 
 \subsubsection{軸受け4検討}
-X=0.56,Y=1.00とする。
 \begin{eqnarray}
 寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{20000}{500} \right)^{1/3} = 3.420\\
 速度係数f_n &=& \left( \frac{100}{3n} \right)^{1/p} = \left( \frac{100}{3 \times 328.5714} \right)^{1/3} = 0.4664\\
-\frac{F_a}{F_r} &=& \frac{1978.13}{4477} = 0.4418(\geq 0.44)\\
-P &=& XF_r+YF_a = 0.56 \times 4477 + 1.00 \times 1978.13 = 4485.25\\
-C &=& \frac{f_h}{f_n} \times P = 7.33276 \times 4485.25 = 32889.26[N]
+\frac{F_a}{F_r} &=& \frac{1978.13}{4718.4} = 0.419(\leq 0.44)\\
+f_0\frac{F_a}{C_{0r}}&=& 13.1 \times \frac{1978.13}{32000} = 0.810\\
+e&=&\frac{0.810-0.689}{1.03-0.689}*0.02 + 0.26 = 0.267
+\end{eqnarray}
+X=0.56,Y= 1.653とする.
+\begin{eqnarray}
+P &=& XF_r+YF_a = 0.56 \times 4718.4 + 1.653 \times 1978.13 = 5912\\
+C &=& \frac{f_h}{f_n} \times P = 7.33276 \times 5912 = 43351[N]
 \end{eqnarray}
 
 \subsubsection{軸受け4再検討}
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 328.5714} \times (53000/4485.25)^3\\
-           &=& 83692.52 \geq 20000
-\end{eqnarray}
-
-X=0.56,Y=1.71とする。
-\begin{eqnarray}
-P &=& XF_r+YF_a = 0.56 \times 4477 + 1.71 \times 1978.13 = 5889.72\\
-寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 328.5714} \times (40500/5889.27)^3\\
-           &=& 36971.09 \geq 20000\\
-寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{36971.09}{500} \right)^{1/3} = 4.197
+           &=& 500 \times \frac{100}{3 \times 328.5714} \times (53000/5912)^3\\
+           &=& 36546 \geq 20000
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
 \begin{eqnarray}
 P_0&=&0.6F_r+0.5F_a\\
-&=&0.6 \times 4477 + 0.5 \times 1978.13 = 3675.265 \leq F_r\\
-よって、静等価荷重P_0 &=& F_r = 4477\\
-f_s &=& \frac{C_{0r}}{P_0} = \frac{32000}{4477}\geq 1
+   &=&0.6 \times 4718.4 + 0.5 \times 1978.13 = 3820 \leq F_r\\
+よって、静等価荷重P_0 &=& F_r = 4718.4\\
+f_s &=& \frac{C_{0r}}{P_0} = \frac{32000}{4718.4} = 6.782\geq 1
 \end{eqnarray}
 
 
@@ -304,7 +291,7 @@ f_s &=& \frac{C_{0r}}{P_0} = \frac{32000}{4477}\geq 1
   \caption{軸受け5データ}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-ラジアル荷重&$F_r$&5255.86[N]\\
+ラジアル荷重&$F_r$&6552.33[N]\\
 スラスト荷重&$F_a$&2951[N]\\
 回転数&n&108.0235[rpm]\\
 定格寿命&$L_h$&20000以上 [hour]\\
@@ -317,14 +304,14 @@ f_s &=& \frac{C_{0r}}{P_0} = \frac{32000}{4477}\geq 1
 
 \begin{table}[htb]
 \begin{center}
-  \caption{NSK6018}
+  \caption{NSK6020}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-内径& d & 90 [mm]\\
-外径& D & 140 [mm]\\
-基本動定格荷重&$C_{r}$&58000\\
-基本静定格荷重&$C_{0r}$&50000\\
-軸受各部の形状および適用する&$f_0$&15.6\\
+内径& d & 100 [mm]\\
+外径& D & 150 [mm]\\
+基本動定格荷重&$C_{r}$&60000\\
+基本静定格荷重&$C_{0r}$&54000\\
+軸受各部の形状および適用する&$f_0$&15.9\\
 応力水準によって定まる係数&&\\
 \hline
   \end{tabular}
@@ -332,35 +319,31 @@ f_s &=& \frac{C_{0r}}{P_0} = \frac{32000}{4477}\geq 1
 \end{table}
 
 \subsubsection{軸受け5検討}
-X=0.56,Y=1.00とする。
 \begin{eqnarray}
 寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{20000}{500} \right)^{1/3} = 3.420\\
 速度係数f_n &=& \left( \frac{100}{3n} \right)^{1/p} = \left( \frac{100}{3 \times 108.0235} \right)^{1/3} = 0.67575\\
-\frac{F_a}{F_r} &=& \frac{2986}{5255.86} = 0.568(\geq 0.44)\\
-P &=& XF_r+YF_a = 0.56 \times 5255.86 + 1.00 \times 2951 = 5894.2816\\
-C &=& \frac{f_h}{f_n} \times P = 5.0610 \times 5894.2816 = 29830.959[N]
+\frac{F_a}{F_r} &=& \frac{2951}{6552.33} = 0.450(\geq 0.44)\\
+f_0\frac{F_a}{C_{0r}}&=& 15.9 \times \frac{2951}{54000} = 0.869\\
+\end{eqnarray}
+X=0.56,Y= 1.00とする.
+\begin{eqnarray}
+P &=& XF_r+YF_a = 0.56 \times 6552.33 + 1.00 \times 2951 = 6620.3\\
+C &=& \frac{f_h}{f_n} \times P = 5.0610 \times 6620.3 = 33505.3 [N]
 \end{eqnarray}
 
 \subsubsection{軸受け5再検討}
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 108.0235} \times (147022. 60/5894.2816)^3\\
-           &=& 147022.60 \geq 20000
+           &=& 500 \times \frac{100}{3 \times 108.0235} \times (60000/6620.3)^3\\
+           &=& 114855 \geq 20000
 \end{eqnarray}
-X=0.56,Y=1.45とする。
-\begin{eqnarray}
-P &=& XF_r+YF_a = 0.56 \times 5255.86 + 1.71 \times 2951 =7989.49\\
-寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 108.0235} \times (58000/7989.49)^3\\
-           &=& 59027.90 \geq 20000\\
-寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{59027.90}{500} \right)^{1/3} = 4.9056
-\end{eqnarray}
-\subsubsection{静荷重の確認}
+
+
 \begin{eqnarray}
 P_0&=&0.6F_r+0.5F_a\\
-&=&0.6 \times 5255.86 + 0.5 \times 2951 = 4629.016 \leq F_r\\
-よって、静等価荷重P_0 &=& F_r = 5255.86\\
-f_s &=& \frac{C_{0r}}{P_0} = \frac{50000}{5255.86}\geq 1
+   &=&0.6 \times 6552.33 + 0.5 \times 2951 = 5406.9 \leq F_r\\
+よって、静等価荷重P_0 &=& F_r = 6552.40\\
+f_s &=& \frac{C_{0r}}{P_0} = \frac{54000}{6552.40} = 8.24\geq 1
 \end{eqnarray}
 
 
@@ -373,11 +356,11 @@ f_s &=& \frac{C_{0r}}{P_0} = \frac{50000}{5255.86}\geq 1
   \caption{軸受け6データ}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-ラジアル荷重&$F_r$&4479.24[N]\\
+ラジアル荷重&$F_r$&4262.25[N]\\
 スラスト荷重&$F_a$&0\\
 回転数&n&108.0235[rpm]\\
 定格寿命&$L_h$&20000以上 [hour]\\
-最小軸径&$\alpha$&33 [mm]\\
+最小軸径&$\alpha$&35 [mm]\\
 軸受け種類&p(玉軸受け)&3[$\cdot$]\\
 \hline
   \end{tabular}
@@ -386,14 +369,14 @@ f_s &=& \frac{C_{0r}}{P_0} = \frac{50000}{5255.86}\geq 1
 
 \begin{table}[htb]
 \begin{center}
-  \caption{NSK6310}
+  \caption{NSK6208}
   \begin{tabular}{lll} \hline
 名称&記号&値\\
-内径& d &50 [mm]\\
-外径& D &110 [mm]\\
-基本動定格荷重&$C_{r}$&62000\\
-基本静定格荷重&$C_{0r}$&38500\\
-軸受各部の形状および適用する&$f_0$&13.2\\
+内径& d &40 [mm]\\
+外径& D &80 [mm]\\
+基本動定格荷重&$C_{r}$ &29100\\
+基本静定格荷重&$C_{0r}$&17900\\
+軸受各部の形状および適用する&$f_0$&14.0\\
 応力水準によって定まる係数&&\\
 \hline
   \end{tabular}
@@ -405,57 +388,60 @@ f_s &=& \frac{C_{0r}}{P_0} = \frac{50000}{5255.86}\geq 1
 \begin{eqnarray}
 寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{20000}{500} \right)^{1/3} = 3.420\\
 速度係数f_n &=& \left( \frac{100}{3n} \right)^{1/p} = \left( \frac{100}{3 \times 108.0235} \right)^{1/3} = 0.67575\\
-P &=& XF_r+YF_a = 4479.24\\
-C &=& \frac{f_h}{f_n} \times P = 22669.62752[N]
+\frac{F_a}{F_r} &=& \frac{0}{4262.25} = 0 (\leq e)\\
+f_0\frac{F_a}{C_{0r}}&=& 14.0 \times \frac{0}{24000} = 0
+\end{eqnarray}
+X=1.00,Y=0とする.
+\begin{eqnarray}
+P &=& XF_r+YF_a = 4262.25\\
+C &=& \frac{f_h}{f_n} \times P = 21571.4[N]
 \end{eqnarray}
 
 \subsubsection{軸受け6再検討}
-アキシアル荷重が働いていないので、自動的にX=1,Y=0とする。
 \begin{eqnarray}
 寿命時間L_h &=& 500{f_n}^p(C_r/P)^p\\
-           &=& 500 \times \frac{100}{3 \times 108.0235} \times (62000/4479.24)^3\\
-           &=& 30257.740 \geq 20000\\
-寿命係数f_h &=& \left( \frac{L_h}{500} \right)^{1/p} = \left( \frac{30257.74}{500} \right)^{1/3} = 3.926
+           &=& 500 \times \frac{100}{3 \times 108.0235} \times (29100/4262.25)^3\\
+           &=& 49101 \geq 20000\\
 \end{eqnarray}
 
 \subsubsection{静荷重の確認}
 \begin{eqnarray}
 0.6F_r+0.5F_a=0.6 \times 4479.24 + 0.5 \times 0 = 2687.544 \leq F_r\\
 よって、静等価荷重P_0 = F_r = 4479.24\\
-f_s = \frac{C_{0r}}{P_0} = \frac{38500}{4479.24} \geq 1
+f_s = \frac{C_{0r}}{P_0} = \frac{17900}{4262.25} = 4.20\geq 1
 \end{eqnarray}
 
 \section{オイルシールの選定}
 \subsection{軸受け2側オイルシール}
 \begin{table}[htb]
 \begin{center}
-  \caption{商品コード:AA213600}
+  \caption{商品コード:AD3193F0}
   \begin{tabular}{ll}
     \hline
     メーカー&NOK\\
-    型式&TCJ\\
-    内径&25\\
-    外形&45\\
-    厚さ&11\\
-    材質&ニトリルゴム+PTFE焼付\\
+    型式&TB\\
+    内径&60\\
+    外形&75\\
+    厚さ&9\\
+    材質&ニトリルゴム\\
     \hline
   \end{tabular}
 \end{center}
 \end{table}
+
+
 \subsection{軸受け5側オイルシール}
 \begin{table}[htb]
 \begin{center}
-  \caption{商品コード：AA213607}
+  \caption{商品コード：AD4063A0}
   \begin{tabular}{ll}
     \hline
-    商品コード&AA213607\\
-    メーカーコード&GJ2651-P0\\
     メーカー&NOK\\
-    型式&TCJ\\
-    内径(mm)&45
-    \\外径(mm)&62
-    \\厚さ(mm)&9\\
-    材質&ニトリルゴム+PTFE焼付\\
+    型式&TB\\
+    内径(mm)&100\\
+    外径(mm)&125\\
+    厚さ(mm)&13\\
+    材質&ニトリルゴム\\
     \hline
   \end{tabular}
 \end{center}
