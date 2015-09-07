@@ -13,8 +13,8 @@
    height="297mm"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="jiku34.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="jiku14.svg">
   <defs
      id="defs4">
     <marker
@@ -81,14 +81,14 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
      inkscape:cx="281.15347"
-     inkscape:cy="829.15942"
+     inkscape:cy="886.30228"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1321"
-     inkscape:window-height="744"
-     inkscape:window-x="45"
-     inkscape:window-y="24"
+     inkscape:window-width="1366"
+     inkscape:window-height="708"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -98,7 +98,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -191,11 +191,6 @@
          id="tspan4355"
          x="184.35503"
          y="211.07907">0</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 2.99999999;stroke-dashoffset:0"
-       d="m 347.81113,285.26384 90.09202,1.33956"
-       id="path4397"
-       inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-size:21.73923302px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -208,18 +203,6 @@
          id="tspan4401"
          x="104.42813"
          y="232.93477">BMD</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:18.43002129px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="544.35486"
-       y="239.64153"
-       id="text4403"
-       sodipodi:linespacing="125%"
-       transform="scale(0.81150862,1.2322728)"><tspan
-         sodipodi:role="line"
-         id="tspan4405"
-         x="544.35486"
-         y="239.64153">77483.781</tspan></text>
     <path
        sodipodi:type="arc"
        style="fill:none;stroke:#000000;stroke-width:2.85589767000000005;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-start:none;marker-end:url(#Arrow1Lend)"
@@ -247,26 +230,9 @@
          y="111.94425">M</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 427.85714,220.93361 -78.57143,24.28572 1e-5,39.99999 L 190,222.36218"
+       d="m 427.85714,220.93361 -78.57143,63.57143 1e-5,-37.14286 -159.28572,-25"
        id="path4124"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.00000001, 3.00000002;stroke-dashoffset:0"
-       d="m 164.23971,245.97812 181.5206,1.33956"
-       id="path4397-3"
-       inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-size:18.43002129px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="96.977615"
-       y="204.02142"
-       id="text4403-2"
-       sodipodi:linespacing="125%"
-       transform="scale(0.81150862,1.2322728)"><tspan
-         sodipodi:role="line"
-         id="tspan4405-8"
-         x="96.977615"
-         y="204.02142">29547.557</tspan></text>
   </g>
 </svg>
