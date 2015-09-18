@@ -80,17 +80,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="216.33287"
-     inkscape:cy="812.20944"
+     inkscape:zoom="0.7"
+     inkscape:cx="185.10187"
+     inkscape:cy="775.82967"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1321"
-     inkscape:window-height="744"
+     inkscape:window-width="660"
+     inkscape:window-height="716"
      inkscape:window-x="45"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -160,72 +160,54 @@
          x="336.33286"
          y="168.272">R6y</tspan></text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 119.28571,209.50504 -0.71428,97.14286"
-       id="path4326"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 356.78571,204.86218 -0.71428,100.71428"
-       id="path4326-7"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 118.91767,300.25483 237.87896,-0.78527"
-       id="path4326-2"
-       inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-size:21.06594849px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="109.69672"
-       y="284.65918"
-       id="text4353"
-       sodipodi:linespacing="125%"
-       transform="scale(0.92803764,1.0775425)"><tspan
-         sodipodi:role="line"
-         id="tspan4355"
-         x="109.69672"
-         y="284.65918">0</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 118.57142,298.07646 67.14287,-87.85714 168.57142,87.14286"
-       id="path4357"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 2.99999999;stroke-dashoffset:0"
-       d="m 187.09685,210.97812 177.94916,2.05385"
-       id="path4397"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-    <text
-       xml:space="preserve"
-       style="font-size:21.73923302px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="35.422359"
-       y="225.54112"
-       id="text4399"
-       sodipodi:linespacing="125%"
-       transform="scale(1.0351101,0.96608081)"><tspan
-         sodipodi:role="line"
-         id="tspan4401"
-         x="35.422359"
-         y="225.54112">BMD</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:18.43002129px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="453.69482"
-       y="178.19873"
-       id="text4403"
-       sodipodi:linespacing="125%"
-       transform="scale(0.81150862,1.2322728)"><tspan
-         sodipodi:role="line"
-         id="tspan4405"
-         x="453.69482"
-         y="178.19873">351322.779</tspan></text>
-    <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart)"
        d="m 353.57143,124.86218 0,39.28572"
        id="path2987-3"
        inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 115.52427,184.80889 -0.71428,97.14286"
+       id="path4326-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 353.02427,180.16603 -0.71428,100.71428"
+       id="path4326-7-1"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 114.44194,189.84439 352.3209,189.05912"
+       id="path4326-2-9"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:21.06594849px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="103.33459"
+       y="181.53127"
+       id="text4353-4"
+       sodipodi:linespacing="125%"
+       transform="scale(0.92803764,1.0775425)"><tspan
+         sodipodi:role="line"
+         id="tspan4355-4"
+         x="103.33459"
+         y="181.53127">0</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 115.52427,189.0946 62.14286,62.14286 175,-61.42857"
+       id="path4357-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:21.73923302px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="31.788494"
+       y="199.97789"
+       id="text4399-5"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0351101,0.96608081)"><tspan
+         sodipodi:role="line"
+         id="tspan4401-6"
+         x="31.788494"
+         y="199.97789">BMD</tspan></text>
   </g>
 </svg>
